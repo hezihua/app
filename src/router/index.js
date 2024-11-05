@@ -3,6 +3,10 @@ import { createRouter, createWebHashHistory, createWebHistory } from "vue-router
 //1. 定义要使用到的路由组件  （一定要使用文件的全名，得包含文件后缀名）
 import index from "../pages/index.vue"
 import about from "../pages/about.vue"
+import leadership from "../pages/leadership.vue"
+import investment from "../pages/investment.vue"
+import career from "../pages/career.vue"
+import contact from "../pages/contact.vue"
 
 //2. 路由配置
 const routes = [
@@ -13,6 +17,10 @@ const routes = [
     },
     { path: "/index", component: index },
     { path: "/about", component: about },
+    { path: "/leadership", component: leadership },
+    { path: "/investment", component: investment },
+    { path: "/career", component: career },
+    { path: "/contact", component: contact },
 ]
 
 // 3. 创建路由实例
