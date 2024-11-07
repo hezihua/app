@@ -329,10 +329,10 @@ onUnmounted(() => {
       margin: 0 80px;
     }
     .textLeft {
-      font-size: 56px;
+      font-size: 58px;
     }
     .textRight {
-      font-size: 56px;
+      font-size: 58px;
       width: 685px;
       // display: flex;
       // justify-items: end;

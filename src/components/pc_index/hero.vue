@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, watch, onUnmounted } from 'vue';
+import Header from '../common/header.vue'
 
 const zoomBackground = ref(null); // 用于引用 <div> 元素
 const calculatedHeight = ref(0); // 动态高度
@@ -33,6 +34,7 @@ onUnmounted(() => {
 
 <template>
    <section class="section hero zoom-background" ref="zoomBackground"  :style="{ height: calculatedHeight + 'px' }">
+      <Header />
       <Transition name="fade">
 
         <div class="content" v-if="show">
@@ -56,11 +58,19 @@ onUnmounted(() => {
 
 /* 定义动画 */
 @keyframes zoomIn {
+//   0% {
+//     background-size: 102% 102%;
+//     transform: rotate(1deg);
+//   }
+//   100% {
+//     background-size: 100% 100%;
+//     transform: rotate(0deg);
+//   }
   0% {
-    background-size: 120% 120%;
+    transform: translate(-50%, -50%) scale(1.02) rotate(1deg);
   }
   100% {
-    background-size: 100% 100%;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
   }
 }
 
@@ -70,11 +80,28 @@ onUnmounted(() => {
 }
 .zoom-background {
   width: 100%;
-  background-image: url('../../assets/landing_earth.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  animation: zoomIn 1s ease-out forwards; /* 自动产生缩放效果 */
+  position: relative;
+  overflow: hidden;
+//   background-image: url('../../assets/landing_earth.jpg');
+//   background-size: 102% 102%;
+//   background-repeat: no-repeat;
+//   background-position: center center;
+//   animation: zoomIn 1s ease-out forwards; /* 自动产生缩放效果 */
+}
+.zoom-background::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 102%; /* 放大一点以防旋转时背景漏出 */
+    height: 102%;
+    background-image: url('../../assets/landing_earth.jpg'); /* 背景图路径 */
+    background-size: 102% 102%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(0deg); /* 移动到中心，并设置旋转角度 */
+    animation: zoomIn 1s ease-out forwards; /* 设置动画持续时间 */
 }
 
 /* 顶部背景 */
@@ -90,21 +117,23 @@ onUnmounted(() => {
   }
   
   .content {
+    position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 9;
     .border {
       background: #fff;
       padding-right: 1px;
       margin: 0 80px;
     }
     .textLeft {
-      font-size: 56px;
+      font-size: 58px;
     }
     .textRight {
-      font-size: 56px;
+      font-size: 58px;
       width: 685px;
     }
 

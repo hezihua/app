@@ -5,6 +5,7 @@ import Story from './story.vue'
 import Evolution from './evolution.vue'
 import Psylosophy from './psylosophy.vue'
 import Investment from './investment.vue'
+import Footer from '../common/footer.vue'
 
 
 
@@ -31,6 +32,8 @@ import Investment from './investment.vue'
 
     <!-- Investment Section -->
      <Investment />
+
+     <Footer />
    
   </div>
 </template>

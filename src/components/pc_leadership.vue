@@ -9,7 +9,7 @@ const count = ref(0)
 </script>
 
 <template>
-  <p class="read-the-docs">h5_leadership</p>
+  <p class="read-the-docs">pc_leadership</p>
 </template>
 
 <style scoped>

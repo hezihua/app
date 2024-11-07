@@ -242,7 +242,7 @@ onUnmounted(() => {
       width: 40%;
       font-size: 26px;
       color: #c7cfd6;
-      margin: 0% 0 0% 30%;
+      margin: 0% 0 0% 40%;
       // margin-bottom: 20px;
     }
 
@@ -251,13 +251,13 @@ onUnmounted(() => {
       display: flex;
       align-items: center;
       position: relative;
-      margin: 5% 0 5% 30%;
+      margin: 5% 0 5% 40%;
       // padding-top: 10px;
     }
 
     .title {
       width: 40%;
-      margin: 0% 0 0% 30%;
+      margin: 0% 0 0% 40%;
       font-size: 58px;
     }
 
