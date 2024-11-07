@@ -131,6 +131,8 @@ onUnmounted(() => {
     }
     .textLeft {
       font-size: 58px;
+      width: 685px;
+      text-align: right;
     }
     .textRight {
       font-size: 58px;

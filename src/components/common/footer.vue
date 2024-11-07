@@ -37,9 +37,6 @@
   
   <style scoped lang="scss">
   .footer {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
     padding: 0 150px;
     height: 400px;
     background-color: #f8f9fa;
@@ -59,7 +56,7 @@
             font-size: 46px;
             display: flex;
             .item {
-                margin-right: 80px;
+                margin-right: 60px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -90,7 +87,7 @@
         display: flex;
         font-size: 46px;
         .item {
-            margin-right: 80px;
+            margin-right: 60px;
             display: flex;
             justify-content: center;
             align-items: center;

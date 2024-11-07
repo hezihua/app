@@ -193,7 +193,7 @@ onUnmounted(() => {
     // top: 0;
     width: 60%;
     
-    background: #1a3a5f;
+    background: #3498db;
     // width: 100%;
     height: 100%;
     display: flex;
@@ -213,12 +213,22 @@ onUnmounted(() => {
       margin: 1% 35%;
     }
   }
+  .timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100px;
+    width: 100%;
+    height: 100%;
+    background-color: #1a3a5f; /* 替换颜色 */
+    clip-path: polygon(23% 0, 100% 0, 100% 100%, 0 100%); /* 根据需要调整多边形路径 */
+}
   .timeline-container {
     position: absolute;
     right: -85%;
     top: 0;
     width: 85%;
-    background: #1a3a5f;
+    background:  #3498db;
     // width: 100%;
     height: 100%;
     display: flex;
