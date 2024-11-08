@@ -33,7 +33,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div class="leadership">
+    <div class="leadership" id="leadership">
         <div class="left">
             <div class="title">Leadership</div>
             <div class="sub-title">Expertise leads to success</div>

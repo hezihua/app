@@ -1,5 +1,17 @@
 <script setup>
 import { ref, onMounted, watch, onUnmounted } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const navigateTo = (route, hash)=> {
+  if(hash) {
+    router.push({ path: route, hash });
+  } else {
+    router.push(route);
+  }
+        
+}
 const zoomBackground = ref(null); // 用于引用 <div> 元素
 const calculatedHeight = ref(0); // 动态高度
 // 动态计算高度
@@ -40,8 +52,8 @@ onUnmounted(() => {
         <p class="text">People are the lifeblood of our business. We take pride in having cultivated an organization that is a magnet for exceptional talent.</p>
         <p class="text">At Infini Capital, our people are given an opportunity to be impactful in a highly human-centric, highly self-driven environment. We believe in providing our talent with the opportunity to thrive, which in turn leads to our investments prospering.</p>
         <div class="buttonbox">
-          <div class="button">Meet the Team  +</div>
-          <div class="button">Join Us  +</div>
+          <div class="button" @click="navigateTo('/about', '#leadership')">Meet the Team  +</div>
+          <div class="button" @click="navigateTo('/career')">Join Us  +</div>
         </div>
         
       </div>
@@ -94,12 +106,12 @@ onUnmounted(() => {
     overflow: hidden;
     clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%); /* 定义多边形的剪裁路径 */
     .title {
-      font-size: 58px;
+      font-size: 68px;
       width:45%;
-      margin: 25% 15% 3%;
+      margin: 10% 15% 3%;
     }
     .text {
-      font-size: 22;
+      font-size: 26px;
       width: 45%;
       margin: 1% 15%;
     }

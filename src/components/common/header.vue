@@ -1,56 +1,24 @@
 <script setup>
-import { ref, onMounted, watch, onUnmounted } from 'vue';
-const zoomBackground = ref(null); // 用于引用 <div> 元素
-const calculatedHeight = ref(0); // 动态高度
-const show = ref(false); 
-const showtimeline = ref(false);
-// 动态计算高度
-const calculateHeight = () => {
-  if (zoomBackground.value) {
-    const width = zoomBackground.value.clientWidth;
-    calculatedHeight.value = width * 0.5625; // 例如，高度为宽度的 60%
-  }
-};
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 
-
-
-// 组件挂载后计算一次高度
-onMounted(() => {
-  calculateHeight();
-
-  // 监听窗口大小变化，重新计算高度
-  window.addEventListener('resize', calculateHeight);
-});
-
-// 组件销毁时移除事件监听器
-onUnmounted(() => {
-  window.removeEventListener('resize', calculateHeight);
-});
-
+const navigateTo = (route)=> {
+        router.push(route);
+      }
 
 </script>
 
 <template>
     <!-- Philosophy & Values Section -->
-    <section class="section header" ref="zoomBackground">
+    <section class="section header">
       <div class="logo">InfiniCapital</div>
       <div class="menus">
-        <div class="item">
-          <div>About us</div>
-        </div>
-        <div class="item">
-          <div>Investment approach </div>
-        </div>
-        <div class="item">
-
-          <div>Career</div>
-          
-        </div>
-        <div class="item">
-          <div>Contact us</div>
-          
-        </div>
+        <div class="item" @click="navigateTo('/about')">About us</div>
+        <div class="item" @click="navigateTo('/investment')">Investment approach</div>
+        <div class="item" @click="navigateTo('/career')">Career</div>
+        <div class="item" @click="navigateTo('/contact')">Contact us</div>
       </div>
     </section>
 
@@ -71,6 +39,7 @@ onUnmounted(() => {
     justify-content: space-between;
     height: 200px;
     align-items: center;
+    z-index: 99;
     .logo {
         font-size: 58px;
         margin-left: 150px;
@@ -83,6 +52,7 @@ onUnmounted(() => {
         .item {
             color: #fff;
             margin: 0 50px;
+            cursor: pointer;
         }
     }
     

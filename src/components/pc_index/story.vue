@@ -106,12 +106,12 @@ onUnmounted(() => {
     overflow: hidden;
     clip-path: polygon(0 0, 60% 0, 100% 100%, 0 100%); /* 定义多边形的剪裁路径 */
     .title {
-      font-size: 58px;
+      font-size: 78px;
       width:45%;
       margin: 25% 15% 3%;
     }
     .text {
-      font-size: 22;
+      font-size: 22px;
       width: 45%;
       margin: 1% 15%;
     }

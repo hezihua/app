@@ -1,3 +1,15 @@
+<script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const navigateTo = (route)=> {
+        router.push(route);
+      }
+
+</script>
+
 <template>
     <div class="footer">
         <div class="menus-row">
@@ -24,16 +36,6 @@
     </div>
   </template>
   
-  <script>
-  export default {
-    name: 'FooterComponent',
-    methods: {
-      navigateTo(route) {
-        this.$router.push(route);
-      }
-    }
-  }
-  </script>
   
   <style scoped lang="scss">
   .footer {
