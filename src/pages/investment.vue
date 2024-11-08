@@ -13,7 +13,7 @@ const count = ref(0)
 </template>
 
 <script>
-import PCComponent from '../components/pc_investment.vue';
+import PCComponent from '../components/pc_investment/index.vue';
 import MobileComponent from '../components/h5_investment.vue';
 import Vue3DeviceDetector from 'vue3-device-detector';
 
