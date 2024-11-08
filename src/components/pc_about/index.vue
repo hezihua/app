@@ -4,6 +4,7 @@ import About from './about.vue'
 import Industry from './industry.vue'
 import Leadership from './leadership.vue'
 import Leaders from './leaders.vue'
+import Operate from './operate.vue'
 import Footer from '../common/footer.vue'
 
 
@@ -22,6 +23,8 @@ import Footer from '../common/footer.vue'
     <Leadership />
 
     <Leaders />
+
+    <Operate />
 
     <Footer />
    

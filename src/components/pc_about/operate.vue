@@ -18,33 +18,25 @@ const toggleContent = (index = 0)=> {
   <div class="transition-container">
     <div class="content" :class="{ active: isSecondContentVisible }">
       <div class="text" v-if="!isSecondContentVisible">
-        <div>Risk</div>
+        <div>Operate</div>
         <div>Committee</div>
       </div>
       <div class="first-content">
         
         <div class="leader-card"  v-if="!(isSecondContentVisible && currentIndex !== 0)">
             <div class="name">
-              Tony Chin
+                Stephen Lukow
             </div>
-            <div class="duty" >Chief Executive Officer and</div>
-            <div class="duty" >Chief Investment Officer</div>
+            <div class="duty" >General Counsel </div>
 
             <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" @click="toggleContent(0)"></div>
         </div>
         <div class="leader-card"   v-if="!(isSecondContentVisible && currentIndex !== 1)">
             <div class="name">
-              U-Lipp Tong
+                Jackel Chow
             </div>
-            <div class="duty" >Director of Risk - FICC</div>
+            <div class="duty" >Head of Operations</div>
             <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" @click="toggleContent(1)"></div>
-        </div>
-        <div class="leader-card"   v-if="!(isSecondContentVisible && currentIndex !== 2)">
-            <div class="name">
-              Alex Ng
-            </div>
-            <div class="duty" >Director of Risk - Equity</div>
-            <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" @click="toggleContent(2)"></div>
         </div>
 
       </div>
@@ -52,30 +44,25 @@ const toggleContent = (index = 0)=> {
       <div class="second-content">
         <!-- 第二张图片的内容 -->
         <div v-if="currentIndex === 0">
-          <div class="text">Tony Chin is the Founder, CEO and CIO of Infini Capital.</div>
           <div class="text">
-            Before founding Infini Capital in 2015, he was a Partner at GCS Capital, a Hong Kong based Private Equity firm with a focus on buyout and restructuring opportunities in financial sector within Asia. He started his career in the investment banking division at Morgan Stanley and HSBC, with a focus on Mergers and Acquisitions in the TMT sector.
+            Stephen is responsible for the provision of in-house advice on a range of legal and compliance matters within Infini Capital. He was previously Asian General Counsel at ExodusPoint. Prior to his time at ExodusPoint, he was Regional Head of Trading Agreements at Bank of America. He also led the legal team for structured credit transactions in New York and founded and led Asian fixed income legal team in Tokyo during his time in Lehman Brothers. 
+
           </div>
           <div class="text">
-            He holds a BA in Economics from the University of Michigan, Ann Arbor. 
+            He received his J.D. from Harvard Law School in 1993 and Bachelor of Arts degrees from Brown University in 1986.
           </div>
         </div>
         <div v-if="currentIndex === 1">
           <div class="text">
-            U-Lipp is responsible for establishing a risk mandate and monitoring risk limit parameters for the FICC-related strategies. He was previously a Vice President of Investment Risk at JP Morgan Asset Management, an Associate Director of Risk Analysis at Dymon Asia and a Risk Officer at Brevan Howard. 
+            Jackel is leading the integration of external trading platforms and facilitating the interaction between trading and non-trading functions. He was previously a member of the Operations Committee and the Best Execution/Risk Committee at Ovata Capital and Folger Hill. He also worked in trading desk operations at Barclays, Morgan Stanley, and Goldman Sachs. 
+
           </div>
           <div class="text">
-            He holds a Master of Finance, a Master of Advanced Mechanical Engineering, and a Bachelor's degree in Mechanical Engineering from Imperial College.
+            He holds a Master's Degree in Financial Engineering from the University of Hong Kong and a Bachelor's degree from The Hong Kong University of Science and Technology, as well as a law degree from the University of London. He is a CFA and FRM Charter Holder.
+
           </div>
         </div>
-        <div v-if="currentIndex === 2">
-          <div class="text">
-            Alex oversees risk management for equity-related strategies. Previously, he held a senior risk position at Polymer, managing risk identification, assessment, and mitigation. Before that, he was a Vice President at MSCI.
-          </div>
-          <div class="text">
-            He holds an MBA and a BBA from The Hong Kong University of Science and Technology and is a CFA and FRM Charter Holder.
-          </div>
-        </div>
+       
       </div>
     </div>
   </div>
@@ -95,10 +82,13 @@ const toggleContent = (index = 0)=> {
     height: 100%;
     overflow: hidden;
     font-size: 58px;
+    background: #f8f9fa;
     > .text {
-      margin: 700px 0 0 10%;
-      color: #0a3a5e;
-      font-weight: 700;
+        position: absolute;
+        right: 15%;
+        margin: 700px 0 0 10%;
+        color: #0a3a5e;
+        font-weight: 700;
     }
     
     /* 初始状态 */
@@ -107,27 +97,27 @@ const toggleContent = (index = 0)=> {
   .first-content, .second-content {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     height: 100%;
     // padding: 20px;
     box-sizing: border-box;
     // background-color: #0a3a5e; /* 设置背景颜色 */
     color: white;
     transition: transform 1s ease;
-    clip-path: polygon(0% 0, 100% 0, 100% 100%, 20% 100%); /* 定义多边形的剪裁路径 */
+    clip-path: polygon(0% 0, 100% 0, 80% 100%, 0% 100%); /* 定义多边形的剪裁路径 */
   }
   .first-content {
     transform: translateX(0);
     width: 75%;
-    display: flex;
+    // display: flex;
     background-color: #0a3a5e;
     // justify-content: ;
-    flex-wrap: wrap;
-    padding-left: 20%;
+    // flex-wrap: wrap;
+    padding-left: 25%;
     .leader-card {
       padding: 100px 0 0;
       box-sizing: border-box;
-      width: 40%;
+    //   width: 40%;
       height: 400px;
       .name {
         font-size: 58px;
@@ -154,7 +144,7 @@ const toggleContent = (index = 0)=> {
   .second-content {
     width: 75%;
     background-color: #3498db;
-    transform: translateX(100%); /* 初始位置在屏幕右侧外 */
+    transform: translateX(-100%); /* 初始位置在屏幕右侧外 */
     font-size: 22px;
     padding: 300px 0 0;
     .text {
@@ -164,8 +154,8 @@ const toggleContent = (index = 0)=> {
 
   /* 切换到第二张内容 */
   .content.active .first-content {
-    transform: translateX(-30%); /* 第一个内容向左移出屏幕 */
-    padding-left: 6%;
+    transform: translateX(30%); /* 第一个内容向左移出屏幕 */
+    padding-left: 55%;
   }
 
   /* 切换到第二张内容 */

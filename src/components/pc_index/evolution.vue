@@ -79,8 +79,9 @@ onUnmounted(() => {
           <div>Evolution</div>
         </div>
         <p class="text">We continually challenge the status quo, upgrade our institutionalized infrastructure and strategically expand across diverse high-Sharpe strategies.</p>
-        <p class="text">Our entrepreneurial spirit gives us agility and resilience, enabling us to prosper amidst the ever-shifting market.<span @click="handleOpen">展开</span></p>
-        
+        <p class="text">Our entrepreneurial spirit gives us agility and resilience, enabling us to prosper amidst the ever-shifting market.</p>
+
+        <div class="arrow"><img @click="handleOpen" src="../../assets/ic_website_layout_v1B.png"></div>
       </div>
       <Transition name="timeline">
         <div class="timeline-container" id="timeline-container">
@@ -105,7 +106,7 @@ onUnmounted(() => {
                   <p class="description">Licensed with the Hong Kong </p>
                   <p class="description">Securities & Futures Commission</p>
                   <p class="date">Jun 2019</p>
-                  <p class="description">Established proprietary fund <span @click="handleClose">收起</span></p>
+                  <p class="description">Established proprietary fund</p>
                 </div>
                 <div class="content">
                 
@@ -140,6 +141,7 @@ onUnmounted(() => {
               </div>
             </div>
           </section>
+          <div class="arrow"><img @click="handleClose" src="../../assets/ic_website_layout_v1B.png"></div>
         </div>
       </Transition>
     </section>
@@ -203,32 +205,46 @@ onUnmounted(() => {
     overflow: hidden;
     clip-path: polygon(33.5% 0, 100% 0, 100% 100%, 0 100%); /* 定义多边形的剪裁路径 */
     .title {
-      font-size: 58px;
+      font-size: 78px;
       width:45%;
       margin: 25% 35% 3%;
     }
     .text {
-      font-size: 22;
+      font-size: 32px;
       width: 45%;
       margin: 1% 35%;
     }
+
+    .arrow {
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        height: 100px;
+        margin: 100px 75%;
+        img {
+          width: 80px;
+          transition: transform 1s ease;
+          cursor: pointer;
+          transform: rotate(180deg);
+        }
+      }
   }
   .timeline-container::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 100px;
-    width: 100%;
+    left: 0;
+    width: 28%;
     height: 100%;
-    background-color: #1a3a5f; /* 替换颜色 */
-    clip-path: polygon(23% 0, 100% 0, 100% 100%, 0 100%); /* 根据需要调整多边形路径 */
+    background-color: #3498db; /* 替换颜色 */
+    clip-path: polygon(23% 0, 100% 0, 19% 100%, 0 100%); /* 根据需要调整多边形路径 */
 }
   .timeline-container {
     position: absolute;
     right: -85%;
     top: 0;
     width: 85%;
-    background:  #3498db;
+    background:  #1a3a5f;
     // width: 100%;
     height: 100%;
     display: flex;
@@ -237,16 +253,21 @@ onUnmounted(() => {
     // align-items: center;
     overflow: hidden;
     clip-path: polygon(23% 0, 100% 0, 100% 100%, 0 100%); /* 定义多边形的剪裁路径 */
-    padding-top: 6%;
+    padding-top: 10%;
     box-sizing: border-box;
-    .timeline-section {
-      margin-bottom: 40px;
-    }
 
-    .timeline-section h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
+    .arrow {
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        height: 100px;
+        margin: 100px 85%;
+        img {
+          width: 80px;
+          transition: transform 1s ease;
+          cursor: pointer;
+        }
+      }
 
     .sub-title {
       width: 40%;
@@ -261,14 +282,15 @@ onUnmounted(() => {
       display: flex;
       align-items: center;
       position: relative;
-      margin: 5% 0 5% 40%;
+      margin: 2% 0 5% 40%;
       // padding-top: 10px;
     }
 
     .title {
       width: 40%;
       margin: 0% 0 0% 40%;
-      font-size: 58px;
+      font-size: 48px;
+      color: #fff;
     }
 
     .timeline::before {

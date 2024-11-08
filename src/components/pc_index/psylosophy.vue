@@ -39,21 +39,21 @@ onUnmounted(() => {
       <div class="title">Philosophy & Values</div>
       <div class="icons">
         <div class="icon">
-          <img src="../../assets/ic_website_layout_v1B-27.png" alt="">
+          <img src="../../assets/ic_website_layout_v1B-20.png" alt="">
           <div>Discipline</div>
         </div>
         <div class="icon">
-          <img src="../../assets/ic_website_layout_v1B-27.png" alt="">
+          <img src="../../assets/ic_website_layout_v1B-21.png" alt="">
           <div>Entrepreneurial </div>
           <div>Spirit</div>
         </div>
         <div class="icon">
-          <img src="../../assets/ic_website_layout_v1B-27.png" alt="">
+          <img src="../../assets/ic_website_layout_v1B-22.png" alt="">
           <div>Adaptability</div>
           
         </div>
         <div class="icon">
-          <img src="../../assets/ic_website_layout_v1B-27.png" alt="">
+          <img src="../../assets/ic_website_layout_v1B-23.png" alt="">
           <div>Respect</div>
           
         </div>
