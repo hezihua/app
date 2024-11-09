@@ -145,8 +145,8 @@ const toggleContent = (index = 0)=> {
     width: 75%;
     background-color: #3498db;
     transform: translateX(-100%); /* 初始位置在屏幕右侧外 */
-    font-size: 22px;
-    padding: 300px 0 0;
+    font-size: 36px;
+    padding: 260px 0 0;
     .text {
       padding: 20px 25%;
     }

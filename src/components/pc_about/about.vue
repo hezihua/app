@@ -56,15 +56,25 @@ onUnmounted(() => {
             <div class="features">
 
                 <div class="feature">First Asian Hedge Fund with Presence in Abu Dhabi</div>
-                <div class="feature">Proprietary Fund DNA Prioritizing Capital Preservation and High-Quality Returns</div>
+                <div class="feature color">Proprietary Fund DNA Prioritizing Capital Preservation and High-Quality Returns</div>
                 <div class="feature">Substantial Internal Investment to Ensure Alignment of Interest with Investors</div>
-                <div class="feature">Bottom-up Construction of Fund Infrastructure Enables Agility</div>
+                <div class="feature color">Bottom-up Construction of Fund Infrastructure Enables Agility</div>
             </div>
         </div>
     </div>
   </template>
   
   <style scoped lang="scss">
+
+  /* 定义动画 */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1.0);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
   .about-us {
     // background-color: #e0e8f0;
     // text-align: center;
@@ -118,6 +128,14 @@ onUnmounted(() => {
             align-items: center;
             text-align: center;
             font-size: 32px;
+            cursor: pointer;
+            
+        }
+        .color {
+          background: #3498db;
+        }
+        .feature:hover {
+          animation: zoomIn 1s ease-out forwards;
         }
     }
   }

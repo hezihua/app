@@ -68,9 +68,10 @@ import { ref, onMounted, watch, onUnmounted } from 'vue';
         }
         .border {
             height: 80px;
-            width: 300px;
+            width: 450px;
             border-left: 1px solid #fff;
-            margin: 40px auto;
+            transform: translateX(225px);
+            margin: 40px 0;
 
         }
     }
