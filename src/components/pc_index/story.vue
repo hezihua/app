@@ -111,7 +111,7 @@ onUnmounted(() => {
       margin: 25% 15% 3%;
     }
     .text {
-      font-size: 22px;
+      font-size: 26px;
       width: 45%;
       margin: 1% 15%;
     }
