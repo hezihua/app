@@ -61,7 +61,7 @@ import Footer from '../common/footer.vue'
         border-bottom: 1px solid #fff;
         
         font-size: 78px;
-        height: 260px;
+        height: 400px;
         display: flex;
         justify-content: center;
         align-items: end;
