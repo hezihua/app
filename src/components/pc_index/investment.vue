@@ -82,9 +82,9 @@ onUnmounted(() => {
     top: 50%;
     right: 0;
     width: 70%; /* 放大一点以防旋转时背景漏出 */
-    height: 102%;
+    height: 100%;
     background-image: url('../../assets/ExcellentPeople.jpg'); /* 背景图路径 */
-    background-size: 102% 102%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
     transform-origin: center;
