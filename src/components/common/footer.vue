@@ -52,11 +52,11 @@ const navigateTo = (route)=> {
         padding-top: 100px;
         .logo {
             
-            font-size: 58px;
+            font-size: 48px;
             cursor: pointer;
         }
         .links {
-            font-size: 46px;
+            font-size: 36px;
             display: flex;
             .item {
                 margin-right: 60px;
@@ -66,9 +66,10 @@ const navigateTo = (route)=> {
                 cursor: pointer;
             }
             .login {
-                padding: 10px 40px;
+                padding: 10px 20px;
                 border-radius: 60px;
-                height: 60px;
+                height: 50px;
+                font-size: 36px;
                 background: #1a3a5f;
                 color: #fff;
                 display: flex;
@@ -87,7 +88,7 @@ const navigateTo = (route)=> {
     }
     .legal {
         display: flex;
-        font-size: 46px;
+        font-size: 36px;
         .item {
             margin-right: 60px;
             display: flex;

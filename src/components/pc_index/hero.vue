@@ -98,6 +98,7 @@ onUnmounted(() => {
 
 /* 顶部背景 */
 .hero {
+  position: relative;
   .fade-enter-active,
   .fade-leave-active {
     transition: opacity 2s ease;

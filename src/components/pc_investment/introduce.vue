@@ -41,7 +41,7 @@ import { ref, onMounted, watch, onUnmounted } from 'vue';
         width: 70%;
         padding: 0 0 0 10%;
         .title {
-            font-size: 98px;
+            font-size: 78px;
             margin: 320px 0 180px;
 
         }

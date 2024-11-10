@@ -46,6 +46,7 @@ onUnmounted(() => {
   <style scoped lang="scss">
   .container {
     color: #fff;
+    position: relative;
     .about-boxes {
         background-image: url('../../assets/career.jpg'); /* 背景图路径 */
         background-size: 102% 102%;
@@ -57,7 +58,7 @@ onUnmounted(() => {
             margin-bottom: 50px;
         }
         .title {
-            font-size: 98px;
+            font-size: 78px;
             width:65%;
             margin: 20% 10% 3%;
         }

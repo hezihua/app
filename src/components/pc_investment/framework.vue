@@ -314,7 +314,7 @@ const handleClick = (index = 0) => {
         height: 1400px;
         
         .title {
-            font-size: 98px;
+            font-size: 78px;
             // margin-bottom: 200px;
         }
 

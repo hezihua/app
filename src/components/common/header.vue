@@ -38,21 +38,22 @@ const navigateTo = (route)=> {
     display: flex;
     justify-content: space-between;
     height: 200px;
+    width: 100%;
     align-items: center;
     z-index: 99;
     .logo {
-        font-size: 58px;
+        font-size: 48px;
         margin-left: 150px;
         cursor: pointer;
     }
     .menus {
         display: flex;
-        font-size: 46px;
+        font-size: 36px;
         margin-right: 100px;
         align-items: center;
         .item {
             color: #fff;
-            margin: 0 50px;
+            margin: 0 50px 0 0;
             cursor: pointer;
         }
     }

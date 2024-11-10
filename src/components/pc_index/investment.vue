@@ -52,8 +52,14 @@ onUnmounted(() => {
         <p class="text">People are the lifeblood of our business. We take pride in having cultivated an organization that is a magnet for exceptional talent.</p>
         <p class="text">At Infini Capital, our people are given an opportunity to be impactful in a highly human-centric, highly self-driven environment. We believe in providing our talent with the opportunity to thrive, which in turn leads to our investments prospering.</p>
         <div class="buttonbox">
-          <div class="button" @click="navigateTo('/about', '#leadership')">Meet the Team  +</div>
-          <div class="button" @click="navigateTo('/career')">Join Us  +</div>
+          <div class="button" @click="navigateTo('/about', '#leadership')">
+            <div class="button-text">Meet the Team</div>
+            <div  class="add">+</div>
+          </div>
+          <div class="button" @click="navigateTo('/career')">
+            <div class="button-text">Join Us</div>
+            <div class="add">+</div>
+          </div>
         </div>
         
       </div>
@@ -81,7 +87,7 @@ onUnmounted(() => {
     position: absolute;
     top: 50%;
     right: 0;
-    width: 70%; /* 放大一点以防旋转时背景漏出 */
+    width: 60%; /* 放大一点以防旋转时背景漏出 */
     height: 100%;
     background-image: url('../../assets/ExcellentPeople.jpg'); /* 背景图路径 */
     background-size: 100% 100%;
@@ -108,7 +114,7 @@ onUnmounted(() => {
     // position: absolute;
     // left: 0;
     // top: 0;
-    width: 60%;
+    width: 58%;
     
     background: #1a3a5f;
     // width: 100%;
@@ -118,14 +124,14 @@ onUnmounted(() => {
     // justify-content: center;
     // align-items: center;
     overflow: hidden;
-    clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%); /* 定义多边形的剪裁路径 */
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%); /* 定义多边形的剪裁路径 */
     .title {
-      font-size: 98px;
+      font-size: 68px;
       width:45%;
       margin: 15% 15% 5%;
     }
     .text {
-      font-size: 28px;
+      font-size: 24px;
       width: 45%;
       margin: 1% 15%;
     }
@@ -134,17 +140,29 @@ onUnmounted(() => {
       // justify-content: center;
       margin: 200px 0 0 15%;
       .button {
-        width: 350px;
-        height: 80px;
+        width: 260px;
+        height: 60px;
         color: #1a3a5f;
         background: #fff;
-        font-size: 30px;
+        font-size: 26px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         border-radius: 40px;
         margin: 0 60px 0 0;
+        box-sizing: border-box;
+        padding: 0 20px;
         cursor: pointer;
+        .button-text {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-grow: 1;
+        }
+        .add {
+          font-weight: 800;
+          font-size: 32px;
+        }
       }
     }
   }

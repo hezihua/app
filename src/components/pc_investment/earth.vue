@@ -73,10 +73,10 @@ onUnmounted(() => {
 /* 定义动画 */
 @keyframes zoomIn {
   0% {
-    transform: translate(-50%, -50%) scale(1.2) rotate(1deg);
+    transform: translate(-50%, -50%) scale(1);
   }
   100% {
-    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
@@ -121,7 +121,7 @@ onUnmounted(() => {
     // align-items: center;
     z-index: 9;
     .title {
-        font-size: 98px;
+        font-size: 78px;
         width:850px;
         margin: 15% auto 3%;
         text-align: center;

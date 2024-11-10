@@ -77,6 +77,7 @@ onUnmounted(() => {
 }
   .about-us {
     color: #fff;
+    position: relative;
     .about-boxes {
         background-image: url('../../assets/aboutus.jpg'); /* 背景图路径 */
         background-size: 102% 102%;
@@ -93,7 +94,7 @@ onUnmounted(() => {
             margin: 15% 10% 3%;
         }
         .text {
-            font-size: 36px;
+            font-size: 32px;
             width: 65%;
             margin: 0% 10%;
         }

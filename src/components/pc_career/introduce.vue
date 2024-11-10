@@ -18,7 +18,7 @@
 
       <div class="section">
         <div class="question">
-            Culture 
+            <div>Culture</div> 
             <div class="join-button">Join us</div>
         </div>
         <div class="content">
@@ -35,7 +35,7 @@
 
 <style scoped lang="scss">
 .container {
-  max-width: calc(100% - 600px);
+  max-width: calc(100% - 400px);
   margin: 0 auto;
   color: #1a1a1a;
   .divider {
@@ -50,7 +50,10 @@
     box-sizing: border-box;
     .question {
         width: 30%;
-        font-size: 78px;
+        font-size: 68px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         .join-button {
             width: 300px;
             height: 60px;

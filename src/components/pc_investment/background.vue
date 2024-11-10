@@ -49,6 +49,7 @@ onUnmounted(() => {
     // background-color: #e0e8f0;
     // text-align: center;
     color: #fff;
+    position: relative;
     .about-boxes {
         background-image: url('../../assets/aboutus.jpg'); /* 背景图路径 */
         background-size: 102% 102%;
@@ -60,7 +61,7 @@ onUnmounted(() => {
             margin-bottom: 50px;
         }
         .title {
-            font-size: 98px;
+            font-size: 78px;
             width:65%;
             margin: 20% 10% 3%;
         }

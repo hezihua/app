@@ -48,19 +48,20 @@ import Footer from '../common/footer.vue'
 
 .full-page-component {
   width: 100%;
-  min-width: 2280px;
+  min-width: 1980px;
   .container {
     padding-bottom: 200px;
     background: #1a3a5f;
     color: #fff;
+    position: relative;
     .title {
         padding: 0px 0 100px;
         width: 60%;
         margin: 0 auto;
         border-bottom: 1px solid #fff;
         
-        font-size: 98px;
-        height: 500px;
+        font-size: 78px;
+        height: 260px;
         display: flex;
         justify-content: center;
         align-items: end;

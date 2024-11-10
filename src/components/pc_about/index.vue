@@ -54,7 +54,7 @@ onMounted(async () => {
 
 .full-page-component {
   width: 100%;
-  min-width: 2280px;
+  min-width: 1980px;
 }
 
 
