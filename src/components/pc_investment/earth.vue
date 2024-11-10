@@ -23,10 +23,12 @@ const observer = new IntersectionObserver((entries) => {
     console.log(entry)
     if (entry.isIntersecting) {
       // 模块进入可视化区域
-      backgroundStyle.value.transform = 'scale(1.02)';
+      // backgroundStyle.value.transform = 'scale(1.02)';
+      zoomBackground.value.classList.add('active'); // 添加类来触发动画
     } else {
       // 模块离开可视化区域
-      backgroundStyle.value.transform = 'scale(1.0)';
+      // backgroundStyle.value.transform = 'scale(1.0)';
+      zoomBackground.value.classList.remove('active'); // 移除类来停止动画
     }
   });
 }, { threshold: [0, 1] });
@@ -92,15 +94,19 @@ onUnmounted(() => {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 102%; /* 放大一点以防旋转时背景漏出 */
-    height: 102%;
+    width: 100%; /* 放大一点以防旋转时背景漏出 */
+    height: 100%;
     background-image: url('../../assets/earth.jpg'); /* 背景图路径 */
-    background-size: 102% 102%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
     transform-origin: center;
-    transform: translate(-50%, -50%) rotate(0deg); /* 移动到中心，并设置旋转角度 */
+    // transform: translate(-50%, -50%) rotate(0deg); /* 移动到中心，并设置旋转角度 */
     // animation: zoomIn 1s ease-out forwards; /* 设置动画持续时间 */
+}
+
+.zoom-background.active::before {
+  animation: zoomIn 1s ease-out forwards; /* 应用放大动画 */
 }
 
 /* 顶部背景 */

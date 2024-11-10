@@ -240,6 +240,7 @@ const handleClick = (index = 0) => {
             transition: all 2s ease; /* 加入过渡效果 */            
             font-size: 32px;
             display: flex;
+            cursor: pointer;
             
             > div {
                 text-align: center;
@@ -325,6 +326,7 @@ const handleClick = (index = 0) => {
             // justify-content: center;
             // align-items: center;
             text-align: center;
+            
             
             transition: background-color 0.3s;
             cursor: pointer;
