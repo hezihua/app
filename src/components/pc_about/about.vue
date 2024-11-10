@@ -76,9 +76,6 @@ onUnmounted(() => {
   }
 }
   .about-us {
-    // background-color: #e0e8f0;
-    // text-align: center;
-    background: #f8f9fa;
     color: #fff;
     .about-boxes {
         background-image: url('../../assets/aboutus.jpg'); /* 背景图路径 */

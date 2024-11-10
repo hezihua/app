@@ -70,7 +70,6 @@ onUnmounted(() => {
 <template>
     <!-- Constant Evolution Section -->
     <section class="section evolution evolution-background" ref="zoomBackground"  :style="{ height: calculatedHeight + 'px' }">
-      <!-- <div class="test">test</div> -->
       <div class="content">
 
 
@@ -344,14 +343,6 @@ onUnmounted(() => {
     .timeline-item:last-child {
       margin-right: 0;
     }
-  }
-  .test {
-    width: 100px;
-    height: 100px;
-    background: red;
-    position: absolute;
-    right: -200px;
-    top: 0;
   }
 }
 

@@ -230,7 +230,7 @@ const handleClick = (index = 0) => {
             position: absolute;
             left: 0;
             top: 0;
-            background-color: #005a8c;
+            background-color: #1a3a5f;
             color: white;
             padding: 120px 0px 0;
             box-sizing: border-box;
@@ -308,7 +308,7 @@ const handleClick = (index = 0) => {
         right: 0;
         top: 0;
         width: 70%;
-        background: #005a8c;
+        background: #1a3a5f;
         color: #fff;
         height: 1400px;
         

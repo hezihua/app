@@ -45,9 +45,6 @@ onUnmounted(() => {
   
   <style scoped lang="scss">
   .container {
-    // background-color: #e0e8f0;
-    // text-align: center;
-    background: #f8f9fa;
     color: #fff;
     .about-boxes {
         background-image: url('../../assets/career.jpg'); /* 背景图路径 */

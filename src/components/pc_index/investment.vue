@@ -72,10 +72,24 @@ onUnmounted(() => {
 
 .investment-background {
   width: 100%;
-  background-image: url('../../assets/ExcellentPeople.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
+  position: relative;
+  overflow: hidden;
+}
+
+.investment-background::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 70%; /* 放大一点以防旋转时背景漏出 */
+    height: 102%;
+    background-image: url('../../assets/ExcellentPeople.jpg'); /* 背景图路径 */
+    background-size: 102% 102%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform-origin: center;
+    transform: translate(0, -50%) rotate(0deg); /* 移动到中心，并设置旋转角度 */
+    // animation: zoomIn 1s ease-out forwards; /* 设置动画持续时间 */
 }
 
 
@@ -106,12 +120,12 @@ onUnmounted(() => {
     overflow: hidden;
     clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%); /* 定义多边形的剪裁路径 */
     .title {
-      font-size: 68px;
+      font-size: 98px;
       width:45%;
-      margin: 10% 15% 3%;
+      margin: 15% 15% 5%;
     }
     .text {
-      font-size: 26px;
+      font-size: 28px;
       width: 45%;
       margin: 1% 15%;
     }
