@@ -41,15 +41,15 @@ const navigateTo = (route)=> {
   .footer {
     padding: 0 150px;
     height: 400px;
-    background-color: #f8f9fa;
-    border-top: 1px solid #dee2e6;
+    background-color: #fff;
+    // border-top: 1px solid #dee2e6;
     
-    color: #007bff;
+    color: #1a3a5f;
     .menus-row {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-top: 50px;
+        padding-top: 100px;
         .logo {
             
             font-size: 58px;
@@ -66,11 +66,10 @@ const navigateTo = (route)=> {
                 cursor: pointer;
             }
             .login {
-                // margin: 20px 0;
                 padding: 10px 40px;
                 border-radius: 60px;
                 height: 60px;
-                background: #007bff;
+                background: #1a3a5f;
                 color: #fff;
                 display: flex;
                 justify-content: center;
