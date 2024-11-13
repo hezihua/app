@@ -14,7 +14,7 @@ const count = ref(0)
 
 <script>
 import PCComponent from '../components/pc_index/index.vue';
-import MobileComponent from '../components/h5_index.vue';
+import MobileComponent from '../components/h5_index/index.vue';
 import Vue3DeviceDetector from 'vue3-device-detector';
 import { initRootFontSize } from '../utils/fontsize';
 
