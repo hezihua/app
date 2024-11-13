@@ -156,7 +156,7 @@ onUnmounted(() => {
 
 .evolution-background {
   width: 100%;
-  background-image: url('../../assets/story.jpg');
+  background-image: url('../../assets/Constant_Evolution.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -189,13 +189,9 @@ onUnmounted(() => {
   position: relative;
   overflow: hidden;
   > .content {
-    // position: absolute;
-    // left: 0;
-    // top: 0;
     width: 60%;
     
     background: #3498db;
-    // width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -215,11 +211,13 @@ onUnmounted(() => {
     }
 
     .arrow {
+        position: absolute;
+        right: 0;
+        bottom: 0;
         display: flex;
-        // justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         height: 100px;
-        margin: 100px 75%;
+        margin: 100px 10%;
         img {
           width: 80px;
           transition: transform 1s ease;
@@ -256,11 +254,14 @@ onUnmounted(() => {
     box-sizing: border-box;
 
     .arrow {
+        position: absolute;
+        right: 0;
+        bottom: 0;
         display: flex;
-        // justify-content: center;
         align-items: center;
+        justify-content: flex-end;
         height: 100px;
-        margin: 100px 85%;
+        margin: 100px 10%;
         img {
           width: 80px;
           transition: transform 1s ease;

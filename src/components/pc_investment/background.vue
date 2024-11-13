@@ -51,7 +51,7 @@ onUnmounted(() => {
     color: #fff;
     position: relative;
     .about-boxes {
-        background-image: url('../../assets/aboutus.jpg'); /* 背景图路径 */
+        background-image: url('../../assets/Investment_Approach.jpg'); /* 背景图路径 */
         background-size: 102% 102%;
         background-repeat: no-repeat;
         background-position: center;
