@@ -22,7 +22,7 @@
   <style scoped lang="scss">
   .section {
     height: 100vh;
-    position: relative;
+    position: sticky;
     overflow: hidden;
     border-radius: 20rem 20rem 0 0;
   }
@@ -30,7 +30,7 @@
   
   /* 模拟后一个 section 的内容逐步覆盖当前 section */
   .section + .section .content {
-    // position: relative;
+    // position: sticky;
     top: 0;
     // height: 100vh;
     z-index: 3;
@@ -38,7 +38,8 @@
 
 .story {
   
-   
+  position: sticky;
+  top: 0;
   .content {
     width: 100vw;
     height: 100vh;
@@ -52,7 +53,6 @@
     background-position: center center;
     z-index: 2;
     color: #fff;
-    position: relative;
     // will-change: position;
     /* 使用 transform 控制内容动画 */
     // transition: transform 0.5s ease;

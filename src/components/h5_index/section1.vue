@@ -31,7 +31,7 @@
 
 @keyframes zoomIn {
   0% {
-    transform: translate(0, 0) scale(1.01) rotate(0deg);
+    transform: translate(0, 0) scale(1.1) rotate(0deg);
   }
   100% {
     transform: translate(0, 0) scale(1) rotate(0deg);
@@ -43,32 +43,33 @@
     overflow: hidden;
   }
 
-//   .zoom-background {
-//   width: 100%;
-//   position: relative;
-//   overflow: hidden;
-// }
-// .zoom-background::before {
-//     content: "";
-//     position: absolute;
-//     // top: 50vh;
-//     // left: 50vw;
-//     width: 100vw; /* 放大一点以防旋转时背景漏出 */
-//     height: 100vh;
-//     background-image: url('../../assets/landing_earth.jpg'); /* 背景图路径 */
-//     background-size: cover;
-//     background-repeat: no-repeat;
-//     // background-position: 20% 0;
-//     transform-origin: center;
-//     // transform: translate(-50vw, -50vh) rotate(0deg); /* 移动到中心，并设置旋转角度 */
-//     animation: zoomIn 1s ease-out forwards; /* 设置动画持续时间 */
-// }
+  .zoom-background {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.zoom-background::before {
+    content: "";
+    position: absolute;
+    // top: 50vh;
+    // left: 50vw;
+    width: 100vw; /* 放大一点以防旋转时背景漏出 */
+    height: 100vh;
+    background-image: url('../../assets/landing_earth.jpg'); /* 背景图路径 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-position: 20% 0;
+    transform-origin: center;
+    // transform: translate(-50vw, -50vh) rotate(0deg); /* 移动到中心，并设置旋转角度 */
+    // animation: zoomIn 1s ease-out forwards; /* 设置动画持续时间 */
+}
 
 /* 顶部背景 */
 .hero {
-  
+  position: sticky;
+  top: 0;
   .content {
-    position: fixed;
+    position: absolute;
     width: 100vw;
     height: 100vh;  
     display: flex;
@@ -77,14 +78,15 @@
     flex-wrap: wrap;
     font-size: 2em;
     color: white;
-    background-image: url('../../assets/landing_earth.jpg'); /* 背景图路径 */
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform-origin: center;
+    // background-image: url('../../assets/landing_earth.jpg'); /* 背景图路径 */
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // transform-origin: center;
+    // animation: zoomIn 2s ease-out forwards; /* 设置动画持续时间 */
     // background-color: #4a90e2;
     z-index: 1;
     /* 使用 transform 控制内容动画 */
-    transition: transform 0.5s ease;
+    // transition: transform 0.5s ease;
     .border {
       background: #fff;
       width: 80vw;

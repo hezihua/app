@@ -5,6 +5,11 @@
       <Section3 />
       <Section4 />
       <Section5 />
+      <!-- <div class="sticky-box">1</div>
+      <div class="sticky-box">2</div>
+      <div class="sticky-box">3</div>
+      <div class="sticky-box">4</div>
+      <div class="sticky-box">5</div> -->
     </div>
   </template>
   
@@ -21,47 +26,47 @@
       let scrollPosition = window.scrollY;
       let viewportHeight = window.innerHeight;
       console.log(scrollPosition, viewportHeight, 'viewsss')
-      if(scrollPosition > 1 * viewportHeight) {
-        let story = document.querySelector('.story')
-        let content  = story.querySelector('.content')
-        console.log(story, content)
-        content.classList.add('scroll')
-      } else {
-        let story = document.querySelector('.story');
-        let content = story.querySelector('.content');
+      // if(scrollPosition > 1 * viewportHeight) {
+      //   let story = document.querySelector('.story')
+      //   let content  = story.querySelector('.content')
+      //   console.log(story, content)
+      //   content.classList.add('scroll')
+      // } else {
+      //   let story = document.querySelector('.story');
+      //   let content = story.querySelector('.content');
 
-        // 滚动回去时移除 scroll 类
-        content.classList.remove('scroll');
-      }
+      //   // 滚动回去时移除 scroll 类
+      //   content.classList.remove('scroll');
+      // }
 
-      if(scrollPosition > 2.2 * viewportHeight) {
-        let section3 = document.querySelector('.section3')
-        let content  = section3.querySelector('.content')
-        console.log(section3, content)
-        content.classList.add('scroll')
-        content.style.top = `-${0.2 * viewportHeight}px`
-      } else {
-        let section3 = document.querySelector('.section3');
-        let content = section3.querySelector('.content');
-        content.style.top = `-0px`
+      // if(scrollPosition > 2.2 * viewportHeight) {
+      //   let section3 = document.querySelector('.section3')
+      //   let content  = section3.querySelector('.content')
+      //   console.log(section3, content)
+      //   content.classList.add('scroll')
+      //   content.style.top = `-${0.2 * viewportHeight}px`
+      // } else {
+      //   let section3 = document.querySelector('.section3');
+      //   let content = section3.querySelector('.content');
+      //   content.style.top = `-0px`
 
-        // 滚动回去时移除 scroll 类
-        content.classList.remove('scroll');
-      }
+      //   // 滚动回去时移除 scroll 类
+      //   content.classList.remove('scroll');
+      // }
 
-      if(scrollPosition > 3.2 * viewportHeight) {
-        let section4 = document.querySelector('.section4')
-        let content  = section4.querySelector('.content')
-        console.log(section4, content)
-        content.classList.add('scroll')
+      // if(scrollPosition > 3.2 * viewportHeight) {
+      //   let section4 = document.querySelector('.section4')
+      //   let content  = section4.querySelector('.content')
+      //   console.log(section4, content)
+      //   content.classList.add('scroll')
         
-      } else {
-        let section4 = document.querySelector('.section4');
-        let content = section4.querySelector('.content');
+      // } else {
+      //   let section4 = document.querySelector('.section4');
+      //   let content = section4.querySelector('.content');
 
-        // 滚动回去时移除 scroll 类
-        content.classList.remove('scroll');
-      }
+      //   // 滚动回去时移除 scroll 类
+      //   content.classList.remove('scroll');
+      // }
     }
   onMounted(() => {
     sections.value = document.querySelectorAll('.section');
@@ -73,14 +78,14 @@
   </script>
   
   <style lang="scss">
+
   .container {
-    height: 500vh;
-    overflow-y: scroll;
-    font-size: 18px;
-    
-  }
-  .scroll {
-    position: fixed!important;
-  }
+    background: #eee;
+    width: 100vw;
+
+    height: 520vh;
+    margin: 0 auto;
+    overflow: visible;
+}
   </style>
   

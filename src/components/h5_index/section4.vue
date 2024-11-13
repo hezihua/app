@@ -14,20 +14,20 @@
   <style scoped>
   .section {
     height: 100vh;
-    position: relative;
+    position: sticky;
     overflow: hidden;
     border-radius: 20rem 20rem 0 0;
+    position: sticky;
+    top: 0;
   }
   
   .content {
     width: 100vw;
-    position: relative;
-    top: 0;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2em;
+    font-size: 20px;
     color: white;
     background-color: #4a90e2;
     z-index: 4;
@@ -37,7 +37,7 @@
   
   /* 模拟后一个 section 的内容逐步覆盖当前 section */
   .section + .section .content {
-    position: relative;
+    position: sticky;
     top: 0;
     height: 100vh;
     background-color: green;
