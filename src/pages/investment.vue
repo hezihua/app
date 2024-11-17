@@ -14,7 +14,7 @@ const count = ref(0)
 
 <script>
 import PCComponent from '../components/pc_investment/index.vue';
-import MobileComponent from '../components/h5_investment.vue';
+import MobileComponent from '../components/h5_investment/index.vue';
 import Vue3DeviceDetector from 'vue3-device-detector';
 
 export default {

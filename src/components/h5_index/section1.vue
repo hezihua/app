@@ -1,3 +1,11 @@
+
+<script setup>
+import { ref, onMounted, watch, onUnmounted } from 'vue';
+// import Header from '../common/h5_header.vue'
+
+
+
+</script>
 <!-- Section1.vue -->
 <template>
     <section class="section hero zoom-background" ref="zoomBackground" >
@@ -21,11 +29,6 @@
     </section>
   </template>
   
-  <script>
-  export default {
-    name: 'Section1',
-  };
-  </script>
   
   <style scoped lang="scss">
 
@@ -41,6 +44,7 @@
     height: 100vh;
     // position: relative;
     overflow: hidden;
+    position: relative;
   }
 
   .zoom-background {
