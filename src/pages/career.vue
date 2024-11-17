@@ -16,6 +16,7 @@ const count = ref(0)
 import PCComponent from '../components/pc_career/index.vue';
 import MobileComponent from '../components/h5_career/index.vue';
 import Vue3DeviceDetector from 'vue3-device-detector';
+import { initRootFontSize } from '../utils/fontsize';
 
 export default {
   components: {
@@ -30,6 +31,9 @@ export default {
   created() {
     console.log(Vue3DeviceDetector().isMobile, 'Vue3DeviceDetector.isMobile')
     this.currentComponent = Vue3DeviceDetector().isMobile ? MobileComponent : PCComponent;
+    if(Vue3DeviceDetector().isMobile) {
+      initRootFontSize()
+    }
   }
 };
 </script>
