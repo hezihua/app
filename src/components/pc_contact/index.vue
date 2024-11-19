@@ -48,7 +48,7 @@ import Footer from '../common/footer.vue'
 
 .full-page-component {
   width: 100%;
-  min-width: 1980px;
+  min-width: 1900px;
   .container {
     padding-bottom: 200px;
     background: #1a3a5f;
@@ -60,7 +60,7 @@ import Footer from '../common/footer.vue'
         margin: 0 auto;
         border-bottom: 1px solid #fff;
         
-        font-size: 78px;
+        font-size: 72px;
         height: 400px;
         display: flex;
         justify-content: center;

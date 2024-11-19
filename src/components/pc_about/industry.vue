@@ -23,7 +23,7 @@
     text-align: center;
     padding-bottom: 80px;
     .title {
-        font-size: 78px;
+        font-size: 72px;
         padding: 80px 0;
         display: flex;
         justify-content: center;

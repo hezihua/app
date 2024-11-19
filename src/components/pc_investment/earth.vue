@@ -121,13 +121,13 @@ onUnmounted(() => {
     // align-items: center;
     z-index: 9;
     .title {
-        font-size: 78px;
+        font-size: 72px;
         width:850px;
         margin: 15% auto 3%;
         text-align: center;
     }
     .text {
-        font-size: 62px;
+        font-size: 52px;
         width: 65%;
         margin: 0% auto;
     }

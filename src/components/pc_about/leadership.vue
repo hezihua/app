@@ -60,7 +60,7 @@ onUnmounted(() => {
     .left {
         width: 50%;
         .title {
-            font-size: 78px;
+            font-size: 72px;
             margin-top: 280px;
 
         }

@@ -221,22 +221,22 @@ const handleClick = (index = 0) => {
     .features {
         display: flex;
         justify-content: center;
-        width: 2000px;
+        width: 1410px;
         margin: 0 auto;
         padding: 0 0 80px;
         position: relative;
-        height: 380px;
+        height: 300px;
         .feature {
             position: absolute;
             left: 0;
             top: 0;
             background-color: #1a3a5f;
             color: white;
-            padding: 120px 0px 0;
+            padding: 80px 0px 0;
             box-sizing: border-box;
             border-radius: 20px;
-            width: 380px;
-            height: 380px;
+            width: 300px;
+            height: 300px;
             transition: all 2s ease; /* 加入过渡效果 */            
             font-size: 32px;
             display: flex;
@@ -245,7 +245,7 @@ const handleClick = (index = 0) => {
             > div {
                 text-align: center;
                 margin: 0 auto;
-                width: 380px;
+                width: 300px;
             }
             &.full-width {
                 width: 100%; /* 宽度撑满 */
@@ -253,7 +253,7 @@ const handleClick = (index = 0) => {
             .detail {
                 flex-grow: 1;
                 .content {
-                    font-size: 42px;
+                    font-size: 32px;
                     width: 70%;
                     padding: 0 15%;
                     animation: showcontent 1s ease-out forwards;
@@ -266,15 +266,15 @@ const handleClick = (index = 0) => {
         }
 
         .feature:nth-child(2) {
-            transform: translateX(540px);
+            transform: translateX(370px);
         }
 
         .feature:nth-child(3) {
-            transform: translateX(1080px);
+            transform: translateX(740px);
         }
 
         .feature:nth-child(4) {
-            transform: translateX(1620px);
+            transform: translateX(1110px);
         }
 
         .fade-feature-enter-active {
@@ -314,7 +314,7 @@ const handleClick = (index = 0) => {
         height: 1400px;
         
         .title {
-            font-size: 78px;
+            font-size: 62px;
             // margin-bottom: 200px;
         }
 
@@ -335,7 +335,7 @@ const handleClick = (index = 0) => {
                 position: absolute;
                 left: 0;
                 top: 0;
-                font-size: 48px;
+                font-size: 42px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -353,7 +353,7 @@ const handleClick = (index = 0) => {
                 position: absolute;
                 left: 0;
                 top: 0;
-                font-size: 32px;
+                font-size: 26px;
                 display: flex;
                 justify-content: center;
                 align-items: center;

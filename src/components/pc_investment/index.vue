@@ -32,7 +32,7 @@ import Footer from '../common/footer.vue'
 
 .full-page-component {
   width: 100%;
-  min-width: 1980px;
+  min-width: 1900px;
 }
 
 

@@ -46,11 +46,11 @@
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
-    padding: 100px 0 100px;
+    padding: 60px 0;
     box-sizing: border-box;
     .question {
         width: 30%;
-        font-size: 68px;
+        font-size: 58px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -62,7 +62,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 280px 0 0 0px;
+            margin: 200px 0 0 0px;
             background-color:  #1a3a5f;
             color: #fff;
             padding: 10px 20px;
@@ -76,15 +76,17 @@
     }
     .content {
         color: #1a3a5f;
-        font-size: 52px;
+        
         width: 70%;
         .title {
             font-weight: 700;
             width: 80%;
             margin-bottom: 50px;
+            font-size: 42px;
         }
         .text {
             width: 80%;
+            font-size: 36px;
         }
     }
   }

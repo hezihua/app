@@ -37,11 +37,12 @@ import { ref, onMounted, watch, onUnmounted } from 'vue';
     display: flex;
     justify-content: space-between;
     height: 1400px;
+    padding: 0 10%;
     .left {
         width: 70%;
-        padding: 0 0 0 10%;
+        // padding: 0 0 0 10%;
         .title {
-            font-size: 78px;
+            font-size: 72px;
             margin: 320px 0 180px;
 
         }

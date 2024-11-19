@@ -42,7 +42,7 @@ import Footer from '../common/footer.vue'
 
 .full-page-component {
   width: 400vw;
-//   min-width: 1980px;
+//   min-width: 1900px;
 }
 
 
