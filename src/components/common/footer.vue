@@ -44,7 +44,7 @@ const navigateTo = (route)=> {
     background-color: #fff;
     // border-top: 1px solid #dee2e6;
     
-    color: #1a3a5f;
+    color: #093254;
     .menus-row {
         display: flex;
         align-items: center;
@@ -70,7 +70,7 @@ const navigateTo = (route)=> {
                 border-radius: 60px;
                 height: 50px;
                 font-size: 30px;
-                background: #1a3a5f;
+                background: #093254;
                 color: #fff;
                 display: flex;
                 justify-content: center;
@@ -82,7 +82,7 @@ const navigateTo = (route)=> {
     .line {
         height: 0;
         width: 100%;
-        background: #007bff;
+        background: #0b5e9c;
         padding-bottom: 1px;
         margin: 50px 0;
     }

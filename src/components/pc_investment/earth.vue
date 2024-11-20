@@ -122,6 +122,7 @@ onUnmounted(() => {
     z-index: 9;
     .title {
         font-size: 72px;
+        font-family: var(--main-font);
         width:850px;
         margin: 15% auto 3%;
         text-align: center;

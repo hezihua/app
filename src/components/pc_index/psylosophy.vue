@@ -133,9 +133,10 @@ const hideDetails = (index) => {
 
 .philosophy {
   background-color: #ffffff;
-  color: #1a3a5f;
+  color: #093254;
   .title {
-    font-size: 80px;
+    font-size: 72px;
+    font-family: var(--main-font);
     display: flex;
     justify-content: center;
     margin: 5% 0 3%;

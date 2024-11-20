@@ -25,6 +25,6 @@ const count = ref(0)
     align-items: center;
     font-size: 30rem;
     position: relative;
-    background: #005a8c;
+    background: #234c68;
 }
 </style>

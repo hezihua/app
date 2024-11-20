@@ -24,6 +24,7 @@
     padding-bottom: 80px;
     .title {
         font-size: 72px;
+        font-family: var(--main-font);
         padding: 80px 0;
         display: flex;
         justify-content: center;
@@ -48,7 +49,7 @@
             }
         }
         .border {
-            border-right: 1px solid #005a8c;
+            border-right: 1px solid #234c68;
         }
     }
   }

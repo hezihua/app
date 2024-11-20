@@ -153,7 +153,7 @@ const toggleContent = (index = 0)=> {
   }
   .second-content {
     width: 75%;
-    background-color: #3498db;
+    background-color: #234c68;
     transform: translateX(100%); /* 初始位置在屏幕右侧外 */
     font-size: 36px;
     padding: 260px 0 0;

@@ -44,7 +44,7 @@ import { ref, onMounted, watch, onUnmounted } from 'vue';
         .title {
             font-size: 72px;
             margin: 320px 0 180px;
-
+            font-family: var(--main-font);
         }
         .sub-title {
             font-size: 48px;

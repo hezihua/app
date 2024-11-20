@@ -124,11 +124,13 @@ onUnmounted(() => {
     }
     .textLeft {
       font-size: 58px;
+      font-family: var(--main-font);
       width: 685px;
       text-align: right;
     }
     .textRight {
       font-size: 58px;
+      font-family: var(--main-font);
       width: 685px;
     }
 

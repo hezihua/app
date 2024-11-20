@@ -187,7 +187,7 @@ onUnmounted(() => {
 
 
 .story, .evolution, .investment {
-  background-color: #1a3a5f; /* 根据设计图调整颜色 */
+  background-color: #093254; /* 根据设计图调整颜色 */
 }
 
 
@@ -214,7 +214,7 @@ onUnmounted(() => {
   > .content {
     width: 60%;
     
-    background: #3498db;
+    background: #234c68;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -224,6 +224,7 @@ onUnmounted(() => {
     clip-path: polygon(33.5% 0, 100% 0, 100% 100%, 0 100%); /* 定义多边形的剪裁路径 */
     .title {
       font-size: 72px;
+      font-family: var(--main-font);
       width:45%;
       margin: 25% 35% 3%;
       opacity: 0;
@@ -258,7 +259,7 @@ onUnmounted(() => {
     left: 0;
     width: 28%;
     height: 100%;
-    background-color: #3498db; /* 替换颜色 */
+    background-color: #234c68; /* 替换颜色 */
     clip-path: polygon(23% 0, 100% 0, 19% 100%, 0 100%); /* 根据需要调整多边形路径 */
 }
   .timeline-container {
@@ -266,7 +267,7 @@ onUnmounted(() => {
     right: -85%;
     top: 0;
     width: 85%;
-    background:  #1a3a5f;
+    background:  #093254;
     // width: 100%;
     height: 100%;
     display: flex;

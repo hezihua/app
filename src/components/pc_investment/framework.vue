@@ -208,13 +208,14 @@ const handleClick = (index = 0) => {
 
     .title {
         font-size: 68px;
+        font-family: var(--main-font);
         text-align: center;
         width: 800px;
         margin: 200px auto 60px;
     }
     .introduce {
         font-size: 32px;
-        color: #005a8c;
+        color: #234c68;
         margin: 0px 0 100px;
         text-align: center;
     }
@@ -230,7 +231,7 @@ const handleClick = (index = 0) => {
             position: absolute;
             left: 0;
             top: 0;
-            background-color: #1a3a5f;
+            background-color: #093254;
             color: white;
             padding: 80px 0px 0;
             box-sizing: border-box;
@@ -290,7 +291,7 @@ const handleClick = (index = 0) => {
         }
 
         .color {
-          background: #3498db;
+          background: #234c68;
         }
 
         
@@ -309,12 +310,13 @@ const handleClick = (index = 0) => {
         right: 0;
         top: 0;
         width: 70%;
-        background: #1a3a5f;
+        background: #093254;
         color: #fff;
         height: 1400px;
         
         .title {
             font-size: 62px;
+            font-family: var(--main-font);
             // margin-bottom: 200px;
         }
 

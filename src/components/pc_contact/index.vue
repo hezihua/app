@@ -51,7 +51,7 @@ import Footer from '../common/footer.vue'
   min-width: 1900px;
   .container {
     padding-bottom: 200px;
-    background: #1a3a5f;
+    background: #093254;
     color: #fff;
     position: relative;
     .title {
@@ -61,6 +61,7 @@ import Footer from '../common/footer.vue'
         border-bottom: 1px solid #fff;
         
         font-size: 72px;
+        font-family: var(--main-font);
         height: 400px;
         display: flex;
         justify-content: center;

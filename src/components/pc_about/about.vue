@@ -90,6 +90,7 @@ onUnmounted(() => {
         }
         .title {
             font-size: 72px;
+            font-family: var(--main-font);
             width:65%;
             margin: 15% 10% 3%;
         }
@@ -105,7 +106,7 @@ onUnmounted(() => {
     
     .introduce {
         font-size: 32px;
-        color: #005a8c;
+        color: #234c68;
         margin: 100px 0 100px;
         text-align: center;
     }
@@ -116,7 +117,7 @@ onUnmounted(() => {
         flex-wrap: wrap;
         padding: 0 0 80px;
         .feature {
-            background-color: #005a8c;
+            background-color: #234c68;
             color: white;
             padding: 40px;
             border-radius: 20px;
@@ -130,7 +131,7 @@ onUnmounted(() => {
             
         }
         .color {
-          background: #3498db;
+          background: #093254;
         }
         .feature:hover {
           animation: zoomIn 1s ease-out forwards;

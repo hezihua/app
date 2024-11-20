@@ -63,7 +63,7 @@
             justify-content: center;
             align-items: center;
             margin: 200px 0 0 0px;
-            background-color:  #1a3a5f;
+            background-color:  #093254;
             color: #fff;
             padding: 10px 20px;
             border: none;
@@ -75,7 +75,7 @@
         }
     }
     .content {
-        color: #1a3a5f;
+        color: #093254;
         
         width: 70%;
         .title {
