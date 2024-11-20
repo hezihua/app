@@ -1,17 +1,22 @@
 <script setup>
 import { ref, onMounted, watch, onUnmounted } from 'vue';
 import Story from './story.vue'
+import gsap from "gsap";
+  import ScrollTrigger from "gsap/ScrollTrigger";
+  
+  // 注册 ScrollTrigger 插件
+  gsap.registerPlugin(ScrollTrigger);
 const zoomBackground = ref(null); // 用于引用 <div> 元素
 const calculatedHeight = ref(0); // 动态高度
 const show = ref(false); 
 const showtimeline = ref(false);
 // 动态计算高度
-const calculateHeight = () => {
-  if (zoomBackground.value) {
-    const width = zoomBackground.value.clientWidth;
-    calculatedHeight.value = width * 0.5625; // 例如，高度为宽度的 60%
-  }
-};
+// const calculateHeight = () => {
+//   if (zoomBackground.value) {
+//     const width = zoomBackground.value.clientWidth;
+//     calculatedHeight.value = width * 0.5625; // 例如，高度为宽度的 60%
+//   }
+// };
 
 const handleOpen = () => {
 //   showtimeline.value = true
@@ -53,15 +58,33 @@ function animateopen(start = -85, end = 0) {
 
 // 组件挂载后计算一次高度
 onMounted(() => {
-  calculateHeight();
+  // calculateHeight();
 
   // 监听窗口大小变化，重新计算高度
-  window.addEventListener('resize', calculateHeight);
+  // window.addEventListener('resize', calculateHeight);
+
+   // 创建动画时间轴
+   const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".evolution", // 触发动画的容器
+        start: "top 0%",      // 动画开始的位置
+        end: "bottom -40%",  // 动画结束的位置
+        scrub: true,           // 平滑滚动效果
+        pin: true,             // 固定容器
+      },
+    });
+  
+    // 添加动画效果
+  timeline
+  .to(".content .title", { opacity: 1,  duration: 1000 })   // 放大
+  .to(".content .text", { opacity: 1,  duration: 1000 })   // 放大
+    .to("#timeline-container", { translateX: '-100%', duration: 1000 })         // 放大
+    .to(".timeline-section", { opacity: 1, duration: 1000 })   
 });
 
 // 组件销毁时移除事件监听器
 onUnmounted(() => {
-  window.removeEventListener('resize', calculateHeight);
+  // window.removeEventListener('resize', calculateHeight);
 });
 
 
@@ -69,7 +92,7 @@ onUnmounted(() => {
 
 <template>
     <!-- Constant Evolution Section -->
-    <section class="section evolution evolution-background" ref="zoomBackground"  :style="{ height: calculatedHeight + 'px' }">
+    <section class="section evolution evolution-background" ref="zoomBackground"  :style="{ height: '56.25vw' }">
       <div class="content">
 
 
@@ -203,11 +226,13 @@ onUnmounted(() => {
       font-size: 72px;
       width:45%;
       margin: 25% 35% 3%;
+      opacity: 0;
     }
     .text {
       font-size: 32px;
       width: 45%;
       margin: 1% 35%;
+      opacity: 0;
     }
 
     .arrow {
@@ -252,7 +277,9 @@ onUnmounted(() => {
     clip-path: polygon(23% 0, 100% 0, 100% 100%, 0 100%); /* 定义多边形的剪裁路径 */
     padding-top: 10%;
     box-sizing: border-box;
-
+    .timeline-section {
+      opacity: 0;
+    }
     .arrow {
         position: absolute;
         right: 0;

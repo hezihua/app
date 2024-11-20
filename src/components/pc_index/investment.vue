@@ -1,6 +1,11 @@
 <script setup>
 import { ref, onMounted, watch, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
+import gsap from "gsap";
+  import ScrollTrigger from "gsap/ScrollTrigger";
+  
+  // 注册 ScrollTrigger 插件
+  gsap.registerPlugin(ScrollTrigger);
 
 const router = useRouter();
 
@@ -15,24 +20,39 @@ const navigateTo = (route, hash)=> {
 const zoomBackground = ref(null); // 用于引用 <div> 元素
 const calculatedHeight = ref(0); // 动态高度
 // 动态计算高度
-const calculateHeight = () => {
-  if (zoomBackground.value) {
-    const width = zoomBackground.value.clientWidth;
-    calculatedHeight.value = width * 0.5625; // 例如，高度为宽度的 60%
-  }
-};
+// const calculateHeight = () => {
+//   if (zoomBackground.value) {
+//     const width = zoomBackground.value.clientWidth;
+//     calculatedHeight.value = width * 0.5625; // 例如，高度为宽度的 60%
+//   }
+// };
 
 // 组件挂载后计算一次高度
 onMounted(() => {
-  calculateHeight();
+  // calculateHeight();
 
   // 监听窗口大小变化，重新计算高度
-  window.addEventListener('resize', calculateHeight);
+  // window.addEventListener('resize', calculateHeight);
+   // 创建动画时间轴
+   const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".investment", // 触发动画的容器
+        start: "top 0%",      // 动画开始的位置
+        end: "bottom 40%",  // 动画结束的位置
+        scrub: true,           // 平滑滚动效果
+        pin: true,             // 固定容器
+      },
+    });
+  
+    // 添加动画效果
+  timeline
+  .to(".investmentcontent .title", {  opacity: 1, duration: 1000 })   // 放大
+    .to(".investmentcontent .text", {  opacity: 1, duration: 1000 })  
 });
 
 // 组件销毁时移除事件监听器
 onUnmounted(() => {
-  window.removeEventListener('resize', calculateHeight);
+  // window.removeEventListener('resize', calculateHeight);
 });
 
 
@@ -42,8 +62,8 @@ onUnmounted(() => {
 
 
     <!-- Investment Section -->
-    <section class="section investment investment-background" ref="zoomBackground" :style="{ height: calculatedHeight + 'px' }">
-      <div class="content">
+    <section class="section investment investment-background" ref="zoomBackground" :style="{ height: '56.25vw' }">
+      <div class="investmentcontent">
         <div class="title">
           <div>Investment in and </div>
           <div>Empowerment of</div>
@@ -110,7 +130,7 @@ onUnmounted(() => {
 .investment {
   
   
-  .content {
+  .investmentcontent {
     // position: absolute;
     // left: 0;
     // top: 0;
@@ -129,11 +149,13 @@ onUnmounted(() => {
       font-size: 68px;
       width:45%;
       margin: 15% 15% 5%;
+      opacity: 0;
     }
     .text {
       font-size: 24px;
       width: 45%;
       margin: 1% 15%;
+      opacity: 0;
     }
     .buttonbox {
       display: flex;
@@ -153,6 +175,7 @@ onUnmounted(() => {
         box-sizing: border-box;
         padding: 0 20px;
         cursor: pointer;
+        
         .button-text {
           display: flex;
           justify-content: center;
@@ -166,6 +189,10 @@ onUnmounted(() => {
       }
     }
   }
+}
+
+.button:active {
+  transform: scale(1.06); /* 放大10% */
 }
 
 

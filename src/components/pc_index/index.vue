@@ -5,7 +5,7 @@ import Story from './story.vue'
 import Evolution from './evolution.vue'
 import Psylosophy from './psylosophy.vue'
 import Investment from './investment.vue'
-import Test from './test.vue'
+// import Test from './test.vue'
 import Footer from '../common/footer.vue'
 
 
@@ -22,7 +22,7 @@ import Footer from '../common/footer.vue'
     <!-- Our Story Section -->
     <Story />
    
-    <Test />
+    <!-- <Test /> -->
     <!-- Constant Evolution Section -->
     <Evolution />
    

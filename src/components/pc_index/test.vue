@@ -26,7 +26,7 @@
   
     // 添加动画效果
     timeline
-      .to("#box", { scale: 1.5 })         // 放大
+      .to("#box", { scale: 1.5, duration: 5 })         // 放大
       .to("#box", { rotation: 360 })     // 旋转
       .to("#box", { backgroundColor: "#ff0000" }); // 改变背景颜色
   });
