@@ -78,7 +78,7 @@ onMounted(() => {
   timeline
   .to(".content .title", { opacity: 1,  duration: 1000 })   // 放大
   .to(".content .text", { opacity: 1,  duration: 1000 })   // 放大
-    .to("#timeline-container", { translateX: '-100%', duration: 1000 })         // 放大
+    .to("#timeline-container", { translateX: '-100%', duration: 3000 })         // 放大
     .to(".timeline-section", { opacity: 1, duration: 1000 })   
 });
 

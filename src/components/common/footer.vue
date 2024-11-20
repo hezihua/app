@@ -56,7 +56,7 @@ const navigateTo = (route)=> {
             cursor: pointer;
         }
         .links {
-            font-size: 36px;
+            font-size: 30px;
             display: flex;
             .item {
                 margin-right: 40px;

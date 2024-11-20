@@ -19,6 +19,7 @@ const navigateTo = (route)=> {
         <div class="item" @click="navigateTo('/investment')">Investment approach</div>
         <div class="item" @click="navigateTo('/career')">Career</div>
         <div class="item" @click="navigateTo('/contact')">Contact us</div>
+        <div class="item" @click="navigateTo('/investor-login')">Investor login</div>
       </div>
     </section>
 
@@ -48,7 +49,7 @@ const navigateTo = (route)=> {
     }
     .menus {
         display: flex;
-        font-size: 36px;
+        font-size: 30px;
         margin-right: 100px;
         align-items: center;
         .item {
