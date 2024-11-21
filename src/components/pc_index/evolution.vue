@@ -218,21 +218,21 @@ onUnmounted(() => {
     height: 100%;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
+    justify-content: center;
     // align-items: center;
     overflow: hidden;
     clip-path: polygon(33.5% 0, 100% 0, 100% 100%, 0 100%); /* 定义多边形的剪裁路径 */
     .title {
-      font-size: 72px;
+      font-size: 62px;
       font-family: var(--main-font);
-      width:45%;
-      margin: 25% 35% 3%;
+      width:65%;
+      margin: 0% 5% 3% 30%;
       opacity: 0;
     }
     .text {
-      font-size: 32px;
-      width: 45%;
-      margin: 1% 35%;
+      font-size: 26px;
+      width: 65%;
+      margin: 1% 5% 1% 30%;
       opacity: 0;
     }
 
@@ -272,11 +272,11 @@ onUnmounted(() => {
     height: 100%;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
+    justify-content: center;
     // align-items: center;
     overflow: hidden;
     clip-path: polygon(23% 0, 100% 0, 100% 100%, 0 100%); /* 定义多边形的剪裁路径 */
-    padding-top: 10%;
+    padding-top: 3%;
     box-sizing: border-box;
     .timeline-section {
       opacity: 0;
@@ -298,26 +298,26 @@ onUnmounted(() => {
       }
 
     .sub-title {
-      width: 40%;
+      width: 50%;
       font-size: 26px;
       color: #c7cfd6;
-      margin: 0% 0 0% 40%;
+      margin: 0% 0 0% 30%;
       // margin-bottom: 20px;
     }
 
     .timeline {
-      width: 40%;
+      width: 50%;
       display: flex;
       align-items: center;
       position: relative;
-      margin: 2% 0 5% 40%;
+      margin: 2% 0 4% 30%;
       // padding-top: 10px;
     }
 
     .title {
-      width: 40%;
-      margin: 0% 0 0% 40%;
-      font-size: 48px;
+      width: 50%;
+      margin: 0% 0 0% 30%;
+      font-size: 36px;
       color: #fff;
     }
 
@@ -359,14 +359,15 @@ onUnmounted(() => {
 
     .date {
       font-weight: bold;
-      margin-bottom: 5px;
-      height: 24px;
+      // margin-bottom: 2px;
+      font-size: 12px;
+      height: 14px;
     }
 
     .description {
-      font-size: 14px;
+      font-size: 12px;
       color: #c7cfd6;
-      height: 21px;
+      height: 14px;
     }
 
     .timeline-item:last-child {

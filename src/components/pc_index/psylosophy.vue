@@ -47,7 +47,7 @@ const hideDetails = (index) => {
 
 <template>
     <!-- Philosophy & Values Section -->
-    <section class="section philosophy" ref="zoomBackground" :style="{ height: calculatedHeight  * 0.5+ 'px' }">
+    <section class="section philosophy" ref="zoomBackground">
       <div class="title">Philosophy & Values</div>
       <div class="icons">
           <div class="icon-container">
@@ -135,11 +135,11 @@ const hideDetails = (index) => {
   background-color: #ffffff;
   color: #093254;
   .title {
-    font-size: 72px;
+    font-size: 62px;
     font-family: var(--main-font);
     display: flex;
     justify-content: center;
-    margin: 5% 0 3%;
+    margin: 5% 0;
   }
   .icons {
     display: flex;
@@ -148,33 +148,37 @@ const hideDetails = (index) => {
     overflow: hidden;
     .icon-container {
       position: relative;
-      height: 400px;
-      width: 300px;
+      height: 320px;
+      width: 260px;
+      // padding: 20px;
       cursor: pointer;
     }
     .content-detail {
       
-      position: absolute;
+      // position: absolute;
       top: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 26px;
-      height: 400px;
+      font-size: 22px;
+      height: 320px;
       // background:  rgb(26, 58, 95, .5);
     }
     .icon {
-      position: absolute;
-      font-size: 46px;
-
+      // position: absolute;
+      font-size: 36px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
       img {
-        width: 220px;
-        margin-left: 60px;
+        width: 160px;
+        margin: 0 auto;
+        // margin-left: 60px;
       }
       > div {
         display: flex;
         justify-content: center;
-        width: 300px;
+        width: 260px;
       }
     }
   }

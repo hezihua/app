@@ -39,8 +39,9 @@ const navigateTo = (route)=> {
   
   <style scoped lang="scss">
   .footer {
-    padding: 0 150px;
-    height: 400px;
+    // padding: 0 20px;
+    // box-sizing: border-box;
+    height: 360px;
     background-color: #fff;
     // border-top: 1px solid #dee2e6;
     
@@ -50,14 +51,17 @@ const navigateTo = (route)=> {
         align-items: center;
         justify-content: space-between;
         padding-top: 100px;
+        width: 1180px;
+        margin: 0 auto;
         .logo {
-            
-            font-size: 42px;
+            padding-left: 20px;
+            font-size: 36px;
             cursor: pointer;
         }
         .links {
-            font-size: 30px;
+            font-size: 24px;
             display: flex;
+            padding-right: 20px;
             .item {
                 margin-right: 40px;
                 display: flex;
@@ -69,7 +73,7 @@ const navigateTo = (route)=> {
                 padding: 10px 20px;
                 border-radius: 60px;
                 height: 50px;
-                font-size: 30px;
+                font-size: 24px;
                 background: #093254;
                 color: #fff;
                 display: flex;
@@ -81,14 +85,17 @@ const navigateTo = (route)=> {
     }
     .line {
         height: 0;
-        width: 100%;
+        width: 1180px;
         background: #0b5e9c;
         padding-bottom: 1px;
-        margin: 50px 0;
+        margin: 50px auto;
     }
     .legal {
         display: flex;
-        font-size: 30px;
+        font-size: 24px;
+        padding-left: 20px;
+        width: 1180px;
+        margin: 0 auto;
         .item {
             margin-right: 40px;
             display: flex;

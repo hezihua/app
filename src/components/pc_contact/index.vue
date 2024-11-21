@@ -48,7 +48,7 @@ import Footer from '../common/footer.vue'
 
 .full-page-component {
   width: 100%;
-  min-width: 1900px;
+  // min-width: 1900px;
   .container {
     padding-bottom: 200px;
     background: #093254;

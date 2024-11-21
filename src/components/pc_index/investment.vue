@@ -141,38 +141,38 @@ onUnmounted(() => {
     height: 100%;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
+    justify-content: center;
     // align-items: center;
     overflow: hidden;
     clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%); /* 定义多边形的剪裁路径 */
     .title {
-      font-size: 68px;
+      font-size: 48px;
       font-family: var(--main-font);
-      width:45%;
-      margin: 15% 15% 5%;
+      width:65%;
+      margin: 0% 10% 3%;
       opacity: 0;
     }
     .text {
-      font-size: 24px;
-      width: 45%;
-      margin: 1% 15%;
+      font-size: 18px;
+      width: 65%;
+      margin: 1% 10%;
       opacity: 0;
     }
     .buttonbox {
       display: flex;
       // justify-content: center;
-      margin: 200px 0 0 15%;
+      margin: 4% 0 0 10%;
       .button {
-        width: 260px;
-        height: 60px;
+        width: 200px;
+        height: 50px;
         color: #093254;
         background: #fff;
-        font-size: 26px;
+        font-size: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-radius: 40px;
-        margin: 0 60px 0 0;
+        margin: 0 30px 0 0;
         box-sizing: border-box;
         padding: 0 20px;
         cursor: pointer;
@@ -184,8 +184,8 @@ onUnmounted(() => {
           flex-grow: 1;
         }
         .add {
-          font-weight: 800;
-          font-size: 32px;
+          font-weight: 700;
+          font-size: 26px;
         }
       }
     }

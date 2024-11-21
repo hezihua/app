@@ -33,7 +33,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-   <section class="section hero zoom-background" ref="zoomBackground"  :style="{ height: calculatedHeight + 'px' }">
+   <section class="section hero zoom-background" ref="zoomBackground"  :style="{ height: '56.25vw' }">
       <Header />
       <Transition name="fade">
 
@@ -55,7 +55,6 @@ onUnmounted(() => {
 
 <style scoped lang="scss">
 
-
 /* 定义动画 */
 @keyframes zoomIn {
   0% {
@@ -66,34 +65,55 @@ onUnmounted(() => {
   }
 }
 
+/* 基础样式 */
 .section {
   width: 100%;
   color: #fff;
 }
+
+/* 背景样式 */
 .zoom-background {
   width: 100%;
   position: relative;
   overflow: hidden;
-//   background-image: url('../../assets/landing_earth.jpg');
-//   background-size: 102% 102%;
-//   background-repeat: no-repeat;
-//   background-position: center center;
-//   animation: zoomIn 1s ease-out forwards; /* 自动产生缩放效果 */
 }
+
 .zoom-background::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 102%; /* 放大一点以防旋转时背景漏出 */
-    height: 102%;
-    background-image: url('../../assets/landing_earth.jpg'); /* 背景图路径 */
-    background-size: 102% 102%;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform-origin: center;
-    transform: translate(-50%, -50%) rotate(0deg); /* 移动到中心，并设置旋转角度 */
-    animation: zoomIn 1s ease-out forwards; /* 设置动画持续时间 */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 102%;
+  height: 102%;
+  background-image: url('../../assets/landing_earth.jpg');
+  background-size: 102% 102%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: zoomIn 1s ease-out forwards;
+}
+
+/* 媒体查询针对125%缩放 */
+@media screen and (min-resolution: 1.25dppx) {
+  .zoom-background::before {
+    background-size: 127.5% 127.5%;
+  }
+  .textLeft, .textRight {
+    font-size: 72.5px; /* 58px * 1.25 */
+  }
+  /* 其他需要适配125%缩放的元素 */
+}
+
+/* 媒体查询针对150%缩放 */
+@media screen and (min-resolution: 1.5dppx) {
+  .zoom-background::before {
+    background-size: 153% 153%;
+  }
+  .textLeft, .textRight {
+    font-size: 87px; /* 58px * 1.5 */
+  }
+  /* 其他需要适配150%缩放的元素 */
 }
 
 /* 顶部背景 */
@@ -133,7 +153,6 @@ onUnmounted(() => {
       font-family: var(--main-font);
       width: 685px;
     }
-
   }
 }
 

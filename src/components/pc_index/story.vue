@@ -122,21 +122,21 @@ onUnmounted(() => {
     height: 100%;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
+    justify-content: center;
     // align-items: center;
     overflow: hidden;
     clip-path: polygon(0 0, 60% 0, 100% 100%, 0 100%); /* 定义多边形的剪裁路径 */
     .title {
-      font-size: 72px;
+      font-size: 62px;
       font-family: var(--main-font);
-      width:45%;
-      margin: 25% 15% 3%;
+      width:60%;
+      margin: 0% 10% 3%;
       opacity: 0;
     }
     .text {
       font-size: 26px;
-      width: 45%;
-      margin: 1% 15%;
+      width: 60%;
+      margin: 1% 10%;
       opacity: 0;
     }
   }
