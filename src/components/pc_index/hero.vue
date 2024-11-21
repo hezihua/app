@@ -21,7 +21,7 @@ onMounted(() => {
   window.addEventListener('resize', calculateHeight);
   setTimeout(()=> {
     show.value = true
-  }, 2000)
+  }, 500)
 });
 
 // 组件销毁时移除事件监听器
