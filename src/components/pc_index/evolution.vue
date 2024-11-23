@@ -7,6 +7,10 @@ import gsap from "gsap";
   // 注册 ScrollTrigger 插件
   gsap.registerPlugin(ScrollTrigger);
 const zoomBackground = ref(null); // 用于引用 <div> 元素
+const isEnd = ref(false)
+const timelineIsEnd = ref(false)
+const evolutioncontent = ref(null); // 用于引用 <div> 元素
+const timelinecontent = ref(null); // 用于引用 <div> 元素
 const calculatedHeight = ref(0); // 动态高度
 const show = ref(false); 
 const showtimeline = ref(false);
@@ -17,6 +21,52 @@ const showtimeline = ref(false);
 //     calculatedHeight.value = width * 0.5625; // 例如，高度为宽度的 60%
 //   }
 // };
+
+
+const observer = new IntersectionObserver((entries) => {
+  console.log(entries, 'entries')
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      // 模块进入可视化区域
+      // backgroundStyle.value.transform = 'scale(1.02)';
+      console.log(isEnd.value)
+      if(!isEnd.value) {
+        console.log(isEnd.value, 'isEnd')
+        evolutioncontent.value.classList.add('active'); // 添加类来触发动画
+        isEnd.value = true
+      }
+      
+    } else {
+      // 模块离开可视化区域
+      // backgroundStyle.value.transform = 'scale(1.0)';
+      // evolutioncontent.value.classList.remove('active'); // 移除类来停止动画
+    }
+  });
+}, { threshold: [0, 1] });
+
+const timelineobserver = new IntersectionObserver((entries) => {
+  console.log(entries, 'entries')
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      // 模块进入可视化区域
+      // backgroundStyle.value.transform = 'scale(1.02)';
+      console.log(timelineIsEnd.value)
+      if(!timelineIsEnd.value) {
+        console.log(timelineIsEnd.value, 'timelineIsEnd')
+        timelinecontent.value.classList.add('active'); // 添加类来触发动画
+        timelineIsEnd.value = true
+      }
+      
+    } else {
+      // 模块离开可视化区域
+      // backgroundStyle.value.transform = 'scale(1.0)';
+      // evolutioncontent.value.classList.remove('active'); // 移除类来停止动画
+    }
+  });
+}, { threshold: [0, 1] });
+
 
 const handleOpen = () => {
 //   showtimeline.value = true
@@ -63,6 +113,12 @@ onMounted(() => {
   // 监听窗口大小变化，重新计算高度
   // window.addEventListener('resize', calculateHeight);
 
+  const moduleElement = document.querySelector('.evolutioncontent');
+  observer.observe(moduleElement);
+
+  const timelinecontentModule = document.querySelector('.timelinecontent');
+  timelineobserver.observe(timelinecontentModule);
+
    // 创建动画时间轴
    const timeline = gsap.timeline({
       scrollTrigger: {
@@ -76,10 +132,8 @@ onMounted(() => {
   
     // 添加动画效果
   timeline
-  .to(".content .title", { opacity: 1,  duration: 1000 })   // 放大
-  .to(".content .text", { opacity: 1,  duration: 1000 })   // 放大
     .to("#timeline-container", { translateX: '-100%', duration: 3000 })         // 放大
-    .to(".timeline-section", { opacity: 1, duration: 1000 })   
+    // .to(".timeline-section", { opacity: 1, duration: 1000 })   
 });
 
 // 组件销毁时移除事件监听器
@@ -93,77 +147,83 @@ onUnmounted(() => {
 <template>
     <!-- Constant Evolution Section -->
     <section class="section evolution evolution-background" ref="zoomBackground"  :style="{ height: '56.25vw' }">
-      <div class="content">
+      <div class="evolutioncontainer">
+        <div class="evolutioncontent" ref="evolutioncontent">
 
 
-        <div class="title">
-          <div>Constant</div>
-          <div>Evolution</div>
+          <div class="title">
+            <div>Constant</div>
+            <div>Evolution</div>
+          </div>
+          <p class="text">We continually challenge the status quo, upgrade our institutionalized infrastructure and strategically expand across diverse high-Sharpe strategies.</p>
+          <p class="text">Our entrepreneurial spirit gives us agility and resilience, enabling us to prosper amidst the ever-shifting market.</p>
+
+          <div class="arrow"><img @click="handleOpen" src="../../assets/ic_website_layout_v1B.png"></div>
         </div>
-        <p class="text">We continually challenge the status quo, upgrade our institutionalized infrastructure and strategically expand across diverse high-Sharpe strategies.</p>
-        <p class="text">Our entrepreneurial spirit gives us agility and resilience, enabling us to prosper amidst the ever-shifting market.</p>
-
-        <div class="arrow"><img @click="handleOpen" src="../../assets/ic_website_layout_v1B.png"></div>
       </div>
+      
       <Transition name="timeline">
         <div class="timeline-container" id="timeline-container">
-          <section class="timeline-section">
-            <div class="title">Proprietary </div>
-            <div  class="title">Investment</div>
-            <div class="timeline">
-              <div class="timeline-item">
-                <div class="circle"></div>
-                <div class="content">
-                  <p class="date">Jun 2015</p>
-                  <p class="description">Founded Infini Capital to </p>
-                  <p class="description">conduct proprietary trading </p>
-                  <p class="date"></p>
-                  <p class="description"></p>
-                </div>
-              </div>
-              <div class="timeline-item">
-                <div class="circle"></div>
-                <div class="content">
-                  <p class="date">Jan 2019</p>
-                  <p class="description">Licensed with the Hong Kong </p>
-                  <p class="description">Securities & Futures Commission</p>
-                  <p class="date">Jun 2019</p>
-                  <p class="description">Established proprietary fund</p>
-                </div>
-                <div class="content">
-                
-                  
-                </div>
-              </div>
-            
-            </div>
-          </section>
+          <div class="timelinecontent" ref="timelinecontent">
 
-          <section class="timeline-section">
-            <div class="title">Welcoming External Capital </div>
-            <p class="sub-title">(with Significant Internal Investment)</p>
-            <div class="timeline">
-              <div class="timeline-item">
-                <div class="circle"></div>
-                <div class="content">
-                  <p class="date">Nov 2023</p>
-                  <p class="description">Infini Global Master Fund </p>
-                  <p class="description">launched</p>
-                  <p class="description"></p>
+            <section class="timeline-section">
+              <div class="title">Proprietary </div>
+              <div  class="title">Investment</div>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="circle"></div>
+                  <div class="content">
+                    <p class="date">Jun 2015</p>
+                    <p class="description">Founded Infini Capital to </p>
+                    <p class="description">conduct proprietary trading </p>
+                    <p class="date"></p>
+                    <p class="description"></p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="circle"></div>
+                  <div class="content">
+                    <p class="date">Jan 2019</p>
+                    <p class="description">Licensed with the Hong Kong </p>
+                    <p class="description">Securities & Futures Commission</p>
+                    <p class="date">Jun 2019</p>
+                    <p class="description">Established proprietary fund</p>
+                  </div>
+                  <div class="content">
+                  
+                    
+                  </div>
+                </div>
+              
+              </div>
+            </section>
+  
+            <section class="timeline-section">
+              <div class="title">Welcoming External Capital </div>
+              <p class="sub-title">(with Significant Internal Investment)</p>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="circle"></div>
+                  <div class="content">
+                    <p class="date">Nov 2023</p>
+                    <p class="description">Infini Global Master Fund </p>
+                    <p class="description">launched</p>
+                    <p class="description"></p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="circle"></div>
+                  <div class="content">
+                    <p class="date">2024</p>
+                    <p class="description">Licensed with the Financial Services </p>
+                    <p class="description">Regulatory Authority (FSRA) at </p>
+                    <p class="description">Abu Dhabi</p>
+                  </div>
                 </div>
               </div>
-              <div class="timeline-item">
-                <div class="circle"></div>
-                <div class="content">
-                  <p class="date">2024</p>
-                  <p class="description">Licensed with the Financial Services </p>
-                  <p class="description">Regulatory Authority (FSRA) at </p>
-                  <p class="description">Abu Dhabi</p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <div class="arrow"><img @click="handleClose" src="../../assets/ic_website_layout_v1B.png"></div>
+            </section>
+            <div class="arrow"><img @click="handleClose" src="../../assets/ic_website_layout_v1B.png"></div>
+          </div>
         </div>
       </Transition>
     </section>
@@ -171,6 +231,30 @@ onUnmounted(() => {
 </template>
 
 <style scoped lang="scss">
+
+/* 定义动画 */
+@keyframes zoomIn {
+  0% {
+    transform: translate(100%, 0%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+/* 定义动画 */
+@keyframes zoomInTimeline {
+  0% {
+    // transform: translate(100%, 0%);
+    opacity: 0;
+  }
+  100% {
+    // transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
 
 .section {
   width: 100%;
@@ -190,6 +274,14 @@ onUnmounted(() => {
   background-color: #093254; /* 根据设计图调整颜色 */
 }
 
+
+.evolutioncontent.active {
+  animation: zoomIn 1s ease-out forwards; /* 应用放大动画 */
+}
+
+.timelinecontent.active {
+  animation: zoomInTimeline 1s ease-out forwards; /* 应用放大动画 */
+}
 
 
 .evolution {
@@ -211,29 +303,34 @@ onUnmounted(() => {
   justify-content: end;
   position: relative;
   overflow: hidden;
-  > .content {
+  .evolutioncontainer {
     width: 60%;
     
     background: #234c68;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    
     // align-items: center;
     overflow: hidden;
     clip-path: polygon(33.5% 0, 100% 0, 100% 100%, 0 100%); /* 定义多边形的剪裁路径 */
+  }
+  .evolutioncontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     .title {
-      font-size: 62rem;
+      font-size: 72rem;
       font-family: var(--main-font);
       width:65%;
       margin: 0% 5% 3% 30%;
-      opacity: 0;
+      // opacity: 0;
     }
     .text {
       font-size: 26rem;
       width: 65%;
       margin: 1% 5% 1% 30%;
-      opacity: 0;
+      // opacity: 0;
     }
 
     .arrow {
@@ -279,7 +376,7 @@ onUnmounted(() => {
     padding-top: 3%;
     box-sizing: border-box;
     .timeline-section {
-      opacity: 0;
+      // opacity: 0;
     }
     .arrow {
         position: absolute;

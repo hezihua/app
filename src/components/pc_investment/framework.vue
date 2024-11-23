@@ -315,7 +315,7 @@ const handleClick = (index = 0) => {
         height: 1400rem;
         
         .title {
-            font-size: 62rem;
+            font-size: 72rem;
             font-family: var(--main-font);
             // margin-bottom: 200rem;
         }

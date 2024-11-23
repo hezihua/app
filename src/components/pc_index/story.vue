@@ -122,10 +122,13 @@ onUnmounted(() => {
 <template>
   <!-- Our Story Section -->
     <section class="section story story-background" ref="zoomBackground" :style="{ height: '56.25vw' }">
-        <div id="storycontent" class="storycontent" :style="{ transform: 'translate(-100%)' }" ref="storycontent">
-          <div class="title">Our Story</div>
-          <p class="text">Infini Capital started as a proprietary trading house and organically evolved into an alternative investment manager. We prioritize capital preservation and high-quality returns as core to our investment and operation.</p>
-          <p class="text">Over the years, we have captured uncorrelated and attractive return streams, by implementing this principle and by empowering extraordinary talents to pursue their best ideas.</p>
+        <div class="storycontainer">
+          <div id="storycontent" class="storycontent" :style="{ transform: 'translate(-100%)' }" ref="storycontent">
+            <div class="title">Our Story</div>
+            <p class="text">Infini Capital started as a proprietary trading house and organically evolved into an alternative investment manager. We prioritize capital preservation and high-quality returns as core to our investment and operation.</p>
+            <p class="text">Over the years, we have captured uncorrelated and attractive return streams, by implementing this principle and by empowering extraordinary talents to pursue their best ideas.</p>
+          </div>
+          
         </div>
     </section>
 </template>
@@ -169,25 +172,30 @@ onUnmounted(() => {
 
 .story {
   
-  
-  .storycontent {
-    // position: absolute;
-    // left: 0;
-    // top: 0;
+  .storycontainer {
     width: 60%;
 
     background: #093254;
     // width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    
     // align-items: center;
     overflow: hidden;
     clip-path: polygon(0 0, 60% 0, 100% 100%, 0 100%); /* 定义多边形的剪裁路径 */
+  }
+  .storycontent {
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+   
     // transition: all 1s ease; /* 动画过渡效果 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     .title {
-      font-size: 62rem;
+      font-size: 72rem;
       font-family: var(--main-font);
       width:60%;
       margin: 0% 10% 3%;

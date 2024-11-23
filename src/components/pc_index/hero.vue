@@ -58,7 +58,7 @@ onUnmounted(() => {
 /* 定义动画 */
 @keyframes zoomIn {
   0% {
-    transform: translate(-50%, -50%) scale(1.2) rotate(10deg);
+    transform: translate(-50%, -50%) scale(1.06) rotate(5deg);
   }
   100% {
     transform: translate(-50%, -50%) scale(1) rotate(0deg);

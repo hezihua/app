@@ -135,7 +135,7 @@ const hideDetails = (index) => {
   background-color: #ffffff;
   color: #093254;
   .title {
-    font-size: 62rem;
+    font-size: 72rem;
     font-family: var(--main-font);
     display: flex;
     justify-content: center;
