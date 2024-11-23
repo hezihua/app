@@ -34,7 +34,7 @@ onUnmounted(() => {
 <template>
     <div class="about-us">
         <Header />
-        <div class="about-boxes" ref="zoomBackground"  :style="{ height: calculatedHeight + 'px' }">
+        <div class="about-boxes" ref="zoomBackground"  :style="{ height: calculatedHeight + 'rem' }">
             <div class="title">About Us</div>
             <div class="article">
                 <div class="text">From our founding in 2015 and our roots in proprietary investment, Infini Capital has organically </div>
@@ -86,16 +86,16 @@ onUnmounted(() => {
         transform-origin: center;
         overflow: hidden;
         .article {
-            margin-bottom: 50px;
+            margin-bottom: 50rem;
         }
         .title {
-            font-size: 72px;
+            font-size: 72rem;
             font-family: var(--main-font);
             width:65%;
             margin: 15% 10% 3%;
         }
         .text {
-            font-size: 32px;
+            font-size: 32rem;
             width: 65%;
             margin: 0% 10%;
         }
@@ -105,28 +105,28 @@ onUnmounted(() => {
   .feature-boxes {
     
     .introduce {
-        font-size: 32px;
+        font-size: 32rem;
         color: #234c68;
-        margin: 100px 0 100px;
+        margin: 100rem 0 100rem;
         text-align: center;
     }
     .features {
         display: flex;
-        gap: 80px;
+        gap: 80rem;
         justify-content: center;
         flex-wrap: wrap;
-        padding: 0 0 80px;
+        padding: 0 0 80rem;
         .feature {
             background-color: #234c68;
             color: white;
-            padding: 40px;
-            border-radius: 20px;
-            width: 280px;
-            height: 280px;
+            padding: 40rem;
+            border-radius: 20rem;
+            width: 280rem;
+            height: 280rem;
             display: flex;
             align-items: center;
             text-align: center;
-            font-size: 32px;
+            font-size: 32rem;
             cursor: pointer;
             
         }

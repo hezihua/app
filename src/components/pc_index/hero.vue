@@ -38,14 +38,14 @@ onUnmounted(() => {
       <Transition name="fade">
 
         <div class="content" v-if="show">
-          <div class="textLeft" :style="{ height: calculatedHeight * 0.5 + 'px' }">
+          <div class="textLeft" :style="{ height: calculatedHeight * 0.5 + 'rem' }">
             <div>A Pan-Asia</div>
             <div>Multi-Strategy </div>
             <div>Platform</div>
           </div>
-          <div class="border" :style="{ height: calculatedHeight * 0.5 + 'px' }"></div>
-          <div class="textRight" :style="{ height: calculatedHeight * 0.5 + 'px' }">
-            <div :style="{ paddingTop: calculatedHeight * 0.5 - 168 + 'px' }">Relentless Pursuit of</div> 
+          <div class="border" :style="{ height: calculatedHeight * 0.5 + 'rem' }"></div>
+          <div class="textRight" :style="{ height: calculatedHeight * 0.5 + 'rem' }">
+            <div :style="{ paddingTop: calculatedHeight * 0.5 - 168 + 'rem' }">Relentless Pursuit of</div> 
             <div>Quality Returns</div>
           </div>
         </div>
@@ -95,23 +95,23 @@ onUnmounted(() => {
 }
 
 /* 媒体查询针对125%缩放 */
-@media screen and (min-resolution: 1.25dppx) {
+@media screen and (min-resolution: 1.25dprem) {
   .zoom-background::before {
     background-size: 127.5% 127.5%;
   }
   .textLeft, .textRight {
-    font-size: 72.5px; /* 58px * 1.25 */
+    font-size: 72.5rem; /* 58rem * 1.25 */
   }
   /* 其他需要适配125%缩放的元素 */
 }
 
 /* 媒体查询针对150%缩放 */
-@media screen and (min-resolution: 1.5dppx) {
+@media screen and (min-resolution: 1.5dprem) {
   .zoom-background::before {
     background-size: 153% 153%;
   }
   .textLeft, .textRight {
-    font-size: 87px; /* 58px * 1.5 */
+    font-size: 87rem; /* 58rem * 1.5 */
   }
   /* 其他需要适配150%缩放的元素 */
 }
@@ -139,19 +139,19 @@ onUnmounted(() => {
     z-index: 9;
     .border {
       background: #fff;
-      padding-right: 1px;
-      margin: 0 80px;
+      padding-right: 1rem;
+      margin: 0 80rem;
     }
     .textLeft {
-      font-size: 58px;
+      font-size: 58rem;
       font-family: var(--main-font);
-      width: 685px;
+      width: 685rem;
       text-align: right;
     }
     .textRight {
-      font-size: 58px;
+      font-size: 58rem;
       font-family: var(--main-font);
-      width: 685px;
+      width: 685rem;
     }
   }
 }

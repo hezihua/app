@@ -56,26 +56,26 @@ onUnmounted(() => {
     text-align: center;
     display: flex;
     justify-content: space-between;
-    height: 1000px;
+    height: 1000rem;
     .left {
         width: 50%;
         .title {
-            font-size: 72px;
+            font-size: 72rem;
             font-family: var(--main-font);
-            margin-top: 280px;
+            margin-top: 280rem;
 
         }
         .sub-title {
-            font-size: 48px;
-            margin: 30px 0;
+            font-size: 48rem;
+            margin: 30rem 0;
         }
         .text {
-            font-size: 32px;
+            font-size: 32rem;
         }
     }
     .right{
         width: 50%;
-        height: 1000px;
+        height: 1000rem;
         overflow: hidden;
         img {
             height: 100%;
@@ -88,7 +88,7 @@ onUnmounted(() => {
   }
   
   .leader-profile {
-    margin-top: 20px;
+    margin-top: 20rem;
   }
   </style>
   

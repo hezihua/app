@@ -146,14 +146,14 @@ onUnmounted(() => {
     overflow: hidden;
     clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%); /* 定义多边形的剪裁路径 */
     .title {
-      font-size: 48px;
+      font-size: 48rem;
       font-family: var(--main-font);
       width:65%;
       margin: 0% 10% 3%;
       opacity: 0;
     }
     .text {
-      font-size: 18px;
+      font-size: 18rem;
       width: 65%;
       margin: 1% 10%;
       opacity: 0;
@@ -163,18 +163,18 @@ onUnmounted(() => {
       // justify-content: center;
       margin: 4% 0 0 10%;
       .button {
-        width: 200px;
-        height: 50px;
+        width: 200rem;
+        height: 50rem;
         color: #093254;
         background: #fff;
-        font-size: 20px;
+        font-size: 20rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-radius: 40px;
-        margin: 0 30px 0 0;
+        border-radius: 40rem;
+        margin: 0 30rem 0 0;
         box-sizing: border-box;
-        padding: 0 20px;
+        padding: 0 20rem;
         cursor: pointer;
         
         .button-text {
@@ -185,7 +185,7 @@ onUnmounted(() => {
         }
         .add {
           font-weight: 700;
-          font-size: 26px;
+          font-size: 26rem;
         }
       }
     }

@@ -46,21 +46,21 @@ export default {
               if(index - 1 === i) {
                 const topValue = scrollPosition - sections.value[i].offsetTop;
                 sections.value[i].querySelector('.content').style.position = 'fixed';
-                sections.value[i].querySelector('.content').style.top = `${-topValue}px`;
+                sections.value[i].querySelector('.content').style.top = `${-topValue}rem`;
               } else {
                 sections.value[i].querySelector('.content').style.position = 'relative';
-                sections.value[i].querySelector('.content').style.top = `${-0}px`;
+                sections.value[i].querySelector('.content').style.top = `${-0}rem`;
               }
              
              
             }
             // 将当前 section 的 content 设置为 relative
             section.querySelector('.content').style.position = 'relative';
-            section.querySelector('.content').style.top = `0px`;
+            section.querySelector('.content').style.top = `0rem`;
           } else {
             // 如果当前 section 不在可视区域内，将其 content 设置为 relative
             section.querySelector('.content').style.position = 'relative';
-            section.querySelector('.content').style.top = `0px`;
+            section.querySelector('.content').style.top = `0rem`;
             // section.querySelector('.content').style.position = 'relative';
           }
         });
@@ -75,7 +75,7 @@ export default {
         });
       }, {
         root: null, // 相对于视口检查交叉情况
-        rootMargin: '0px',
+        rootMargin: '0rem',
         threshold: 0.1, // 目标10%可见时触发回调
       });
 
@@ -97,7 +97,7 @@ export default {
   .container {
     height: 500vh; /* 支持滚动的总高度 */
     overflow-y: scroll;
-    font-size: 18px;
+    font-size: 18rem;
   }
   </style>
   

@@ -207,46 +207,46 @@ const handleClick = (index = 0) => {
     overflow: hidden;
 
     .title {
-        font-size: 68px;
+        font-size: 68rem;
         font-family: var(--main-font);
         text-align: center;
-        width: 800px;
-        margin: 200px auto 60px;
+        width: 800rem;
+        margin: 200rem auto 60rem;
     }
     .introduce {
-        font-size: 32px;
+        font-size: 32rem;
         color: #234c68;
-        margin: 0px 0 100px;
+        margin: 0rem 0 100rem;
         text-align: center;
     }
     .features {
         display: flex;
         justify-content: center;
-        width: 1410px;
+        width: 1410rem;
         margin: 0 auto;
-        padding: 0 0 80px;
+        padding: 0 0 80rem;
         position: relative;
-        height: 300px;
+        height: 300rem;
         .feature {
             position: absolute;
             left: 0;
             top: 0;
             background-color: #093254;
             color: white;
-            padding: 80px 0px 0;
+            padding: 80rem 0rem 0;
             box-sizing: border-box;
-            border-radius: 20px;
-            width: 300px;
-            height: 300px;
+            border-radius: 20rem;
+            width: 300rem;
+            height: 300rem;
             transition: all 2s ease; /* 加入过渡效果 */            
-            font-size: 32px;
+            font-size: 32rem;
             display: flex;
             cursor: pointer;
             
             > div {
                 text-align: center;
                 margin: 0 auto;
-                width: 300px;
+                width: 300rem;
             }
             &.full-width {
                 width: 100%; /* 宽度撑满 */
@@ -254,7 +254,7 @@ const handleClick = (index = 0) => {
             .detail {
                 flex-grow: 1;
                 .content {
-                    font-size: 32px;
+                    font-size: 32rem;
                     width: 70%;
                     padding: 0 15%;
                     animation: showcontent 1s ease-out forwards;
@@ -263,19 +263,19 @@ const handleClick = (index = 0) => {
         }
 
         .feature:nth-child(1) {
-            transform: translateX(0px);
+            transform: translateX(0rem);
         }
 
         .feature:nth-child(2) {
-            transform: translateX(370px);
+            transform: translateX(370rem);
         }
 
         .feature:nth-child(3) {
-            transform: translateX(740px);
+            transform: translateX(740rem);
         }
 
         .feature:nth-child(4) {
-            transform: translateX(1110px);
+            transform: translateX(1110rem);
         }
 
         .fade-feature-enter-active {
@@ -302,7 +302,7 @@ const handleClick = (index = 0) => {
   }
 
   .Infrastructure-container {
-    height: 1400px;
+    height: 1400rem;
     position: relative;
     
     .Infrastructure {
@@ -312,17 +312,17 @@ const handleClick = (index = 0) => {
         width: 70%;
         background: #093254;
         color: #fff;
-        height: 1400px;
+        height: 1400rem;
         
         .title {
-            font-size: 62px;
+            font-size: 62rem;
             font-family: var(--main-font);
-            // margin-bottom: 200px;
+            // margin-bottom: 200rem;
         }
 
         .item {
-            width: 700px;
-            height: 250px;
+            width: 700rem;
+            height: 250rem;
             position: relative;
             // display: flex;
             // justify-content: center;
@@ -337,14 +337,14 @@ const handleClick = (index = 0) => {
                 position: absolute;
                 left: 0;
                 top: 0;
-                font-size: 42px;
+                font-size: 42rem;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
                 .text {
-                    width: 450px;
-                    height: 250px;
+                    width: 450rem;
+                    height: 250rem;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -355,11 +355,11 @@ const handleClick = (index = 0) => {
                 position: absolute;
                 left: 0;
                 top: 0;
-                font-size: 26px;
+                font-size: 26rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 250px;
+                height: 250rem;
             }
         }
 
@@ -372,12 +372,12 @@ const handleClick = (index = 0) => {
         }
         .image {
             position: absolute;
-            left: -700px;
-            top: 200px;
+            left: -700rem;
+            top: 200rem;
             z-index: 9;
             img {
-                width: 1000px;
-                height: 1000px;
+                width: 1000rem;
+                height: 1000rem;
             }
         }
     }

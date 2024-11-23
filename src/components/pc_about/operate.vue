@@ -73,20 +73,20 @@ const toggleContent = (index = 0)=> {
 .transition-container {
   position: relative;
   width: 100%;
-  height: 1000px;
-  /* max-width: 600px; */
+  height: 1000rem;
+  /* max-width: 600rem; */
   margin: auto;
   .content {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    font-size: 58px;
+    font-size: 58rem;
     background: #f8f9fa;
     > .text {
         position: absolute;
         right: 15%;
-        margin: 700px 0 0 10%;
+        margin: 700rem 0 0 10%;
         color: #0a3a5e;
         font-weight: 700;
     }
@@ -99,7 +99,7 @@ const toggleContent = (index = 0)=> {
     top: 0;
     left: 0;
     height: 100%;
-    // padding: 20px;
+    // padding: 20rem;
     box-sizing: border-box;
     // background-color: #0a3a5e; /* 设置背景颜色 */
     color: white;
@@ -115,25 +115,25 @@ const toggleContent = (index = 0)=> {
     // flex-wrap: wrap;
     padding-left: 25%;
     .leader-card {
-      padding: 100px 0 0;
+      padding: 100rem 0 0;
       box-sizing: border-box;
     //   width: 40%;
-      height: 400px;
+      height: 400rem;
       .name {
-        font-size: 58px;
+        font-size: 58rem;
         width: 100%;
       }
       .duty {
         width: 100%;
-        font-size: 32px;
+        font-size: 32rem;
       }
       .arrow {
         display: flex;
         // justify-content: center;
         align-items: center;
-        height: 100px;
+        height: 100rem;
         img {
-          width: 80px;
+          width: 80rem;
           transition: transform 1s ease;
           cursor: pointer;
         }
@@ -145,10 +145,10 @@ const toggleContent = (index = 0)=> {
     width: 75%;
     background-color: #234c68;
     transform: translateX(-100%); /* 初始位置在屏幕右侧外 */
-    font-size: 36px;
-    padding: 260px 0 0;
+    font-size: 36rem;
+    padding: 260rem 0 0;
     .text {
-      padding: 20px 25%;
+      padding: 20rem 25%;
     }
   }
 

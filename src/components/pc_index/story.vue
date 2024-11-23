@@ -85,7 +85,7 @@ onMounted(() => {
   //   });
   // }, {
   //   root: null, // 视口作为参照
-  //   rootMargin: '0px',
+  //   rootMargin: '0rem',
   //   threshold: 0.1 // 至少10%的元素可见时触发
   // });
 
@@ -187,14 +187,14 @@ onUnmounted(() => {
     clip-path: polygon(0 0, 60% 0, 100% 100%, 0 100%); /* 定义多边形的剪裁路径 */
     // transition: all 1s ease; /* 动画过渡效果 */
     .title {
-      font-size: 62px;
+      font-size: 62rem;
       font-family: var(--main-font);
       width:60%;
       margin: 0% 10% 3%;
       // opacity: 0;
     }
     .text {
-      font-size: 26px;
+      font-size: 26rem;
       width: 60%;
       margin: 1% 10%;
       // opacity: 0;

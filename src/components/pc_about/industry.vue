@@ -21,18 +21,18 @@
   .industry-leadership {
     background-color: #fff;
     text-align: center;
-    padding-bottom: 80px;
+    padding-bottom: 80rem;
     .title {
-        font-size: 72px;
+        font-size: 72rem;
         font-family: var(--main-font);
-        padding: 80px 0;
+        padding: 80rem 0;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .awards {
         display: flex;
-        // gap: 40px;
+        // gap: 40rem;
         justify-content: space-around;
         
         .award {
@@ -40,16 +40,16 @@
             flex-direction: column;
             align-items: center;
             width: 50%;
-            padding-bottom: 40px;
-            font-size: 42px;
+            padding-bottom: 40rem;
+            font-size: 42rem;
             img {
-                // width: 100px;
-                height: 100px;
-                padding: 80px 0 40px;
+                // width: 100rem;
+                height: 100rem;
+                padding: 80rem 0 40rem;
             }
         }
         .border {
-            border-right: 1px solid #234c68;
+            border-right: 1rem solid #234c68;
         }
     }
   }

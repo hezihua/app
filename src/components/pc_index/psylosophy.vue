@@ -135,7 +135,7 @@ const hideDetails = (index) => {
   background-color: #ffffff;
   color: #093254;
   .title {
-    font-size: 62px;
+    font-size: 62rem;
     font-family: var(--main-font);
     display: flex;
     justify-content: center;
@@ -144,13 +144,13 @@ const hideDetails = (index) => {
   .icons {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 20rem;
     overflow: hidden;
     .icon-container {
       position: relative;
-      height: 320px;
-      width: 260px;
-      // padding: 20px;
+      height: 320rem;
+      width: 260rem;
+      // padding: 20rem;
       cursor: pointer;
     }
     .content-detail {
@@ -160,25 +160,25 @@ const hideDetails = (index) => {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 22px;
-      height: 320px;
+      font-size: 22rem;
+      height: 320rem;
       // background:  rgb(26, 58, 95, .5);
     }
     .icon {
       // position: absolute;
-      font-size: 36px;
+      font-size: 36rem;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       img {
-        width: 160px;
+        width: 160rem;
         margin: 0 auto;
-        // margin-left: 60px;
+        // margin-left: 60rem;
       }
       > div {
         display: flex;
         justify-content: center;
-        width: 260px;
+        width: 260rem;
       }
     }
   }

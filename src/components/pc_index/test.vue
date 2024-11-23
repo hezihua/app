@@ -51,15 +51,15 @@
   
   /* 动画元素样式 */
   #box {
-    width: 200px;
-    height: 200px;
+    width: 200rem;
+    height: 200rem;
     background: #00aaff;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    border-radius: 10px;
+    border-radius: 10rem;
     text-align: center;
   }
   </style>

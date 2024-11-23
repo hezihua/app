@@ -42,27 +42,27 @@ const navigateTo = (route)=> {
     width: 100vw;
     z-index: 99;
     .header-content {
-      width: 1180px;
+      width: 80vw;
       display: flex;
       justify-content: space-between;
-      height: 200px;
+      height: 200rem;
       
       align-items: center;
       margin: 0 auto;
     }
     .logo {
-        font-size: 36px;
+        font-size: 36rem;
         cursor: pointer;
-        padding-left: 20px;
+        padding-left: 20rem;
     }
     .menus {
         display: flex;
-        font-size: 24px;
+        font-size: 24rem;
         align-items: center;
-        padding-right: 20px;
+        padding-right: 20rem;
         .item {
             color: #fff;
-            margin: 0 0px 0 40px;
+            margin: 0 0rem 0 40rem;
             cursor: pointer;
         }
     }

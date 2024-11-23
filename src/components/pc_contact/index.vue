@@ -48,43 +48,43 @@ import Footer from '../common/footer.vue'
 
 .full-page-component {
   width: 100%;
-  // min-width: 1900px;
+  // min-width: 1900rem;
   .container {
-    padding-bottom: 200px;
+    padding-bottom: 200rem;
     background: #093254;
     color: #fff;
     position: relative;
     .title {
-        padding: 0px 0 100px;
+        padding: 0rem 0 100rem;
         width: 60%;
         margin: 0 auto;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1rem solid #fff;
         
-        font-size: 72px;
+        font-size: 72rem;
         font-family: var(--main-font);
-        height: 400px;
+        height: 400rem;
         display: flex;
         justify-content: center;
         align-items: end;
     }
     .menus {
-        margin-top: 100px;
+        margin-top: 100rem;
         
         .item {
-            margin: 60px 0;
+            margin: 60rem 0;
             .sub-title {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 
                 font-weight: 700;
-                font-size: 42px;
+                font-size: 42rem;
             }
             .text {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 42px;
+                font-size: 42rem;
             }
         }
     }

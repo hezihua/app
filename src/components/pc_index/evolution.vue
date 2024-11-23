@@ -223,14 +223,14 @@ onUnmounted(() => {
     overflow: hidden;
     clip-path: polygon(33.5% 0, 100% 0, 100% 100%, 0 100%); /* 定义多边形的剪裁路径 */
     .title {
-      font-size: 62px;
+      font-size: 62rem;
       font-family: var(--main-font);
       width:65%;
       margin: 0% 5% 3% 30%;
       opacity: 0;
     }
     .text {
-      font-size: 26px;
+      font-size: 26rem;
       width: 65%;
       margin: 1% 5% 1% 30%;
       opacity: 0;
@@ -242,10 +242,10 @@ onUnmounted(() => {
         bottom: 0;
         display: flex;
         align-items: flex-end;
-        height: 100px;
-        margin: 100px 10%;
+        height: 100rem;
+        margin: 100rem 10%;
         img {
-          width: 80px;
+          width: 80rem;
           transition: transform 1s ease;
           cursor: pointer;
           transform: rotate(180deg);
@@ -288,10 +288,10 @@ onUnmounted(() => {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        height: 100px;
-        margin: 100px 10%;
+        height: 100rem;
+        margin: 100rem 10%;
         img {
-          width: 80px;
+          width: 80rem;
           transition: transform 1s ease;
           cursor: pointer;
         }
@@ -299,10 +299,10 @@ onUnmounted(() => {
 
     .sub-title {
       width: 50%;
-      font-size: 26px;
+      font-size: 26rem;
       color: #c7cfd6;
       margin: 0% 0 0% 30%;
-      // margin-bottom: 20px;
+      // margin-bottom: 20rem;
     }
 
     .timeline {
@@ -311,13 +311,13 @@ onUnmounted(() => {
       align-items: center;
       position: relative;
       margin: 2% 0 4% 30%;
-      // padding-top: 10px;
+      // padding-top: 10rem;
     }
 
     .title {
       width: 50%;
       margin: 0% 0 0% 30%;
-      font-size: 36px;
+      font-size: 36rem;
       color: #fff;
     }
 
@@ -327,7 +327,7 @@ onUnmounted(() => {
       top: 0;
       left: 0;
       right: 0;
-      height: 2px;
+      height: 2rem;
       background-color: #c7cfd6;
       z-index: 0;
     }
@@ -338,13 +338,13 @@ onUnmounted(() => {
       // flex-direction: column;
       // align-items: center;
       position: relative;
-      // margin:90px 40px 0 0;
+      // margin:90rem 40rem 0 0;
     }
 
     .circle {
-      width: 18px;
-      height: 18px;
-      transform: translate(100px, -9px);
+      width: 18rem;
+      height: 18rem;
+      transform: translate(100rem, -9rem);
       background-color: #fff;
       border-radius: 50%;
       position: relative;
@@ -352,22 +352,22 @@ onUnmounted(() => {
     }
 
     .content {
-      margin-top: 10px;
+      margin-top: 10rem;
       // text-align: center;
       z-index: 1;
     }
 
     .date {
       font-weight: bold;
-      // margin-bottom: 2px;
-      font-size: 12px;
-      height: 14px;
+      // margin-bottom: 2rem;
+      font-size: 12rem;
+      height: 14rem;
     }
 
     .description {
-      font-size: 12px;
+      font-size: 12rem;
       color: #c7cfd6;
-      height: 14px;
+      height: 14rem;
     }
 
     .timeline-item:last-child {

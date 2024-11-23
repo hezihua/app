@@ -36,50 +36,50 @@ import { ref, onMounted, watch, onUnmounted } from 'vue';
     // text-align: center;
     display: flex;
     justify-content: space-between;
-    height: 1400px;
+    height: 1400rem;
     padding: 0 10%;
     .left {
         width: 70%;
         // padding: 0 0 0 10%;
         .title {
-            font-size: 72px;
-            margin: 320px 0 180px;
+            font-size: 72rem;
+            margin: 320rem 0 180rem;
             font-family: var(--main-font);
         }
         .sub-title {
-            font-size: 48px;
-            margin: 30px 0;
+            font-size: 48rem;
+            margin: 30rem 0;
         }
         .text {
-            font-size: 32px;
+            font-size: 32rem;
             width: 80%;
             // margin: 0 auto;
         }
     }
     .right{
         width: 30%;
-        // height: 1000px;
-        padding: 200px 0;
+        // height: 1000rem;
+        padding: 200rem 0;
         box-sizing: border-box;
         overflow: hidden;
         .item {
-            font-size: 58px;
-            width: 450px;
+            font-size: 58rem;
+            width: 450rem;
             text-align: center;
         }
         .border {
-            height: 80px;
-            width: 450px;
-            border-left: 1px solid #fff;
-            transform: translateX(225px);
-            margin: 40px 0;
+            height: 80rem;
+            width: 450rem;
+            border-left: 1rem solid #fff;
+            transform: translateX(225rem);
+            margin: 40rem 0;
 
         }
     }
   }
   
   .leader-profile {
-    margin-top: 20px;
+    margin-top: 20rem;
   }
   </style>
   

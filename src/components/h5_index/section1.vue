@@ -94,7 +94,7 @@ import { ref, onMounted, watch, onUnmounted } from 'vue';
     .border {
       background: #fff;
       width: 80vw;
-      border-bottom: 1px solid #fff;
+      border-bottom: 1rem solid #fff;
       margin: 10vh 0;
     }
     .textLeft {

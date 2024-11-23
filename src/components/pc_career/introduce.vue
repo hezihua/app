@@ -35,37 +35,37 @@
 
 <style scoped lang="scss">
 .container {
-  max-width: calc(100% - 400px);
+  max-width: calc(100% - 400rem);
   margin: 0 auto;
   color: #1a1a1a;
   .divider {
     border: none;
-    margin: 20px 0;
+    margin: 20rem 0;
   }
   .section {
-    margin-bottom: 20px;
+    margin-bottom: 20rem;
     display: flex;
     justify-content: center;
-    padding: 60px 0;
+    padding: 60rem 0;
     box-sizing: border-box;
     .question {
         width: 30%;
-        font-size: 58px;
+        font-size: 58rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         .join-button {
-            width: 300px;
-            height: 60px;
-            border-radius: 60px;
-            font-size: 32px;
+            width: 300rem;
+            height: 60rem;
+            border-radius: 60rem;
+            font-size: 32rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 200px 0 0 0px;
+            margin: 200rem 0 0 0rem;
             background-color:  #093254;
             color: #fff;
-            padding: 10px 20px;
+            padding: 10rem 20rem;
             border: none;
             cursor: pointer;
             transition: background-color 0.3s;
@@ -81,12 +81,12 @@
         .title {
             font-weight: 700;
             width: 80%;
-            margin-bottom: 50px;
-            font-size: 42px;
+            margin-bottom: 50rem;
+            font-size: 42rem;
         }
         .text {
             width: 80%;
-            font-size: 36px;
+            font-size: 36rem;
         }
     }
   }

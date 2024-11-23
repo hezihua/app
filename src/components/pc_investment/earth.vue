@@ -54,7 +54,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <section class="section earth zoom-background" ref="zoomBackground"  :style="{ height: calculatedHeight + 'px', ...backgroundStyle }">
+    <section class="section earth zoom-background" ref="zoomBackground"  :style="{ height: calculatedHeight + 'rem', ...backgroundStyle }">
       <div class="content">
 
         <div class="title">
@@ -121,14 +121,14 @@ onUnmounted(() => {
     // align-items: center;
     z-index: 9;
     .title {
-        font-size: 72px;
+        font-size: 72rem;
         font-family: var(--main-font);
-        width:850px;
+        width:850rem;
         margin: 15% auto 3%;
         text-align: center;
     }
     .text {
-        font-size: 52px;
+        font-size: 52rem;
         width: 65%;
         margin: 0% auto;
     }

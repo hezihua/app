@@ -27,7 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 20rem;
     color: purple;
     background-color: #4a90e2;
     z-index: 5;
