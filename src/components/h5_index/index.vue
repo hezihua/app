@@ -11,7 +11,7 @@
   
   <script setup>
   import { onMounted, ref } from 'vue';
-  import Header from '../common/h5_header.vue'
+  import Header from '../common/h5_header.vue';
   import Section1 from './section1.vue';
   import Section2 from './section2.vue';
   import Section3 from './section3.vue';
