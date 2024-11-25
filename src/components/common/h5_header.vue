@@ -40,7 +40,7 @@ const navigateTo = (route)=> {
     align-items: center;
     font-size: 30rem;
     color: #fff;
-    padding: 0 4vw;
+    padding: 0 10vw;
     box-sizing: border-box;
     z-index: 9;
     top: 0;

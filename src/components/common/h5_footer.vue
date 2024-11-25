@@ -40,10 +40,10 @@ const navigateTo = (route)=> {
   .footer {
     // padding: 0 20rem;
     // box-sizing: border-box;
-    height: 40vh;
+    // height: 40vh;
     background-color: #fff;
     // border-top: 1rem solid #dee2e6;
-    
+    padding: 2vh 0 5vh;
     color: #093254;
     .menus-row {
         // display: flex;
@@ -52,6 +52,7 @@ const navigateTo = (route)=> {
         // padding-top: 100rem;
         width: 80vw;
         margin: 0 auto;
+
         
         .links {
             font-size: 16rem;
@@ -66,9 +67,9 @@ const navigateTo = (route)=> {
     .line {
         height: 0;
         width: 80vw;
-        background: #0b5e9c;
-        padding-bottom: 1rem;
-        margin: 10rem auto;
+        // background: #0b5e9c;
+        border-bottom: 1rem solid #0b5e9c;
+        margin: 2vh auto 2vh;
     }
     .legal {
         // display: flex;

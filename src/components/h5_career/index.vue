@@ -1,30 +1,36 @@
 <script setup>
-import { ref } from 'vue'
-  import Header from '../common/h5_header.vue'
+import { ref, onMounted, watch, onUnmounted } from 'vue';
+import Background from './background.vue'
+import Introduce from './introduce.vue'
+import Footer from '../common/h5_footer.vue'
 
-defineProps({
-  msg: String,
-})
 
-const count = ref(0)
+
+
+
+
 </script>
 
 <template>
-  <div class="section">
-    <Header />
-    h5_career</div>
+  <div class="full-page-component">
+    <Background />
+
+    <Introduce />
+
+    <Footer />
+   
+  </div>
 </template>
 
-<style scoped>
-.section {
-    height: 100vh;
-    width: 100vw;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30rem;
-    position: relative;
-    background: #234c68;
+<style scoped lang="scss">
+
+.full-page-component {
+  width: 100%;
+  // min-width: 1900rem;
 }
+
+
+
+
 </style>
+
