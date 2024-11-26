@@ -6,6 +6,7 @@ const zoomBackground = ref(null); // 用于引用 <div> 元素
 const calculatedHeight = ref(0); // 动态高度
 const show = ref(false); 
 const showtimeline = ref(false);
+const showcontent = ref(false)
 // 动态计算高度
 const calculateHeight = () => {
   if (zoomBackground.value) {
@@ -35,7 +36,8 @@ const isHovering = ref([false, false, false, false]);
 
 
 const triggerDetails = (index) => {
-  if (isHovering[index]) {
+  showcontent.value = false
+  if (isHovering.value[index]) {
     isHovering.value[index] = false;
   } else {
     let result = [];
@@ -46,6 +48,9 @@ const triggerDetails = (index) => {
         result.push(false)
       }
     })
+    setTimeout(() => {
+      showcontent.value = true
+    }, 1000);
     isHovering.value = result
   }
  
@@ -70,10 +75,10 @@ const hideDetails = (index) => {
               <img src="../../assets/ic_website_layout_v1B-20.png" alt="">
               <div>Discipline</div>
             </div>
-            <div v-if="isHovering[0]" class="content-detail">
+            <div v-if="isHovering[0] && showcontent" class="content-detail">
               A strong risk culture is embedded in our proprietary DNA. Our mission is clear: to safeguard and grow our investors' capital
             </div>
-            <div class="add"> + </div>
+            <div class="add" :class="{ 'active': isHovering[0] }"> + </div>
           </div>
         </transition>
         
@@ -84,11 +89,11 @@ const hideDetails = (index) => {
               <div>Entrepreneurial</div>
               <div> Spirit</div>
             </div>
-            <div v-if="isHovering[1]" class="content-detail">
+            <div v-if="isHovering[1] && showcontent" class="content-detail">
               
               We acknowledge that there is always potential for improvement. We are in a state of continuous evolution, aiming for excellence in everything we do
             </div>
-            <div class="add"> + </div>
+            <div class="add"  :class="{ 'active': isHovering[1] }"> + </div>
           </div>
         </transition>
         
@@ -100,10 +105,10 @@ const hideDetails = (index) => {
               <div>Adaptability</div>
               
             </div>
-            <div v-if="isHovering[2]" class="content-detail" >
+            <div v-if="isHovering[2] && showcontent" class="content-detail" >
               The market is anything but static. We embrace this challenge with perseverance and flexibility
             </div>
-            <div class="add"> + </div>
+            <div class="add"  :class="{ 'active': isHovering[2] }"> + </div>
           </div>
         </transition>
         
@@ -115,10 +120,10 @@ const hideDetails = (index) => {
               <div>Respect</div>
               
             </div>
-            <div v-if="isHovering[3]" class="content-detail">
+            <div v-if="isHovering[3] && showcontent" class="content-detail">
               We hold transparency and collaboration in high esteem, convinced that open dialogue and a supportive culture foster the most robust investment ideas
             </div>
-            <div class="add"> + </div>
+            <div class="add"  :class="{ 'active': isHovering[3] }"> + </div>
           </div>
         </transition>
         
@@ -134,23 +139,21 @@ const hideDetails = (index) => {
   color: #fff;
 }
 
+    /* 定义动画 */
+@keyframes showcontent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity 2s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
-}
-
-.fade-feature-enter-active {
-    transition: opacity 2s ease;
-}
-        
-.fade-feature-leave-active {
-    transition: opacity 0.5s ease;
-}
-
-.fade-feature-enter-from, .fade-feature-leave-to {
-    opacity: 0;
 }
 
 .philosophy {
@@ -173,7 +176,7 @@ const hideDetails = (index) => {
     overflow: hidden;
     .icon-container {
       position: relative;
-      // width: 260rem;
+      width: 260rem;
       // padding: 20rem;
       margin: 0 40rem;
       cursor: pointer;
@@ -183,6 +186,7 @@ const hideDetails = (index) => {
       border-radius: 20rem;
       display: flex;
       align-items: center;
+      transition: all 1s ease; /* 加入过渡效果 */    
       &.full-width {
           width: 600rem; /* 宽度撑满 */
       }
@@ -193,6 +197,11 @@ const hideDetails = (index) => {
       right: 20rem;
       color: #fff;
       font-size: 38rem;
+      transform: rotate(0deg);
+      transition: all 1s ease; /* 加入过渡效果 */    
+      &.active {
+          transform: rotate(45deg); /* 宽度撑满 */
+      }
     }
     .content-detail {
       
@@ -205,6 +214,7 @@ const hideDetails = (index) => {
       height: 320rem;
       width: 340rem;
       padding: 0 20rem 0 0;
+      animation: showcontent 1s ease-out forwards;
 
       // background:  rgb(26, 58, 95, .5);
     }
