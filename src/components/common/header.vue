@@ -14,7 +14,9 @@ const navigateTo = (route)=> {
     <!-- Philosophy & Values Section -->
     <section class="section header">
       <div class="header-content">
-        <div class="logo" @click="navigateTo('/index')">InfiniCapital</div>
+        <div class="logo" @click="navigateTo('/index')">
+          <img src="../../assets/logo.png" alt="">
+        </div>
         <div class="menus">
           <div class="item" @click="navigateTo('/about')">About us</div>
           <div class="item" @click="navigateTo('/investment')">Investment approach</div>
@@ -54,6 +56,10 @@ const navigateTo = (route)=> {
         font-size: 36rem;
         cursor: pointer;
         padding-left: 20rem;
+        width: 300rem;
+        img {
+          width: 100%;
+        }
     }
     .menus {
         display: flex;

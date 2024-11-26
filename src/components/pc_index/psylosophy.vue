@@ -34,8 +34,22 @@ onUnmounted(() => {
 const isHovering = ref([false, false, false, false]);
 
 
-const showDetails = (index) => {
-  isHovering.value[index] = true;
+const triggerDetails = (index) => {
+  if (isHovering[index]) {
+    isHovering.value[index] = false;
+  } else {
+    let result = [];
+    [1,2,3,4].forEach((item, i) => {
+      if (i === index) {
+          result.push(true)
+      } else {
+        result.push(false)
+      }
+    })
+    isHovering.value = result
+  }
+ 
+  
 };
 
 const hideDetails = (index) => {
@@ -50,67 +64,63 @@ const hideDetails = (index) => {
     <section class="section philosophy" ref="zoomBackground">
       <div class="title">Philosophy & Values</div>
       <div class="icons">
-          <div class="icon-container">
-            <transition name="fade">
-              <div v-if="isHovering[0]" class="content-detail" @click="hideDetails(0)">
-                A strong risk culture is embedded in our proprietary DNA. Our mission is clear: to safeguard and grow our investors' capital
-              </div>
-            </transition>
-            <transition name="fade">
-              <div class="icon" v-if="!isHovering[0]" @click="showDetails(0)">
-                <img src="../../assets/ic_website_layout_v1B-20.png" alt="">
-                <div>Discipline</div>
-              </div>
-            </transition>
+        <transition name="fade">
+          <div class="icon-container" @click="triggerDetails(0)">
+            <div class="icon">
+              <img src="../../assets/ic_website_layout_v1B-20.png" alt="">
+              <div>Discipline</div>
+            </div>
+            <div v-if="isHovering[0]" class="content-detail">
+              A strong risk culture is embedded in our proprietary DNA. Our mission is clear: to safeguard and grow our investors' capital
+            </div>
+            <div class="add"> + </div>
           </div>
+        </transition>
         
-          <div class="icon-container">
-            <transition name="fade">
-               <div v-if="isHovering[1]" class="content-detail" @click="hideDetails(1)">
-                
-                We acknowledge that there is always potential for improvement. We are in a state of continuous evolution, aiming for excellence in everything we do
-              </div>
-            </transition>
-            <transition name="fade">
-              <div class="icon" v-if="!isHovering[1]" @click="showDetails(1)">
-                <img src="../../assets/ic_website_layout_v1B-21.png" alt="">
-                <div>Entrepreneurial</div>
-                <div> Spirit</div>
-              </div>
-            </transition>
+        <transition name="fade">
+          <div class="icon-container" @click="triggerDetails(1)">
+            <div class="icon" >
+              <img src="../../assets/ic_website_layout_v1B-21.png" alt="">
+              <div>Entrepreneurial</div>
+              <div> Spirit</div>
+            </div>
+            <div v-if="isHovering[1]" class="content-detail">
+              
+              We acknowledge that there is always potential for improvement. We are in a state of continuous evolution, aiming for excellence in everything we do
+            </div>
+            <div class="add"> + </div>
           </div>
+        </transition>
         
         
-          <div class="icon-container">
-            <transition name="fade">
-              <div v-if="isHovering[2]" class="content-detail" @click="hideDetails(2)">
-                The market is anything but static. We embrace this challenge with perseverance and flexibility
-              </div>
-            </transition>
-            <transition name="fade">
-              <div class="icon" v-if="!isHovering[2]" @click="showDetails(2)">
-                <img src="../../assets/ic_website_layout_v1B-22.png" alt="">
-                <div>Adaptability</div>
-                
-              </div>
-            </transition>
+        <transition name="fade">
+          <div class="icon-container" @click="triggerDetails(2)">
+            <div class="icon" >
+              <img src="../../assets/ic_website_layout_v1B-22.png" alt="">
+              <div>Adaptability</div>
+              
+            </div>
+            <div v-if="isHovering[2]" class="content-detail" >
+              The market is anything but static. We embrace this challenge with perseverance and flexibility
+            </div>
+            <div class="add"> + </div>
           </div>
+        </transition>
         
         
-          <div class="icon-container">
-            <transition name="fade">
-              <div v-if="isHovering[3]" class="content-detail" @click="hideDetails(3)">
-                We hold transparency and collaboration in high esteem, convinced that open dialogue and a supportive culture foster the most robust investment ideas
-              </div>
-            </transition>
-            <transition name="fade">
-              <div class="icon" v-if="!isHovering[3]" @click="showDetails(3)">
-                <img src="../../assets/ic_website_layout_v1B-23.png" alt="">
-                <div>Respect</div>
-                
-              </div>
-            </transition>
+        <transition name="fade" >
+          <div class="icon-container" @click="triggerDetails(3)">
+            <div class="icon" >
+              <img src="../../assets/ic_website_layout_v1B-23.png" alt="">
+              <div>Respect</div>
+              
+            </div>
+            <div v-if="isHovering[3]" class="content-detail">
+              We hold transparency and collaboration in high esteem, convinced that open dialogue and a supportive culture foster the most robust investment ideas
+            </div>
+            <div class="add"> + </div>
           </div>
+        </transition>
         
       </div>
     </section>
@@ -134,24 +144,40 @@ const hideDetails = (index) => {
 .philosophy {
   background-color: #ffffff;
   color: #093254;
+  padding: 0 0 100rem 0;
   .title {
     font-size: 72rem;
     font-family: var(--main-font);
     display: flex;
     justify-content: center;
     margin: 5% 0;
+    color: #093254;
   }
   .icons {
     display: flex;
-    justify-content: space-around;
-    margin-top: 20rem;
+    // width: 80%;
+    justify-content: center;
+    margin: 20rem auto;
     overflow: hidden;
     .icon-container {
       position: relative;
-      height: 320rem;
-      width: 260rem;
+      // width: 260rem;
       // padding: 20rem;
+      margin: 0 40rem;
       cursor: pointer;
+      color: #fff;
+      height: 360rem;
+      background: #093254;
+      border-radius: 20rem;
+      display: flex;
+      align-items: center;
+    }
+    .add {
+      position: absolute;
+      top: 10rem;
+      right: 20rem;
+      color: #fff;
+      font-size: 38rem;
     }
     .content-detail {
       
@@ -162,17 +188,22 @@ const hideDetails = (index) => {
       justify-content: center;
       font-size: 22rem;
       height: 320rem;
+      width: 340rem;
+      padding: 0 20rem 0 0;
+
       // background:  rgb(26, 58, 95, .5);
     }
     .icon {
       // position: absolute;
+      width: 260rem;
       font-size: 36rem;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      
       img {
         width: 160rem;
-        margin: 0 auto;
+        margin: 0 auto 30rem;
         // margin-left: 60rem;
       }
       > div {

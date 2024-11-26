@@ -14,7 +14,9 @@ const navigateTo = (route)=> {
     <div class="footer">
         <div class="menus-row">
 
-            <div class="logo" @click="navigateTo('/index')">InfiniCapital</div>
+            <div class="logo" @click="navigateTo('/index')">
+              <img src="../../assets/footer_logo.png" alt="">
+            </div>
             <div class="links">
                 <div class="item" @click="navigateTo('/about')">About us</div>
                 <div class="item" @click="navigateTo('/investment')">Investment approach</div>
@@ -57,6 +59,10 @@ const navigateTo = (route)=> {
             padding-left: 20rem;
             font-size: 36rem;
             cursor: pointer;
+            width: 300rem;
+            img {
+              width: 300rem;
+            }
         }
         .links {
             font-size: 24rem;

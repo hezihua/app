@@ -1,6 +1,8 @@
 <template>
     <div class="header">
-        <div class="logo" @click="navigateTo('/index')">InfiniCapital</div>
+        <div class="logo" @click="navigateTo('/index')">
+          <img src="../../assets/logo.png" alt="">
+        </div>
         <div class="add" @click="toggleMenu">+</div>
         <div class="menus" :class="{ 'show': isMenuVisible }">
             <div class="hide" @click="toggleMenu">+</div>
@@ -47,6 +49,11 @@ const navigateTo = (route)=> {
     left: 0;
     .logo {
         width: 60%;
+        display: flex;
+        align-items: center;
+        img {
+          width: 100%;
+        }
     }
     .add {
         flex-grow: 1;

@@ -30,7 +30,9 @@ const navigateTo = (route)=> {
             <div class="login" @click="navigateTo('/investor-login')">
                 Investor Login
             </div>
-            <div class="logo" @click="navigateTo('/index')">InfiniCapital</div>
+            <div class="logo" @click="navigateTo('/index')">
+              <img src="../../assets/footer_logo.png" alt="">
+            </div>
         </div>
     </div>
   </template>
@@ -92,6 +94,11 @@ const navigateTo = (route)=> {
         .logo {
             font-size: 42rem;
             cursor: pointer;
+            width: 14rem;
+            width: 60%;
+            img {
+              width: 100%;
+            }
         }
         .item {
             cursor: pointer;
