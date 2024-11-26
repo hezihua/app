@@ -278,17 +278,17 @@ const handleClick = (index = 0) => {
             transform: translateX(1110rem);
         }
 
-        .fade-feature-enter-active {
-            transition: opacity 2s ease;
-        }
+        // .fade-feature-enter-active {
+        //     transition: opacity 2s ease;
+        // }
         
-        .fade-feature-leave-active {
-            transition: opacity 0.5s ease;
-        }
+        // .fade-feature-leave-active {
+        //     transition: opacity 0.5s ease;
+        // }
 
-        .fade-feature-enter-from, .fade-feature-leave-to {
-            opacity: 0;
-        }
+        // .fade-feature-enter-from, .fade-feature-leave-to {
+        //     opacity: 0;
+        // }
 
         .color {
           background: #234c68;

@@ -65,7 +65,7 @@ const hideDetails = (index) => {
       <div class="title">Philosophy & Values</div>
       <div class="icons">
         <transition name="fade">
-          <div class="icon-container" @click="triggerDetails(0)">
+          <div class="icon-container" @click="triggerDetails(0)" :class="{ 'full-width': isHovering[0] }">
             <div class="icon">
               <img src="../../assets/ic_website_layout_v1B-20.png" alt="">
               <div>Discipline</div>
@@ -78,7 +78,7 @@ const hideDetails = (index) => {
         </transition>
         
         <transition name="fade">
-          <div class="icon-container" @click="triggerDetails(1)">
+          <div class="icon-container" @click="triggerDetails(1)" :class="{ 'full-width': isHovering[1] }">
             <div class="icon" >
               <img src="../../assets/ic_website_layout_v1B-21.png" alt="">
               <div>Entrepreneurial</div>
@@ -94,7 +94,7 @@ const hideDetails = (index) => {
         
         
         <transition name="fade">
-          <div class="icon-container" @click="triggerDetails(2)">
+          <div class="icon-container" @click="triggerDetails(2)" :class="{ 'full-width': isHovering[2] }">
             <div class="icon" >
               <img src="../../assets/ic_website_layout_v1B-22.png" alt="">
               <div>Adaptability</div>
@@ -109,7 +109,7 @@ const hideDetails = (index) => {
         
         
         <transition name="fade" >
-          <div class="icon-container" @click="triggerDetails(3)">
+          <div class="icon-container" @click="triggerDetails(3)" :class="{ 'full-width': isHovering[3] }" >
             <div class="icon" >
               <img src="../../assets/ic_website_layout_v1B-23.png" alt="">
               <div>Respect</div>
@@ -135,10 +135,22 @@ const hideDetails = (index) => {
 }
 
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+  transition: opacity 2s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+.fade-feature-enter-active {
+    transition: opacity 2s ease;
+}
+        
+.fade-feature-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.fade-feature-enter-from, .fade-feature-leave-to {
+    opacity: 0;
 }
 
 .philosophy {
@@ -171,6 +183,9 @@ const hideDetails = (index) => {
       border-radius: 20rem;
       display: flex;
       align-items: center;
+      &.full-width {
+          width: 600rem; /* 宽度撑满 */
+      }
     }
     .add {
       position: absolute;
