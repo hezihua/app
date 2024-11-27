@@ -50,7 +50,7 @@
     box-sizing: border-box;
     .question {
         width: 30%;
-        font-size: 58rem;
+        font-size: 72rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -86,7 +86,7 @@
         }
         .text {
             width: 80%;
-            font-size: 36rem;
+            font-size: 26rem;
         }
     }
   }

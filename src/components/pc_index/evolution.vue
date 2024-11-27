@@ -158,7 +158,7 @@ onUnmounted(() => {
           <p class="text">We continually challenge the status quo, upgrade our institutionalized infrastructure and strategically expand across diverse high-Sharpe strategies.</p>
           <p class="text">Our entrepreneurial spirit gives us agility and resilience, enabling us to prosper amidst the ever-shifting market.</p>
 
-          <div class="arrow"><img @click="handleOpen" src="../../assets/ic_website_layout_v1B.png"></div>
+          <!-- <div class="arrow"><img @click="handleOpen" src="../../assets/ic_website_layout_v1B.png"></div> -->
         </div>
       </div>
       
@@ -222,7 +222,7 @@ onUnmounted(() => {
                 </div>
               </div>
             </section>
-            <div class="arrow"><img @click="handleClose" src="../../assets/ic_website_layout_v1B.png"></div>
+            <!-- <div class="arrow"><img @click="handleClose" src="../../assets/ic_website_layout_v1B.png"></div> -->
           </div>
         </div>
       </Transition>
@@ -312,19 +312,19 @@ onUnmounted(() => {
     // align-items: center;
     overflow: hidden;
     clip-path: polygon(33.5% 0, 100% 0, 100% 100%, 0 100%); /* 定义多边形的剪裁路径 */
-  }
-  .evolutioncontent {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  .evolutioncontent {
+    padding: 10vh 0;
     width: 100%;
-    height: 100%;
+    // height: 100%;
     .title {
       font-size: 72rem;
       font-family: var(--main-font);
       width:65%;
       margin: 0% 5% 3% 30%;
-      // opacity: 0;
     }
     .text {
       font-size: 26rem;
@@ -373,7 +373,6 @@ onUnmounted(() => {
     // align-items: center;
     overflow: hidden;
     clip-path: polygon(23% 0, 100% 0, 100% 100%, 0 100%); /* 定义多边形的剪裁路径 */
-    padding-top: 3%;
     box-sizing: border-box;
     .timeline-section {
       // opacity: 0;
@@ -396,7 +395,7 @@ onUnmounted(() => {
 
     .sub-title {
       width: 50%;
-      font-size: 26rem;
+      font-size: 32rem;
       color: #c7cfd6;
       margin: 0% 0 0% 30%;
       // margin-bottom: 20rem;
@@ -414,7 +413,7 @@ onUnmounted(() => {
     .title {
       width: 50%;
       margin: 0% 0 0% 30%;
-      font-size: 36rem;
+      font-size: 48rem;
       color: #fff;
     }
 
@@ -457,14 +456,14 @@ onUnmounted(() => {
     .date {
       font-weight: bold;
       // margin-bottom: 2rem;
-      font-size: 12rem;
-      height: 14rem;
+      font-size: 22rem;
+      height: 26rem;
     }
 
     .description {
-      font-size: 12rem;
+      font-size: 22rem;
       color: #c7cfd6;
-      height: 14rem;
+      height: 26rem;
     }
 
     .timeline-item:last-child {

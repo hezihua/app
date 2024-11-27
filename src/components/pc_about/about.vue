@@ -34,7 +34,7 @@ onUnmounted(() => {
 <template>
     <div class="about-us">
         <Header />
-        <div class="about-boxes" ref="zoomBackground"  :style="{ height: calculatedHeight + 'rem' }">
+        <div class="about-boxes" ref="zoomBackground"  :style="{ height: '56.25vw' }">
             <div class="title">About Us</div>
             <div class="article">
                 <div class="text">From our founding in 2015 and our roots in proprietary investment, Infini Capital has organically </div>
@@ -80,11 +80,15 @@ onUnmounted(() => {
     position: relative;
     .about-boxes {
         background-image: url('../../assets/aboutus.jpg'); /* 背景图路径 */
-        background-size: 102% 102%;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
         background-position: center;
         transform-origin: center;
         overflow: hidden;
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        padding-left: 10vw;
         .article {
             margin-bottom: 50rem;
         }
@@ -92,12 +96,11 @@ onUnmounted(() => {
             font-size: 72rem;
             font-family: var(--main-font);
             width:65%;
-            margin: 15% 10% 3%;
+            margin: 0% 0% 3%;
         }
         .text {
-            font-size: 32rem;
+            font-size: 26rem;
             width: 65%;
-            margin: 0% 10%;
         }
     }
   }

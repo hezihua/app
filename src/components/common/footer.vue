@@ -65,7 +65,7 @@ const navigateTo = (route)=> {
             }
         }
         .links {
-            font-size: 24rem;
+            font-size: 26rem;
             display: flex;
             padding-right: 20rem;
             .item {
@@ -79,7 +79,7 @@ const navigateTo = (route)=> {
                 padding: 10rem 20rem;
                 border-radius: 60rem;
                 height: 50rem;
-                font-size: 24rem;
+                font-size: 26rem;
                 background: #093254;
                 color: #fff;
                 display: flex;
@@ -98,7 +98,7 @@ const navigateTo = (route)=> {
     }
     .legal {
         display: flex;
-        font-size: 24rem;
+        font-size: 26rem;
         padding-left: 20rem;
         width: 80vw;
         margin: 0 auto;

@@ -122,10 +122,11 @@ const toggleContent = (index = 0)=> {
       .name {
         font-size: 58rem;
         width: 100%;
+        margin-bottom: 10rem;
       }
       .duty {
         width: 100%;
-        font-size: 32rem;
+        font-size: 26rem;
       }
       .arrow {
         display: flex;

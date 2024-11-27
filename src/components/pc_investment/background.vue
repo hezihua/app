@@ -34,7 +34,7 @@ onUnmounted(() => {
 <template>
     <div class="container">
         <Header />
-        <div class="about-boxes" ref="zoomBackground"  :style="{ height: calculatedHeight + 'rem' }">
+        <div class="about-boxes" ref="zoomBackground"  :style="{ height: '38vw' }">
             <div class="title">
                 <div>Investment</div>
                 <div>Approach</div>
@@ -57,18 +57,12 @@ onUnmounted(() => {
         background-position: center;
         transform-origin: center;
         overflow: hidden;
-        .article {
-            margin-bottom: 50rem;
-        }
+        display: flex;
+        align-items: center;
         .title {
             font-size: 72rem;
             font-family: var(--main-font);
             width:65%;
-            margin: 20% 10% 3%;
-        }
-        .text {
-            font-size: 36rem;
-            width: 65%;
             margin: 0% 10%;
         }
     }

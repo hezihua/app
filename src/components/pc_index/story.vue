@@ -182,6 +182,9 @@ onUnmounted(() => {
     // align-items: center;
     overflow: hidden;
     clip-path: polygon(0 0, 60% 0, 100% 100%, 0 100%); /* 定义多边形的剪裁路径 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .storycontent {
     // position: absolute;
@@ -189,11 +192,9 @@ onUnmounted(() => {
     // top: 0;
    
     // transition: all 1s ease; /* 动画过渡效果 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 10vh 0;
     width: 100%;
-    height: 100%;
+    // height: 100%;
     .title {
       font-size: 72rem;
       font-family: var(--main-font);

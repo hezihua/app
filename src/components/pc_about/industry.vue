@@ -41,7 +41,7 @@
             align-items: center;
             width: 50%;
             padding-bottom: 40rem;
-            font-size: 42rem;
+            font-size: 26rem;
             img {
                 // width: 100rem;
                 height: 100rem;

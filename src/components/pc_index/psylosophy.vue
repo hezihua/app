@@ -221,7 +221,7 @@ const hideDetails = (index) => {
     .icon {
       // position: absolute;
       width: 260rem;
-      font-size: 36rem;
+      font-size: 26rem;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;

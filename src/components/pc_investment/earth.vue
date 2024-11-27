@@ -54,7 +54,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <section class="section earth zoom-background" ref="zoomBackground"  :style="{ height: calculatedHeight + 'rem', ...backgroundStyle }">
+    <section class="section earth zoom-background" ref="zoomBackground"  :style="{ height: '56.25vw', ...backgroundStyle }">
       <div class="content">
 
         <div class="title">
@@ -73,10 +73,10 @@ onUnmounted(() => {
 /* 定义动画 */
 @keyframes zoomIn {
   0% {
-    transform: translate(-51%, -51%) scale(1.05);
+    transform: translate(-50%, -50%) scale(1.2);
   }
   100% {
-    transform: translate(-51%, -51%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
@@ -101,7 +101,7 @@ onUnmounted(() => {
     background-repeat: no-repeat;
     background-position: center;
     transform-origin: center;
-    // transform: translate(-50%, -50%) rotate(0deg); /* 移动到中心，并设置旋转角度 */
+    transform: translate(-50%, -50%) rotate(0deg); /* 移动到中心，并设置旋转角度 */
     // animation: zoomIn 1s ease-out forwards; /* 设置动画持续时间 */
 }
 
@@ -116,20 +116,21 @@ onUnmounted(() => {
     position: absolute;
     width: 100%;
     height: 100%;
-    // display: flex;
-    // justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     // align-items: center;
     z-index: 9;
     .title {
         font-size: 72rem;
         font-family: var(--main-font);
         width:850rem;
-        margin: 15% auto 3%;
+        margin: 0% auto 10%;
         text-align: center;
     }
     .text {
-        font-size: 52rem;
-        width: 65%;
+        font-size: 26rem;
+        width: 50%;
         margin: 0% auto;
     }
 

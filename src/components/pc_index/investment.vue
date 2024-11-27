@@ -248,7 +248,7 @@ onUnmounted(() => {
     overflow: hidden;
     clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%); /* 定义多边形的剪裁路径 */
     .title {
-      font-size: 48rem;
+      font-size: 72rem;
       font-family: var(--main-font);
       width:65%;
       margin: 0% 10% 3%;
@@ -256,7 +256,7 @@ onUnmounted(() => {
       // opacity: 0;
     }
     .text {
-      font-size: 18rem;
+      font-size: 26rem;
       width: 65%;
       margin: 0% 10%;
       transform: translate(-100%, 0);

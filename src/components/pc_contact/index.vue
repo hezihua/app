@@ -34,10 +34,6 @@ import Footer from '../common/footer.vue'
             </div>
         </div>
     </div>
-    
-    <!-- <Background />
-
-    <Introduce /> -->
 
     <Footer />
    
@@ -78,13 +74,13 @@ import Footer from '../common/footer.vue'
                 align-items: center;
                 
                 font-weight: 700;
-                font-size: 42rem;
+                font-size: 38rem;
             }
             .text {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 42rem;
+                font-size: 26rem;
             }
         }
     }

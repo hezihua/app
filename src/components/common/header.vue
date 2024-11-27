@@ -41,7 +41,7 @@ const navigateTo = (route)=> {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 99;
     .header-content {
       width: 80vw;
@@ -63,7 +63,7 @@ const navigateTo = (route)=> {
     }
     .menus {
         display: flex;
-        font-size: 24rem;
+        font-size: 26rem;
         align-items: center;
         padding-right: 20rem;
         .item {

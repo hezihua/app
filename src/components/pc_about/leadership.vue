@@ -70,7 +70,7 @@ onUnmounted(() => {
             margin: 30rem 0;
         }
         .text {
-            font-size: 32rem;
+            font-size: 26rem;
         }
     }
     .right{
