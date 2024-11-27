@@ -27,14 +27,6 @@ const isEndText = ref(false)
 const textcontent = ref(null);
 const isEndButton = ref(false)
 const buttoncontent = ref(null);
-const calculatedHeight = ref(0); // 动态高度
-// 动态计算高度
-// const calculateHeight = () => {
-//   if (zoomBackground.value) {
-//     const width = zoomBackground.value.clientWidth;
-//     calculatedHeight.value = width * 0.5625; // 例如，高度为宽度的 60%
-//   }
-// };
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -101,10 +93,6 @@ const buttonobserver = new IntersectionObserver((entries) => {
 
 // 组件挂载后计算一次高度
 onMounted(() => {
-  // calculateHeight();
-
-  // 监听窗口大小变化，重新计算高度
-  // window.addEventListener('resize', calculateHeight);
    // 创建动画时间轴
   //  const timeline = gsap.timeline({
   //     scrollTrigger: {
@@ -129,10 +117,6 @@ onMounted(() => {
   buttonobserver.observe(buttonModuleElement);
 });
 
-// 组件销毁时移除事件监听器
-onUnmounted(() => {
-  // window.removeEventListener('resize', calculateHeight);
-});
 
 
 </script>

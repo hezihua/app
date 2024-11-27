@@ -1,35 +1,14 @@
 <script setup>
 import { ref, onMounted, watch, onUnmounted } from 'vue';
-import Story from './story.vue'
-import Evolution from './evolution.vue'
 const zoomBackground = ref(null); // 用于引用 <div> 元素
-const calculatedHeight = ref(0); // 动态高度
 const show = ref(false); 
 const showtimeline = ref(false);
 const showcontent = ref(false)
-// 动态计算高度
-const calculateHeight = () => {
-  if (zoomBackground.value) {
-    const width = zoomBackground.value.clientWidth;
-    calculatedHeight.value = width * 0.5625; // 例如，高度为宽度的 60%
-  }
-};
 
 
 
 
-// 组件挂载后计算一次高度
-onMounted(() => {
-  calculateHeight();
 
-  // 监听窗口大小变化，重新计算高度
-  window.addEventListener('resize', calculateHeight);
-});
-
-// 组件销毁时移除事件监听器
-onUnmounted(() => {
-  window.removeEventListener('resize', calculateHeight);
-});
 
 // 使用数组来存储每个块的悬停状态
 const isHovering = ref([false, false, false, false]);
@@ -55,10 +34,6 @@ const triggerDetails = (index) => {
   }
  
   
-};
-
-const hideDetails = (index) => {
-  isHovering.value[index] = false;
 };
 
 

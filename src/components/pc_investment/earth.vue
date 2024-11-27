@@ -3,15 +3,8 @@ import { ref, onMounted, watch, onUnmounted, nextTick } from 'vue';
 import Header from '../common/header.vue'
 
 const zoomBackground = ref(null); // 用于引用 <div> 元素
-const calculatedHeight = ref(0); // 动态高度
-const show = ref(false); 
-// 动态计算高度
-const calculateHeight = () => {
-  if (zoomBackground.value) {
-    const width = zoomBackground.value.clientWidth;
-    calculatedHeight.value = width * 0.5625; // 例如，高度为宽度的 60%
-  }
-};
+ 
+
 
 const backgroundStyle = ref({
   transform: 'scale(1)',
@@ -35,20 +28,12 @@ const observer = new IntersectionObserver((entries) => {
 
 // 组件挂载后计算一次高度
 onMounted(async () => {
-  calculateHeight();
-
-  // 监听窗口大小变化，重新计算高度
-  window.addEventListener('resize', calculateHeight);
   await nextTick()
 
   const moduleElement = document.querySelector('.earth');
   observer.observe(moduleElement);
 });
 
-// 组件销毁时移除事件监听器
-onUnmounted(() => {
-  window.removeEventListener('resize', calculateHeight);
-});
 
 
 </script>

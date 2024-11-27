@@ -7,14 +7,6 @@ import gsap from "gsap";
   gsap.registerPlugin(ScrollTrigger);
 const storycontent = ref(null); // 用于引用 <div> 元素
 const isEnd = ref(false)
-const calculatedHeight = ref(0); // 动态高度
-// 动态计算高度
-// const calculateHeight = () => {
-//   if (zoomBackground.value) {
-//     const width = zoomBackground.value.clientWidth;
-//     calculatedHeight.value = width * 0.5625; // 例如，高度为宽度的 60%
-//   }
-// };
 
 
 
@@ -64,10 +56,8 @@ const observer = new IntersectionObserver((entries) => {
 
 // 组件挂载后计算一次高度
 onMounted(() => {
-  // calculateHeight();
 
   // 监听窗口大小变化，重新计算高度
-  // window.addEventListener('resize', calculateHeight);
   // window.addEventListener('scroll', handleScroll);
   // const content = document.getElementById('storycontent');
 
@@ -110,10 +100,6 @@ onMounted(() => {
     // .to("#storycontent .text", { opacity: 1, duration: 6000 })   // 放大
 });
 
-// 组件销毁时移除事件监听器
-onUnmounted(() => {
-  // window.removeEventListener('resize', calculateHeight);
-});
 
 
 
