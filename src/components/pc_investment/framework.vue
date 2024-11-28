@@ -90,61 +90,55 @@ const triggerDetails = (index) => {
               
                 <transition name="fade-feature">
                     <div :class="{ 'full-width': blockHovering[0] }"  class="feature" @click="triggerDetails(0)" >
-                        <div>
+                        <div class="main">
                             <div>Specialized Risk</div>
                             <div>Management</div>
                             <div>Process</div>
                         </div>
-                        <div class="detail" v-if="blockHovering[0]">
-                            <div class="content"  v-if="showcontent">
-
-                                Risk managers specialize in the asset classes they oversee, facilitating productive discussions with investment professionals.
-                            </div>
+                        <div class="detail" v-if="blockHovering[0] && showcontent">
+                            
+                            Risk managers specialize in the asset classes they oversee, facilitating productive discussions with investment professionals.
                         </div>
                     </div>
                 </transition>
                 <transition name="fade-feature">
                     <div :class="{ 'full-width': blockHovering[1] }" class="feature color" @click="triggerDetails(1)"  >
-                        <div>
+                        <div class="main">
                             <div>Prudent</div>
                             <div>Capital</div>
                             <div>Allocation</div>
                         </div>
-                        <div class="detail" v-if="blockHovering[1]">
-                            <div class="content"  v-if="showcontent">
-
-                                Capital allocation is both art and science. We strive to identify the best uses of capital to generate superior long-term returns for investors. 
-                            </div>
+                        <div class="detail" v-if="blockHovering[1] && showcontent">
+                            
+                            Capital allocation is both art and science. We strive to identify the best uses of capital to generate superior long-term returns for investors. 
+                            
                         </div>
                     </div>
                 </transition>
                 <transition name="fade-feature">
                     <div :class="{ 'full-width': blockHovering[2] }" class="feature" @click="triggerDetails(2)"  >
-                        <div>
+                        <div class="main">
                             <div>Mitigation</div>
                             <div>of</div>
                             <div>Tail Risks</div>
                         </div>
-                        <div class="detail" v-if="blockHovering[2]">
-                            <div class="content"  v-if="showcontent">
-
-                                We systematically evaluate potential stress factors and scenarios to manage exposures across our portfolio, striking the right balance between risk and reward.
-                            </div>
+                        <div class="detail" v-if="blockHovering[2] && showcontent">
+                            
+                            We systematically evaluate potential stress factors and scenarios to manage exposures across our portfolio, striking the right balance between risk and reward.
+                            
                         </div>
                     </div>
                 </transition>
                 <transition name="fade-feature">
                     <div :class="{ 'full-width': blockHovering[3] }" class="feature color" @click="triggerDetails(3)"  >
-                        <div>
+                        <div class="main">
                             <div>Resilient</div>
                             <div>Liquidity</div>
                             <div>Profile</div>
                         </div>
-                        <div class="detail" v-if="blockHovering[3]">
-                            <div class="content" v-if="showcontent">
-
-                                We employ a range of methods to monitor and manage the liquidity of our portfolio. We stay vigilant even in highly liquid asset classes to avoid concentration risks. 
-                            </div>
+                        <div class="detail" v-if="blockHovering[3] && showcontent">
+                            
+                            We employ a range of methods to monitor and manage the liquidity of our portfolio. We stay vigilant even in highly liquid asset classes to avoid concentration risks. 
                         </div>
                     </div>
                     
@@ -187,18 +181,10 @@ const triggerDetails = (index) => {
   
   <style scoped lang="scss">
 
-    /* 定义动画 */
-@keyframes zoomIn {
-  0% {
-    transform: scale(1.0);
-  }
-  100% {
-    transform: scale(1.08);
-  }
-}
+
 
 .fade-feature-enter-active, .fade-feature-leave-active {
-  transition: opacity 2s;
+  transition: opacity 0.3s;
 }
 .fade-feature-enter, .fade-feature-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
@@ -236,44 +222,50 @@ const triggerDetails = (index) => {
     .features {
         display: flex;
         justify-content: center;
-        width: 1410rem;
+        // width: 1410rem;
         margin: 0 auto;
         padding: 0 0 80rem;
         position: relative;
         height: 300rem;
         .feature {
            
-            background-color: #093254;
-            color: white;
-            // padding: 80rem 0rem 0;
-            box-sizing: border-box;
-            border-radius: 20rem;
+            position: relative;
             width: 260rem;
-            height: 300rem;
-            margin: 0 20rem;
-            transition: all 1s ease; /* 加入过渡效果 */            
-            font-size: 26rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            // padding: 20rem;
+            margin: 0 40rem;
             cursor: pointer;
-            
-            > div {
-                text-align: center;
-                margin: 0 auto;
-                width: 260rem;
-            }
+            color: #fff;
+            height: 360rem;
+            background: #093254;
+            border-radius: 20rem;
+            display: flex;
+            align-items: center;
+            transition: all .5s ease; /* 加入过渡效果 */    
             &.full-width {
                 width: 600rem; /* 宽度撑满 */
             }
-            .detail {
-                flex-grow: 1;
-                .content {
-                    font-size: 26rem;
-                    width: 90%;
-                    padding: 0 5% 0 0;
-                    animation: showcontent 1s ease-out forwards;
+            .main {
+                width: 260rem;
+                font-size: 26rem;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                > div {
+                    width: 260rem;
+                    text-align: center;
                 }
+            }
+            .detail {
+                // flex-grow: 1;
+                top: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 22rem;
+                height: 320rem;
+                width: 340rem;
+                padding: 0 20rem 0 0;
+                animation: showcontent .5s ease-out forwards;
             }
         }
 
