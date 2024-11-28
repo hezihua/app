@@ -120,7 +120,7 @@ onMounted(() => {
   
     // 添加动画效果
   timeline
-    .to("#timeline-container", { translateX: '-100%', duration: 3000 })         // 放大
+    .to("#timeline-container", { translateX: '-100%' })         // 放大
     // .to(".timeline-section", { opacity: 1, duration: 1000 })   
 });
 
@@ -152,8 +152,7 @@ onMounted(() => {
           <div class="timelinecontent" ref="timelinecontent">
 
             <section class="timeline-section">
-              <div class="title">Proprietary </div>
-              <div  class="title">Investment</div>
+              <div class="title">Proprietary Investment</div>
               <div class="timeline">
                 <div class="timeline-item">
                   <div class="circle"></div>
@@ -191,18 +190,16 @@ onMounted(() => {
                   <div class="circle"></div>
                   <div class="content">
                     <p class="date">Nov 2023</p>
-                    <p class="description">Infini Global Master Fund </p>
-                    <p class="description">launched</p>
-                    <p class="description"></p>
+                    <p class="description">Open for                     </p>
+                    <p class="description">external capital</p>
                   </div>
                 </div>
                 <div class="timeline-item">
                   <div class="circle"></div>
                   <div class="content">
-                    <p class="date">2024</p>
-                    <p class="description">Licensed with the Financial Services </p>
-                    <p class="description">Regulatory Authority (FSRA) at </p>
-                    <p class="description">Abu Dhabi</p>
+                    <p class="date">Mar 2024​                    </p>
+                    <p class="description">Established presence in                    </p>
+                    <p class="description">Abu Dhabi​                    </p>
                   </div>
                 </div>
               </div>

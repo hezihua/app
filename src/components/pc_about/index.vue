@@ -35,7 +35,7 @@ onMounted(async () => {
   <div class="full-page-component">
     <About />
 
-    <Industry />
+    <!-- <Industry /> -->
 
 
     <Leadership />

@@ -178,7 +178,7 @@ onMounted(() => {
     // top: 0;
    
     // transition: all 1s ease; /* 动画过渡效果 */
-    padding: 10vh 0;
+    padding: 15vh 0;
     width: 100%;
     // height: 100%;
     .title {

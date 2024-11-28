@@ -50,7 +50,7 @@
     box-sizing: border-box;
     .question {
         width: 30%;
-        font-size: 72rem;
+        font-size: 58rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

@@ -161,7 +161,7 @@ const triggerDetails = (index) => {
       border-radius: 20rem;
       display: flex;
       align-items: center;
-      transition: all 1s ease; /* 加入过渡效果 */    
+      transition: all .5s ease; /* 加入过渡效果 */    
       &.full-width {
           width: 600rem; /* 宽度撑满 */
       }
@@ -173,14 +173,12 @@ const triggerDetails = (index) => {
       color: #fff;
       font-size: 38rem;
       transform: rotate(0deg);
-      transition: all 1s ease; /* 加入过渡效果 */    
+      transition: all .5s ease; /* 加入过渡效果 */    
       &.active {
           transform: rotate(45deg); /* 宽度撑满 */
       }
     }
     .content-detail {
-      
-      // position: absolute;
       top: 0;
       display: flex;
       align-items: center;
@@ -189,12 +187,9 @@ const triggerDetails = (index) => {
       height: 320rem;
       width: 340rem;
       padding: 0 20rem 0 0;
-      animation: showcontent 1s ease-out forwards;
-
-      // background:  rgb(26, 58, 95, .5);
+      animation: showcontent .5s ease-out forwards;
     }
     .icon {
-      // position: absolute;
       width: 260rem;
       font-size: 26rem;
       display: flex;
