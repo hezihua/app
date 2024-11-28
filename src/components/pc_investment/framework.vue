@@ -17,7 +17,7 @@ const items = [
   { title: "In-house Quantitative and IT Teams", details: "We have dedicated our in-house research and development effort in technology to accelerate our platform evolution." },
   { title: "Proprietary Systems", details: "We have developed tailor-made system solutions to best fit our strategy and risk mandate, optimizing risk-reward ratios and adapting quickly to changing market conditions." }
 ];
-
+const blockHovering = ref([false, false, false, false]);
 // 使用数组来存储每个块的悬停状态
 const isHovering = ref([false, false, false]);
 
@@ -48,6 +48,29 @@ const handleClick = (index = 0) => {
 }
 
 
+const triggerDetails = (index) => {
+  showcontent.value = false
+  if (blockHovering.value[index]) {
+    blockHovering.value[index] = false;
+  } else {
+    let result = [];
+    [1,2,3,4].forEach((item, i) => {
+      if (i === index) {
+          result.push(true)
+      } else {
+        result.push(false)
+      }
+    })
+    setTimeout(() => {
+      showcontent.value = true
+    }, 1000);
+    blockHovering.value = result
+  }
+ 
+  
+};
+
+
 
 
 </script>
@@ -64,14 +87,15 @@ const handleClick = (index = 0) => {
 
             </div>
             <div class="features">
+              
                 <transition name="fade-feature">
-                    <div :class="{ 'full-width': currentIndex === 0 }"  class="feature" @click="handleClick(0)" v-if="currentIndex === 0 || currentIndex === -1">
+                    <div :class="{ 'full-width': blockHovering[0] }"  class="feature" @click="triggerDetails(0)" >
                         <div>
                             <div>Specialized Risk</div>
                             <div>Management</div>
                             <div>Process</div>
                         </div>
-                        <div class="detail" v-if="currentIndex === 0">
+                        <div class="detail" v-if="blockHovering[0]">
                             <div class="content"  v-if="showcontent">
 
                                 Risk managers specialize in the asset classes they oversee, facilitating productive discussions with investment professionals.
@@ -80,13 +104,13 @@ const handleClick = (index = 0) => {
                     </div>
                 </transition>
                 <transition name="fade-feature">
-                    <div :class="{ 'full-width': currentIndex === 1 }" class="feature color" @click="handleClick(1)"  v-if="currentIndex === 1 || currentIndex === -1">
+                    <div :class="{ 'full-width': blockHovering[1] }" class="feature color" @click="triggerDetails(1)"  >
                         <div>
                             <div>Prudent</div>
                             <div>Capital</div>
                             <div>Allocation</div>
                         </div>
-                        <div class="detail" v-if="currentIndex === 1">
+                        <div class="detail" v-if="blockHovering[1]">
                             <div class="content"  v-if="showcontent">
 
                                 Capital allocation is both art and science. We strive to identify the best uses of capital to generate superior long-term returns for investors. 
@@ -95,13 +119,13 @@ const handleClick = (index = 0) => {
                     </div>
                 </transition>
                 <transition name="fade-feature">
-                    <div :class="{ 'full-width': currentIndex === 2 }" class="feature" @click="handleClick(2)"  v-if="currentIndex === 2 || currentIndex === -1">
+                    <div :class="{ 'full-width': blockHovering[2] }" class="feature" @click="triggerDetails(2)"  >
                         <div>
                             <div>Mitigation</div>
                             <div>of</div>
                             <div>Tail Risks</div>
                         </div>
-                        <div class="detail" v-if="currentIndex === 2">
+                        <div class="detail" v-if="blockHovering[2]">
                             <div class="content"  v-if="showcontent">
 
                                 We systematically evaluate potential stress factors and scenarios to manage exposures across our portfolio, striking the right balance between risk and reward.
@@ -110,13 +134,13 @@ const handleClick = (index = 0) => {
                     </div>
                 </transition>
                 <transition name="fade-feature">
-                    <div :class="{ 'full-width': currentIndex === 3 }" class="feature color" @click="handleClick(3)"  v-if="currentIndex === 3 ||  currentIndex === -1">
+                    <div :class="{ 'full-width': blockHovering[3] }" class="feature color" @click="triggerDetails(3)"  >
                         <div>
                             <div>Resilient</div>
                             <div>Liquidity</div>
                             <div>Profile</div>
                         </div>
-                        <div class="detail" v-if="currentIndex === 3">
+                        <div class="detail" v-if="blockHovering[3]">
                             <div class="content" v-if="showcontent">
 
                                 We employ a range of methods to monitor and manage the liquidity of our portfolio. We stay vigilant even in highly liquid asset classes to avoid concentration risks. 
@@ -173,6 +197,13 @@ const handleClick = (index = 0) => {
   }
 }
 
+.fade-feature-enter-active, .fade-feature-leave-active {
+  transition: opacity 2s;
+}
+.fade-feature-enter, .fade-feature-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
     /* 定义动画 */
 @keyframes showcontent {
   0% {
@@ -211,76 +242,47 @@ const handleClick = (index = 0) => {
         position: relative;
         height: 300rem;
         .feature {
-            position: absolute;
-            left: 0;
-            top: 0;
+           
             background-color: #093254;
             color: white;
-            padding: 80rem 0rem 0;
+            // padding: 80rem 0rem 0;
             box-sizing: border-box;
             border-radius: 20rem;
-            width: 300rem;
+            width: 260rem;
             height: 300rem;
-            transition: all 2s ease; /* 加入过渡效果 */            
-            font-size: 32rem;
+            margin: 0 20rem;
+            transition: all 1s ease; /* 加入过渡效果 */            
+            font-size: 26rem;
             display: flex;
+            justify-content: center;
+            align-items: center;
             cursor: pointer;
             
             > div {
                 text-align: center;
                 margin: 0 auto;
-                width: 300rem;
+                width: 260rem;
             }
             &.full-width {
-                width: 100%; /* 宽度撑满 */
+                width: 600rem; /* 宽度撑满 */
             }
             .detail {
                 flex-grow: 1;
                 .content {
-                    font-size: 32rem;
-                    width: 70%;
-                    padding: 0 15%;
+                    font-size: 26rem;
+                    width: 90%;
+                    padding: 0 5% 0 0;
                     animation: showcontent 1s ease-out forwards;
                 }
             }
         }
 
-        .feature:nth-child(1) {
-            transform: translateX(0rem);
-        }
 
-        .feature:nth-child(2) {
-            transform: translateX(370rem);
-        }
-
-        .feature:nth-child(3) {
-            transform: translateX(740rem);
-        }
-
-        .feature:nth-child(4) {
-            transform: translateX(1110rem);
-        }
-
-        // .fade-feature-enter-active {
-        //     transition: opacity 2s ease;
-        // }
-        
-        // .fade-feature-leave-active {
-        //     transition: opacity 0.5s ease;
-        // }
-
-        // .fade-feature-enter-from, .fade-feature-leave-to {
-        //     opacity: 0;
-        // }
 
         .color {
           background: #234c68;
         }
 
-        
-        // .feature:hover {
-        //   animation: zoomIn 1s ease-out forwards;
-        // }
     }
   }
 
