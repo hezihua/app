@@ -36,6 +36,27 @@ const triggerDetails = (index) => {
   
 };
 
+const handleMouseEnter = (index) => {
+  console.log('kkkk')
+  showcontent.value = false
+  let result = [];
+  [1,2,3,4].forEach((item, i) => {
+    if (i === index) {
+        result.push(true)
+    } else {
+      result.push(false)
+    }
+  })
+  setTimeout(() => {
+    showcontent.value = true
+  }, 1000);
+  isHovering.value = result
+}
+const handleMouseLeave = (index) => {
+  showcontent.value = false
+  isHovering.value[index] = false;
+}
+
 
 </script>
 
@@ -45,7 +66,10 @@ const triggerDetails = (index) => {
       <div class="title">Philosophy & Values</div>
       <div class="icons">
         <transition name="fade">
-          <div class="icon-container" @click="triggerDetails(0)" :class="{ 'full-width': isHovering[0] }">
+          <div class="icon-container" 
+          @mouseenter="handleMouseEnter(0)" 
+          @mouseleave="handleMouseLeave(0)"  
+          :class="{ 'full-width': isHovering[0] }">
             <div class="icon">
               <img src="../../assets/ic_website_layout_v1B-20.png" alt="">
               <div>Discipline</div>
@@ -58,7 +82,10 @@ const triggerDetails = (index) => {
         </transition>
         
         <transition name="fade">
-          <div class="icon-container" @click="triggerDetails(1)" :class="{ 'full-width': isHovering[1] }">
+          <div class="icon-container" 
+          @mouseenter="handleMouseEnter(1)" 
+          @mouseleave="handleMouseLeave(1)"  
+          :class="{ 'full-width': isHovering[1] }">
             <div class="icon" >
               <img src="../../assets/ic_website_layout_v1B-21.png" alt="">
               <div>Entrepreneurial</div>
@@ -74,7 +101,10 @@ const triggerDetails = (index) => {
         
         
         <transition name="fade">
-          <div class="icon-container" @click="triggerDetails(2)" :class="{ 'full-width': isHovering[2] }">
+          <div class="icon-container" 
+          @mouseenter="handleMouseEnter(2)" 
+          @mouseleave="handleMouseLeave(2)" 
+          :class="{ 'full-width': isHovering[2] }">
             <div class="icon" >
               <img src="../../assets/ic_website_layout_v1B-22.png" alt="">
               <div>Adaptability</div>
@@ -89,7 +119,11 @@ const triggerDetails = (index) => {
         
         
         <transition name="fade" >
-          <div class="icon-container" @click="triggerDetails(3)" :class="{ 'full-width': isHovering[3] }" >
+          <div class="icon-container" 
+          
+          @mouseenter="handleMouseEnter(3)" 
+          @mouseleave="handleMouseLeave(3)" 
+          :class="{ 'full-width': isHovering[3] }">
             <div class="icon" >
               <img src="../../assets/ic_website_layout_v1B-23.png" alt="">
               <div>Respect</div>

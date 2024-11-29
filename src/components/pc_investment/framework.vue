@@ -70,6 +70,27 @@ const triggerDetails = (index) => {
   
 };
 
+const handleMouseEnter = (index) => {
+  console.log('kkkk')
+  showcontent.value = false
+  let result = [];
+  [1,2,3,4].forEach((item, i) => {
+    if (i === index) {
+        result.push(true)
+    } else {
+      result.push(false)
+    }
+  })
+  setTimeout(() => {
+    showcontent.value = true
+  }, 1000);
+  blockHovering.value = result
+}
+const handleMouseLeave = (index) => {
+  showcontent.value = false
+  blockHovering.value[index] = false;
+}
+
 
 
 
@@ -89,7 +110,12 @@ const triggerDetails = (index) => {
             <div class="features">
               
                 <transition name="fade-feature">
-                    <div :class="{ 'full-width': blockHovering[0] }"  class="feature" @click="triggerDetails(0)" >
+                    <div 
+                      :class="{ 'full-width': blockHovering[0] }"  
+                      class="feature" 
+                      @mouseenter="handleMouseEnter(0)" 
+                      @mouseleave="handleMouseLeave(0)" 
+                    >
                         <div class="main">
                             <div>Specialized Risk</div>
                             <div>Management</div>
@@ -102,7 +128,12 @@ const triggerDetails = (index) => {
                     </div>
                 </transition>
                 <transition name="fade-feature">
-                    <div :class="{ 'full-width': blockHovering[1] }" class="feature color" @click="triggerDetails(1)"  >
+                    <div 
+                      :class="{ 'full-width': blockHovering[1] }" 
+                      class="feature color" 
+                      @mouseenter="handleMouseEnter(1)" 
+                      @mouseleave="handleMouseLeave(1)" 
+                    >
                         <div class="main">
                             <div>Prudent</div>
                             <div>Capital</div>
@@ -116,7 +147,12 @@ const triggerDetails = (index) => {
                     </div>
                 </transition>
                 <transition name="fade-feature">
-                    <div :class="{ 'full-width': blockHovering[2] }" class="feature" @click="triggerDetails(2)"  >
+                    <div 
+                      :class="{ 'full-width': blockHovering[2] }" 
+                      class="feature" 
+                      @mouseenter="handleMouseEnter(2)" 
+                      @mouseleave="handleMouseLeave(2)" 
+                    >
                         <div class="main">
                             <div>Mitigation</div>
                             <div>of</div>
@@ -130,7 +166,12 @@ const triggerDetails = (index) => {
                     </div>
                 </transition>
                 <transition name="fade-feature">
-                    <div :class="{ 'full-width': blockHovering[3] }" class="feature color" @click="triggerDetails(3)"  >
+                    <div 
+                      :class="{ 'full-width': blockHovering[3] }" 
+                      class="feature color" 
+                      @mouseenter="handleMouseEnter(3)" 
+                      @mouseleave="handleMouseLeave(3)" 
+                    >
                         <div class="main">
                             <div>Resilient</div>
                             <div>Liquidity</div>
@@ -224,7 +265,7 @@ const triggerDetails = (index) => {
         justify-content: center;
         // width: 1410rem;
         margin: 0 auto;
-        padding: 0 0 80rem;
+        padding: 0 0 280rem;
         position: relative;
         height: 300rem;
         .feature {

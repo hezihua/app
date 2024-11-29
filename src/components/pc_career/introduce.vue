@@ -2,7 +2,11 @@
     <div class="container">
       <!-- 我们正在寻找的特质部分 -->
       <div class="section">
-        <div class="question">What we are looking for        </div>
+        <div class="question">
+          <div class="text">
+            What we are looking for
+          </div>        
+        </div>
         <div class="content">
           <div class="title">Innovation and Entrepreneurship        </div>
           <div class="text">
@@ -18,7 +22,7 @@
 
       <div class="section">
         <div class="question">
-            <div>Culture</div> 
+            <div class="text">Culture</div> 
             <div class="join-button">Join us</div>
         </div>
         <div class="content">
@@ -50,10 +54,13 @@
     box-sizing: border-box;
     .question {
         width: 30%;
-        font-size: 58rem;
+        font-size: 42rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        .text {
+          width: 60%;
+        }
         .join-button {
             width: 300rem;
             height: 60rem;

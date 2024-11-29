@@ -289,6 +289,9 @@ onMounted(() => {
 .button:active {
   transform: scale(1.06); /* 放大10% */
 }
+.button:hover {
+  transform: scale(1.06); /* 放大10% */
+}
 
 
 
