@@ -1,6 +1,33 @@
 <script setup>
 import { ref, onMounted, watch, onUnmounted } from 'vue';
 
+const leftcontent = ref(null); // 用于引用 <div> 元素
+const isEnd = ref(false)
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      // 模块进入可视化区域
+      // backgroundStyle.value.transform = 'scale(1.02)';
+      console.log(isEnd.value)
+      if(!isEnd.value) {
+        console.log(isEnd.value, 'isEnd')
+        leftcontent.value.classList.add('active'); // 添加类来触发动画
+        isEnd.value = true
+      }
+      
+    } else {
+      // 模块离开可视化区域
+      // backgroundStyle.value.transform = 'scale(1.0)';
+      // leftcontent.value.classList.remove('active'); // 移除类来停止动画
+    }
+  });
+}, { threshold: [0, 1] });
+
+onMounted(()=> {
+  const moduleElement = document.querySelector('#leftcontent');
+  observer.observe(moduleElement);
+})
 
 
 </script>
@@ -8,7 +35,7 @@ import { ref, onMounted, watch, onUnmounted } from 'vue';
 <template>
     <div class="leadership" id="leadership">
         <div class="left">
-          <div class="leftcontent">
+          <div class="leftcontent" id="leftcontent" ref="leftcontent">
 
             <div class="title">
                 <div>Continual Diversification</div>
@@ -36,6 +63,22 @@ import { ref, onMounted, watch, onUnmounted } from 'vue';
   </template>
   
   <style scoped lang="scss">
+
+/* 定义动画 */
+@keyframes zoomIn {
+  0% {
+    transform: translate(-100%, 0%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+.leftcontent.active {
+  animation: zoomIn 1s ease-out forwards; /* 应用放大动画 */
+}
   .leadership {
     background-color: #0a3a5e;
     color: white;

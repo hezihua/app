@@ -41,7 +41,7 @@
 .container {
   max-width: calc(100% - 400rem);
   margin: 0 auto;
-  color: #1a1a1a;
+  color: #093254;
   .divider {
     border: none;
     margin: 20rem 0;
@@ -50,7 +50,7 @@
     margin-bottom: 20rem;
     display: flex;
     justify-content: center;
-    padding: 60rem 0;
+    padding: 100rem 0 40rem;
     box-sizing: border-box;
     .question {
         width: 30%;
@@ -85,6 +85,7 @@
         color: #093254;
         
         width: 70%;
+        color: #0b5e9c;
         .title {
             font-weight: 700;
             width: 80%;

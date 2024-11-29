@@ -9,7 +9,7 @@ const show = ref(false);
 onMounted(() => {
   setTimeout(()=> {
     show.value = true
-  }, 2000)
+  }, 200)
 });
 
 
@@ -19,15 +19,21 @@ onMounted(() => {
     <div class="about-us">
         <Header />
         <div class="about-boxes" ref="zoomBackground"  :style="{ height: '56.25vw' }">
-            <div class="title">About Us</div>
-            <div class="article">
-                <div class="text">From our founding in 2015 and our roots in proprietary investment, Infini Capital has organically </div>
-                <div class="text">grown into a global multi-strategy investment management firm with a Pan-Asia focus.</div>
+          <Transition name="fade">
+
+            <div id="aboutuscontent" v-if="show">
+  
+              <div class="title">About Us</div>
+              <div class="article">
+                  <div class="text">From our founding in 2015 and our roots in proprietary investment, Infini Capital has organically </div>
+                  <div class="text">grown into a global multi-strategy investment management firm with a Pan-Asia focus.</div>
+              </div>
+              <div>
+                  <div class="text">We are relentless in our pursuit of high-quality returns, combining diversified, lowly-correlated</div>
+                  <div class="text">high-Sharpe strategies within our platform.</div>
+              </div>
             </div>
-            <div>
-                <div class="text">We are relentless in our pursuit of high-quality returns, combining diversified, lowly-correlated</div>
-                <div class="text">high-Sharpe strategies within our platform.</div>
-            </div>
+          </Transition>
         </div>
       
         <div class="feature-boxes">
@@ -59,6 +65,17 @@ onMounted(() => {
     transform: scale(1.08);
   }
 }
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translate(-60vw);
+}
   .about-us {
     color: #fff;
     position: relative;
@@ -70,9 +87,12 @@ onMounted(() => {
         transform-origin: center;
         overflow: hidden;
         display: flex;
-        align-content: center;
+        align-items: center;
         flex-wrap: wrap;
         padding-left: 10vw;
+        // #aboutuscontent {
+        //   transform: translate(-60vw);
+        // }
         .article {
             margin-bottom: 50rem;
         }

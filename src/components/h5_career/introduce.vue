@@ -38,7 +38,7 @@
 .container {
 width: 100vw;
 margin: 10vh auto 0;
-color: #1a1a1a;
+color: #093254;
 .divider {
   border: none;
   margin: 20rem 0;

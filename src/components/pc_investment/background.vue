@@ -3,7 +3,15 @@ import { ref, onMounted, watch, onUnmounted } from 'vue';
 import Header from '../common/header.vue'
 
 const zoomBackground = ref(null); // 用于引用 <div> 元素
+const show = ref(false); 
 
+// 组件挂载后计算一次高度
+onMounted(() => {
+  setTimeout(()=> {
+    console.log('llll')
+    show.value = true
+  }, 200)
+});
 
 
 
@@ -14,16 +22,30 @@ const zoomBackground = ref(null); // 用于引用 <div> 元素
     <div class="container">
         <Header />
         <div class="about-boxes" ref="zoomBackground"  :style="{ height: '38vw' }">
-            <div class="title">
-                <div>Investment</div>
-                <div>Approach</div>
-            </div>
+            <Transition name="fade">
+
+                <div class="title" v-if="show">
+                    <div>Investment</div>
+                    <div>Approach</div>
+                </div>
+            </Transition>
             
         </div>
     </div>
   </template>
   
   <style scoped lang="scss">
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translate(-100vw);
+}
   .container {
     // background-color: #e0e8f0;
     // text-align: center;
@@ -43,6 +65,7 @@ const zoomBackground = ref(null); // 用于引用 <div> 元素
             font-family: var(--main-font);
             width:65%;
             margin: 0% 10%;
+            // transform: translate(-100vw);
         }
     }
   }

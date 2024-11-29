@@ -3,7 +3,14 @@ import { ref, onMounted, watch, onUnmounted } from 'vue';
 import Header from '../common/header.vue'
 
 const zoomBackground = ref(null); // 用于引用 <div> 元素
+const show = ref(false); 
 
+// 组件挂载后计算一次高度
+onMounted(() => {
+  setTimeout(()=> {
+    show.value = true
+  }, 200)
+});
 
 
 
@@ -13,15 +20,28 @@ const zoomBackground = ref(null); // 用于引用 <div> 元素
     <div class="container">
         <Header />
         <div class="about-boxes" ref="zoomBackground"  :style="{ height: '75vw' }">
-            <div class="title">
-                <div>Career</div>
-            </div>
+            <Transition name="fade">
+
+                <div class="title" v-if="show">
+                    <div>Career</div>
+                </div>
+            </Transition>
             
         </div>
     </div>
   </template>
   
   <style scoped lang="scss">
+  .fade-enter-active,
+.fade-leave-active {
+  transition: all 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translate(-100vw);
+}
   .container {
     color: #fff;
     position: relative;
