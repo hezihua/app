@@ -43,7 +43,7 @@ const navigateTo = (route)=> {
   .footer {
     // padding: 0 20rem;
     // box-sizing: border-box;
-    height: 360rem;
+    height: 60vh;
     background-color: #fff;
     // border-top: 1rem solid #dee2e6;
     

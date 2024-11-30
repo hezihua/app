@@ -5,7 +5,7 @@
     <Section2 />
     <Section3 />
     <Section4 />
-    <Section5 />
+    <!-- <Section5 /> -->
   </div>
 </template>
 
@@ -29,7 +29,7 @@ onMounted(() => {
   background: #eee;
   width: 100vw;
 
-  height: 520vh;
+  // height: 520vh;
   margin: 0 auto;
   overflow: visible;
 }

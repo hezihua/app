@@ -29,7 +29,7 @@
     background: #eee;
     width: 100vw;
 
-    height: 520vh;
+    // height: 520vh;
     margin: 0 auto;
     overflow: visible;
 }

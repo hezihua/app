@@ -1,32 +1,34 @@
-<script setup>
-import { ref } from 'vue'
-  import Header from '../common/h5_header.vue'
-
-defineProps({
-  msg: String,
-})
-
-const count = ref(0)
-</script>
-
 <template>
-    
-  <div class="section">
+  <div ref="container" class="container">
     <Header />
-    h5_about
+    <About />
+    <Introduce />
+    <Leadership />
+    <Risk />
   </div>
 </template>
 
-<style scoped>
-.section {
-    height: 100vh;
-    width: 100vw;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30rem;
-    position: relative;
-    background: #234c68;
+<script setup>
+import { onMounted, ref } from 'vue';
+import Header from '../common/h5_header.vue';
+import About from './about.vue';
+import Introduce from './introduce.vue'
+import Leadership from './leadership.vue'
+import Risk from './risk.vue'
+onMounted(() => {
+  
+  
+});
+</script>
+
+<style scoped lang="scss">
+
+.container {
+  background: #eee;
+  width: 100vw;
+
+  // height: 520vh;
+  margin: 0 auto;
+  overflow: visible;
 }
 </style>

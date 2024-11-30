@@ -1,47 +1,79 @@
-<!-- Section1.vue -->
+<script setup>
+import { ref, onMounted, watch, onUnmounted } from 'vue';
+import Header from '../common/header.vue'
+
+const zoomBackground = ref(null); // 用于引用 <div> 元素
+const show = ref(false); 
+
+// 组件挂载后计算一次高度
+onMounted(() => {
+  setTimeout(()=> {
+    console.log('llll')
+    show.value = true
+  }, 200)
+});
+
+
+
+
+
+</script>
 <template>
-    <div class="section section4">
-      <div class="content">Section 4 Content</div>
+    <div class="container">
+        <div class="boxes" ref="zoomBackground" >
+            <Transition name="fade">
+
+                <div class="title" v-if="show">
+                    <div>Investment</div>
+                    <div>Approach</div>
+                </div>
+            </Transition>
+            
+        </div>
     </div>
   </template>
   
-  <script>
-  export default {
-    name: 'Section1',
-  };
-  </script>
-  
-  <style scoped>
-  .section {
+  <style scoped lang="scss">
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translate(-100vw);
+}
+  .container {
+    // background-color: #e0e8f0;
+    // text-align: center;
     height: 100vh;
-    position: sticky;
     overflow: hidden;
-    border-radius: 20rem 20rem 0 0;
     position: sticky;
     top: 0;
+    color: #fff;
+    .boxes {
+        background-image: url('../../assets/Investment_Approach.jpg'); /* 背景图路径 */
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform-origin: center;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        .title {
+            font-size: 30rem;
+            font-family: var(--main-font);
+            width:65%;
+            margin: 0% 10%;
+            // transform: translate(-100vw);
+        }
+    }
   }
   
-  .content {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20rem;
-    color: white;
-    background-color: #4a90e2;
-    z-index: 4;
-    /* 使用 transform 控制内容动画 */
-    transition: transform 0.5s ease;
-  }
   
-  /* 模拟后一个 section 的内容逐步覆盖当前 section */
-  .section + .section .content {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    background-color: green;
-    z-index: 5;
-  }
   </style>
   

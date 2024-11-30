@@ -42,16 +42,11 @@ import { ref, onMounted, watch, onUnmounted } from 'vue';
 }
   .section {
     height: 100vh;
-    // position: relative;
+    width: 100%;
     overflow: hidden;
     position: relative;
   }
 
-  .zoom-background {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
 .zoom-background::before {
     content: "";
     position: absolute;

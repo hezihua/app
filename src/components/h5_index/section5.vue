@@ -122,35 +122,38 @@ onMounted(() => {
 </script>
 
 <template>
+    <div class="lastcontainer">
 
-
-    <!-- Investment Section -->
-    <section class="section investment investment-background" ref="zoomBackground">
-      <div class="investmentcontent">
-        <div class="title" ref="titlecontent">
-          <div>Investment in and </div>
-          <div>Empowerment of</div>
-          <div>Excellent People</div>
-        </div>
-        <div class="text" ref="textcontent">
-          <div class="item">People are the lifeblood of our business. We take pride in having cultivated an organization that is a magnet for exceptional talent.</div>
-          <div class="item">At Infini Capital, our people are given an opportunity to be impactful in a highly human-centric, highly self-driven environment. We believe in providing our talent with the opportunity to thrive, which in turn leads to our investments prospering.</div>
-        </div>
-       
-        <div class="buttonbox" ref="buttoncontent">
-          <div class="button" @click="navigateTo('/about', '#leadership')">
-            <div class="button-text">Meet the Team</div>
-            <div  class="add">+</div>
+      <!-- Investment Section -->
+      <section class="section investment investment-background" ref="zoomBackground">
+        <div class="investmentcontent">
+          <div class="title" ref="titlecontent">
+            <div>Investment in and </div>
+            <div>Empowerment of</div>
+            <div>Excellent People</div>
           </div>
-          <div class="button" @click="navigateTo('/career')">
-            <div class="button-text">Join Us</div>
-            <div class="add">+</div>
+          <div class="text" ref="textcontent">
+            <div class="item">People are the lifeblood of our business. We take pride in having cultivated an organization that is a magnet for exceptional talent.</div>
+            <div class="item">At Infini Capital, our people are given an opportunity to be impactful in a highly human-centric, highly self-driven environment. We believe in providing our talent with the opportunity to thrive, which in turn leads to our investments prospering.</div>
           </div>
+         
+          <div class="buttonbox" ref="buttoncontent">
+            <div class="button" @click="navigateTo('/about', '#leadership')">
+              <div class="button-text">Meet the Team</div>
+              <div  class="add">+</div>
+            </div>
+            <div class="button" @click="navigateTo('/career')">
+              <div class="button-text">Join Us</div>
+              <div class="add">+</div>
+            </div>
+          </div>
+          
         </div>
         
-      </div>
-    </section>
-    <Footer />
+      </section>
+      <Footer />
+    </div>
+
 </template>
 
 <style scoped lang="scss">
@@ -166,17 +169,19 @@ onMounted(() => {
     opacity: 1;
   }
 }
-
-.section {
+.lastcontainer {
   width: 100%;
-  height: 100vh;
   color: #fff;
-  height: 100vh;
   position: sticky;
   overflow: hidden;
   border-radius: 20rem 20rem 0 0;
   position: sticky;
   top: 0;
+}
+
+.section {
+  width: 100vw;
+  height: 100vh;
 }
 
 .investment-background {
