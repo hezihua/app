@@ -239,12 +239,11 @@ const handleMouseLeave = (index) => {
 }
   .container {
     background: #f8f9fa;
-    height: 100vh;
+    height: 120vh;
     position: sticky;
     overflow: hidden;
     border-radius: 20rem 20rem 0 0;
-    position: sticky;
-    top: 0;
+    top: -20vh;
   }
   
   .feature-boxes {

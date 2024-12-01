@@ -66,15 +66,13 @@ onMounted(async () => {
 }
 
 .section {
-  height: 100vh;
+  background: #f8f9fa;
+  height: 120vh;
   position: sticky;
   overflow: hidden;
-  top: 0;
-}
-.zoom-background {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
+  border-radius: 20rem 20rem 0 0;
+  position: sticky;
+  top: -20vh;
 }
 .zoom-background::before {
     content: "";
@@ -84,9 +82,9 @@ onMounted(async () => {
     width: 100%; /* 放大一点以防旋转时背景漏出 */
     height: 100%;
     background-image: url('../../assets/earth.jpg'); /* 背景图路径 */
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 90% 0%;
     transform-origin: center;
     transform: translate(-50%, -50%) rotate(0deg); /* 移动到中心，并设置旋转角度 */
     // animation: zoomIn 1s ease-out forwards; /* 设置动画持续时间 */

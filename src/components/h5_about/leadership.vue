@@ -69,8 +69,8 @@ onMounted(()=> {
     position: sticky;
     overflow: hidden;
     top: 0;
-    background-image: url('../../assets/aboutus.jpg'); /* 背景图路径 */
-    background-size: 100% 100%;
+    background-image: url('../../assets/leader.jpg'); /* 背景图路径 */
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     transform-origin: center;

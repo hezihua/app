@@ -41,12 +41,12 @@ onUnmounted(() => {
     
     .career {
         background-image: url('../../assets/career.jpg'); /* 背景图路径 */
-        background-size: 100% 100%;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         transform-origin: center;
         overflow: hidden;
-        // height: 60vh;
+        height: 60vh;
         .article {
             margin-bottom: 50rem;
         }

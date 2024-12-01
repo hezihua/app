@@ -79,7 +79,6 @@ onMounted(()=> {
   .leadership {
     background-color: #0a3a5e;
     color: white;
-    // text-align: center;
     display: flex;
     justify-content: space-between;
     padding: 0 10vw;

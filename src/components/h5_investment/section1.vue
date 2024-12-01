@@ -56,9 +56,10 @@ onMounted(() => {
     .boxes {
         background-image: url('../../assets/Investment_Approach.jpg'); /* 背景图路径 */
         background-size: 100% 100%;
-        background-repeat: no-repeat;
         background-position: center;
         transform-origin: center;
+        background-size: cover;
+        background-repeat: no-repeat;
         overflow: hidden;
         display: flex;
         align-items: center;
