@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, watch, onUnmounted } from 'vue';
-import Header from '../common/header.vue'
+import Footer from '../common/h5_footer.vue'
 
 const zoomBackground = ref(null); // 用于引用 <div> 元素
 const show = ref(false); 
@@ -97,123 +97,121 @@ const handleMouseLeave = (index) => {
 </script>
 <template>
     <div class="container">
-      
-        <div class="feature-boxes">
-            <div class="title">
-                Robust Risk Management Framework
-            </div>
-            <div class="introduce">
-                <div>As a firm that invests substantial capital in our own strategies,</div>
-                <div>capital preservation and quality of returns are of the utmost importance to us.</div>
+      <div class="feature-boxes">
+        <div class="title">
+            Robust Risk Management Framework
+        </div>
+        <div class="introduce">
+            <div>As a firm that invests substantial capital in our own strategies,</div>
+            <div>capital preservation and quality of returns are of the utmost importance to us.</div>
 
+        </div>
+        <div class="features">
+          <transition name="fade-feature">
+            <div 
+              :class="{ 'full-width': blockHovering[0] }"  
+              class="feature" 
+              @mouseenter="handleMouseEnter(0)" 
+              @mouseleave="handleMouseLeave(0)" 
+            >
+              <div class="main">
+                  <div>Specialized Risk</div>
+                  <div>Management</div>
+                  <div>Process</div>
+              </div>
+              <div class="detail" v-if="blockHovering[0] && showcontent">
+                  
+                  Risk managers specialize in the asset classes they oversee, facilitating productive discussions with investment professionals.
+              </div>
             </div>
-            <div class="features">
+          </transition>
+          <transition name="fade-feature">
+              <div 
+                :class="{ 'full-width': blockHovering[1] }" 
+                class="feature color" 
+                @mouseenter="handleMouseEnter(1)" 
+                @mouseleave="handleMouseLeave(1)" 
+              >
+                  <div class="main">
+                      <div>Prudent</div>
+                      <div>Capital</div>
+                      <div>Allocation</div>
+                  </div>
+                  <div class="detail" v-if="blockHovering[1] && showcontent">
+                      
+                      Capital allocation is both art and science. We strive to identify the best uses of capital to generate superior long-term returns for investors. 
+                      
+                  </div>
+              </div>
+          </transition>
+          <transition name="fade-feature">
+              <div 
+                :class="{ 'full-width': blockHovering[2] }" 
+                class="feature" 
+                @mouseenter="handleMouseEnter(2)" 
+                @mouseleave="handleMouseLeave(2)" 
+              >
+                  <div class="main">
+                      <div>Mitigation</div>
+                      <div>of</div>
+                      <div>Tail Risks</div>
+                  </div>
+                  <div class="detail" v-if="blockHovering[2] && showcontent">
+                      
+                      We systematically evaluate potential stress factors and scenarios to manage exposures across our portfolio, striking the right balance between risk and reward.
+                      
+                  </div>
+              </div>
+          </transition>
+          <transition name="fade-feature">
+              <div 
+                :class="{ 'full-width': blockHovering[3] }" 
+                class="feature color" 
+                @mouseenter="handleMouseEnter(3)" 
+                @mouseleave="handleMouseLeave(3)" 
+              >
+                  <div class="main">
+                      <div>Resilient</div>
+                      <div>Liquidity</div>
+                      <div>Profile</div>
+                  </div>
+                  <div class="detail" v-if="blockHovering[3] && showcontent">
+                      
+                      We employ a range of methods to monitor and manage the liquidity of our portfolio. We stay vigilant even in highly liquid asset classes to avoid concentration risks. 
+                  </div>
+              </div>
               
-                <transition name="fade-feature">
-                    <div 
-                      :class="{ 'full-width': blockHovering[0] }"  
-                      class="feature" 
-                      @mouseenter="handleMouseEnter(0)" 
-                      @mouseleave="handleMouseLeave(0)" 
+          </transition>
+        </div>
+        <div class="Infrastructure-container">
+          <div class="Infrastructure">
+            <div class="infrastructuretitle">Infrastructure</div>
+            <div class="list">
+                <div 
+                    v-for="(item, index) in items" 
+                    :key="index" 
+                    class="item" 
+                    @mouseenter="showDetails(index)" 
+                    @mouseleave="hideDetails(index)"
                     >
-                        <div class="main">
-                            <div>Specialized Risk</div>
-                            <div>Management</div>
-                            <div>Process</div>
+                    <transition name="fade">
+                        <div v-if="isHovering[index]" class="content-detail">{{ item.details }}</div>
+                        <div v-else class="content-title">
+                            <div class="text">
+                                {{ item.title }}
+                            </div>
+                            <div>
+                                +
+                            </div>
                         </div>
-                        <div class="detail" v-if="blockHovering[0] && showcontent">
-                            
-                            Risk managers specialize in the asset classes they oversee, facilitating productive discussions with investment professionals.
-                        </div>
-                    </div>
-                </transition>
-                <transition name="fade-feature">
-                    <div 
-                      :class="{ 'full-width': blockHovering[1] }" 
-                      class="feature color" 
-                      @mouseenter="handleMouseEnter(1)" 
-                      @mouseleave="handleMouseLeave(1)" 
-                    >
-                        <div class="main">
-                            <div>Prudent</div>
-                            <div>Capital</div>
-                            <div>Allocation</div>
-                        </div>
-                        <div class="detail" v-if="blockHovering[1] && showcontent">
-                            
-                            Capital allocation is both art and science. We strive to identify the best uses of capital to generate superior long-term returns for investors. 
-                            
-                        </div>
-                    </div>
-                </transition>
-                <transition name="fade-feature">
-                    <div 
-                      :class="{ 'full-width': blockHovering[2] }" 
-                      class="feature" 
-                      @mouseenter="handleMouseEnter(2)" 
-                      @mouseleave="handleMouseLeave(2)" 
-                    >
-                        <div class="main">
-                            <div>Mitigation</div>
-                            <div>of</div>
-                            <div>Tail Risks</div>
-                        </div>
-                        <div class="detail" v-if="blockHovering[2] && showcontent">
-                            
-                            We systematically evaluate potential stress factors and scenarios to manage exposures across our portfolio, striking the right balance between risk and reward.
-                            
-                        </div>
-                    </div>
-                </transition>
-                <transition name="fade-feature">
-                    <div 
-                      :class="{ 'full-width': blockHovering[3] }" 
-                      class="feature color" 
-                      @mouseenter="handleMouseEnter(3)" 
-                      @mouseleave="handleMouseLeave(3)" 
-                    >
-                        <div class="main">
-                            <div>Resilient</div>
-                            <div>Liquidity</div>
-                            <div>Profile</div>
-                        </div>
-                        <div class="detail" v-if="blockHovering[3] && showcontent">
-                            
-                            We employ a range of methods to monitor and manage the liquidity of our portfolio. We stay vigilant even in highly liquid asset classes to avoid concentration risks. 
-                        </div>
-                    </div>
-                    
-                </transition>
-            </div>
-            <div class="Infrastructure-container">
-                
-                <div class="Infrastructure">
-                    <div class="infrastructuretitle">Infrastructure</div>
-                    <div class="list">
-                        <div 
-                            v-for="(item, index) in items" 
-                            :key="index" 
-                            class="item" 
-                            @mouseenter="showDetails(index)" 
-                            @mouseleave="hideDetails(index)"
-                            >
-                            <transition name="fade">
-                                <div v-if="isHovering[index]" class="content-detail">{{ item.details }}</div>
-                                <div v-else class="content-title">
-                                    <div class="text">
-                                        {{ item.title }}
-                                    </div>
-                                    <div>
-                                        +
-                                    </div>
-                                </div>
-                            </transition>
-                        </div>
-                    </div>
-                    
+                    </transition>
                 </div>
             </div>
+              
+          </div>
         </div>
+      </div>
+      <Footer />
     </div>
   </template>
   
