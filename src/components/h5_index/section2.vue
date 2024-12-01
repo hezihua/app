@@ -1,23 +1,60 @@
-<!-- Section1.vue -->
+<script setup>
+import { ref, onMounted, watch, onUnmounted } from 'vue';
+import gsap from "gsap";
+  import ScrollTrigger from "gsap/ScrollTrigger";
+  
+  // 注册 ScrollTrigger 插件
+  gsap.registerPlugin(ScrollTrigger);
+const storycontent = ref(null); // 用于引用 <div> 元素
+const isEnd = ref(false)
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      // 模块进入可视化区域
+      // backgroundStyle.value.transform = 'scale(1.02)';
+      console.log(isEnd.value)
+      if(!isEnd.value) {
+        console.log(isEnd.value, 'isEnd')
+        storycontent.value.classList.add('active'); // 添加类来触发动画
+        isEnd.value = true
+      }
+      
+    } else {
+      // 模块离开可视化区域
+      // backgroundStyle.value.transform = 'scale(1.0)';
+      // storycontent.value.classList.remove('active'); // 移除类来停止动画
+    }
+  });
+}, { threshold: [0, 1] });
+
+// 组件挂载后计算一次高度
+onMounted(() => {
+  const moduleElement = document.querySelector('#storycontent');
+  observer.observe(moduleElement);
+});
+
+
+
+
+</script>
+
 <template>
-    <!-- <div class="section">
-      <div class="content">Section 2 Content</div>
-    </div> -->
     <section class="section story story-background" ref="zoomBackground">
-        <div id="storycontent" class="content">
-            <!-- section 2 -->
+      <div class="storycontainer">
+        <div id="storycontent" class="storycontent" :style="{ transform: 'translate(-100%)' }" ref="storycontent">
           <div class="title">Our Story</div>
           <p class="text">Infini Capital started as a proprietary trading house and organically evolved into an alternative investment manager. We prioritize capital preservation and high-quality returns as core to our investment and operation.</p>
           <p class="text">Over the years, we have captured uncorrelated and attractive return streams, by implementing this principle and by empowering extraordinary talents to pursue their best ideas.</p>
         </div>
+        
+      </div>
     </section>
   </template>
   
-  <script>
-  export default {
-    name: 'Section1',
-  };
-  </script>
+
+
   
   <style scoped lang="scss">
   .section {
@@ -25,27 +62,30 @@
     position: sticky;
     overflow: hidden;
     border-radius: 20rem 20rem 0 0;
-  }
-  
-  
-  /* 模拟后一个 section 的内容逐步覆盖当前 section */
-  .section + .section .content {
-    // position: sticky;
     top: 0;
-    // height: 100vh;
-    z-index: 3;
+    // z-index: 3;
   }
 
+  /* 定义动画 */
+@keyframes zoomIn {
+  0% {
+    transform: translate(-100%, 0%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+
 .story {
-  
-  position: sticky;
-  top: 0;
-  .content {
-    width: 100vw;
+  .storycontainer {
     height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    
+    width: 100vw;
     overflow: hidden;
     background-image: url('../../assets/story.jpg');
     background-size: cover;
@@ -53,21 +93,22 @@
     background-position: center center;
     z-index: 2;
     color: #fff;
-    // will-change: position;
-    /* 使用 transform 控制内容动画 */
-    // transition: transform 0.5s ease;
-    // transition: position 1s ease;
-    // clip-path: polygon(0 0, 60% 0, 100% 100%, 0 100%); /* 定义多边形的剪裁路径 */
+  }
+  .storycontent {
+    padding: 0 0 0 10vw;
     .title {
       font-size: 30rem;
       width:80vw;
-      margin: 20vh 0% 8vh;
+      margin: 0vh 0% 8vh;
     }
     .text {
       font-size: 15rem;
       width: 80vw;
       margin: 4vh 0%;
     }
+  }
+  .storycontent.active {
+    animation: zoomIn 1s ease-out forwards; /* 应用放大动画 */
   }
 }
   </style>

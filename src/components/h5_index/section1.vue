@@ -1,18 +1,25 @@
 
 <script setup>
 import { ref, onMounted, watch, onUnmounted } from 'vue';
-// import Header from '../common/h5_header.vue'
+const zoomBackground = ref(null); // 用于引用 <div> 元素
+const show = ref(false); 
 
+
+// 组件挂载后计算一次高度
+onMounted(() => {
+
+  setTimeout(()=> {
+    show.value = true
+  }, 500)
+});
 
 
 </script>
-<!-- Section1.vue -->
 <template>
     <section class="section hero zoom-background" ref="zoomBackground" >
-      <!-- <Header /> -->
       <Transition name="fade">
 
-        <div class="content">
+        <div class="content" v-if="show">
           <div class="textLeft">
             <div>A Pan-Asia</div>
             <div>Multi-Strategy </div>
@@ -40,6 +47,15 @@ import { ref, onMounted, watch, onUnmounted } from 'vue';
     transform: translate(0, 0) scale(1) rotate(0deg);
   }
 }
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
   .section {
     height: 100vh;
     width: 100%;
@@ -60,7 +76,7 @@ import { ref, onMounted, watch, onUnmounted } from 'vue';
     // background-position: 20% 0;
     transform-origin: center;
     // transform: translate(-50vw, -50vh) rotate(0deg); /* 移动到中心，并设置旋转角度 */
-    // animation: zoomIn 1s ease-out forwards; /* 设置动画持续时间 */
+    animation: zoomIn 1s ease-out forwards; /* 设置动画持续时间 */
 }
 
 /* 顶部背景 */
@@ -75,17 +91,10 @@ import { ref, onMounted, watch, onUnmounted } from 'vue';
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
-    font-size: 2em;
     color: white;
-    // background-image: url('../../assets/landing_earth.jpg'); /* 背景图路径 */
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // transform-origin: center;
-    // animation: zoomIn 2s ease-out forwards; /* 设置动画持续时间 */
-    // background-color: #4a90e2;
     z-index: 1;
     /* 使用 transform 控制内容动画 */
-    // transition: transform 0.5s ease;
+    transition: all 1s ease;
     .border {
       background: #fff;
       width: 80vw;
@@ -94,21 +103,14 @@ import { ref, onMounted, watch, onUnmounted } from 'vue';
     }
     .textLeft {
       font-size: 30rem;
+      width: 80vw;
     }
     .textRight {
       font-size: 30rem;
+      width: 80vw;
     }
 
   }
 }
-
-  
-  /* 模拟后一个 section 的内容逐步覆盖当前 section */
-  .section + .section .content {
-    position: relative;
-    top: 0;
-    height: 150vh;
-    z-index: 2;
-  }
   </style>
   
