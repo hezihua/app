@@ -100,8 +100,8 @@ function animateopen(start = -100, end = 0) {
 // 组件挂载后计算一次高度
 onMounted(() => {
 
-  // const moduleElement = document.querySelector('.evolutioncontent');
-  // observer.observe(moduleElement);
+  const moduleElement = document.querySelector('.evolutioncontent');
+  observer.observe(moduleElement);
 
   // const timelinecontentModule = document.querySelector('.timelinecontent');
   // timelineobserver.observe(timelinecontentModule);
@@ -220,6 +220,29 @@ onMounted(() => {
 
   
   <style scoped lang="scss">
+  /* 定义动画 */
+  @keyframes zoomIn {
+    0% {
+      transform: translate(-100%, 0%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0%, 0%);
+      opacity: 1;
+    }
+  }
+
+  /* 定义动画 */
+  @keyframes zoomInTimeline {
+    0% {
+      // transform: translate(100%, 0%);
+      opacity: 0;
+    }
+    100% {
+      // transform: translate(0%, 0%);
+      opacity: 1;
+    }
+  }
   .section {
     height: 120vh;
     position: sticky;
@@ -239,6 +262,13 @@ onMounted(() => {
       background-repeat: no-repeat;
       background-position: center center;
     }
+  }
+  .evolutioncontent.active {
+    animation: zoomIn 1s ease-out forwards; /* 应用放大动画 */
+  }
+
+  .timelinecontent.active {
+    animation: zoomInTimeline 1s ease-out forwards; /* 应用放大动画 */
   }
 
   .evolution {

@@ -58,11 +58,11 @@ onMounted(() => {
   
   <style scoped lang="scss">
   .section {
-    height: 100vh;
+    height: 110vh;
     position: sticky;
     overflow: hidden;
     border-radius: 20rem 20rem 0 0;
-    top: 0;
+    top: -10vh;
     // z-index: 3;
   }
 
@@ -84,7 +84,6 @@ onMounted(() => {
     height: 100vh;
     display: flex;
     align-items: center;
-    
     width: 100vw;
     overflow: hidden;
     background-image: url('../../assets/story.jpg');

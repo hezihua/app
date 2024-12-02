@@ -86,8 +86,7 @@ const handleMouseLeave = (index) => {
           :class="{ 'full-width': isHovering[1] }">
             <div class="icon" >
               <img src="../../assets/ic_website_layout_v1B-21.png" alt="">
-              <div>Entrepreneurial</div>
-              <div> Spirit</div>
+              <div>Entrepreneurial Spirit</div>
             </div>
             <div v-if="isHovering[1] && showcontent" class="content-detail">
               
@@ -140,8 +139,18 @@ const handleMouseLeave = (index) => {
 
 <style scoped lang="scss">
 .section {
+  padding: 0 10vw 10vh;
   width: 100%;
-  color: #fff;
+  box-sizing: border-box;
+  position: sticky;
+  overflow: hidden;
+  border-radius: 20rem 20rem 0 0;
+  top: -30vh;
+  background-color: #ffffff;
+  color: #093254;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
     /* 定义动画 */
@@ -162,43 +171,36 @@ const handleMouseLeave = (index) => {
 }
 
 .philosophy {
-  background-color: #ffffff;
-  color: #093254;
-  padding: 0 0 100rem 0;
-  height: 100vh;
-  position: sticky;
-  overflow: hidden;
-  border-radius: 20rem 20rem 0 0;
+ 
   .title {
-    font-size: 30rem;
+    font-size: 34rem;
     font-family: var(--main-font);
     display: flex;
     justify-content: center;
-    margin: 5% 0;
+    align-items: center;
+    text-align: center;
+    height: 15vh;
     color: #093254;
   }
   .icons {
     display: flex;
-    // width: 80%;
-    // justify-content: center;
     flex-wrap: wrap;
-    margin: 20rem auto;
     overflow: hidden;
     .icon-container {
       position: relative;
-      width: 260rem;
+      width: 80vw;
       // padding: 20rem;
-      margin: 0 40rem;
       cursor: pointer;
       color: #fff;
-      height: 360rem;
+      height: 20vh;
       background: #093254;
-      border-radius: 20rem;
-      display: flex;
-      align-items: center;
+      border-radius: 5rem;
+      // display: flex;
+      // align-items: flex-start;
+      margin-bottom: 2vh;
       transition: all .5s ease; /* 加入过渡效果 */    
       &.full-width {
-          width: 600rem; /* 宽度撑满 */
+          height: 40vh; /* 宽度撑满 */
       }
     }
     .add {
@@ -219,9 +221,10 @@ const handleMouseLeave = (index) => {
       align-items: center;
       justify-content: center;
       font-size: 12rem;
-      height: 320rem;
-      width: 340rem;
-      padding: 0 20rem 0 0;
+      height: 20vh;
+      width: 80vw;
+      padding: 0 10vw;
+      box-sizing: border-box;
       animation: showcontent .5s ease-out forwards;
     }
     .icon {
@@ -232,14 +235,13 @@ const handleMouseLeave = (index) => {
       flex-wrap: wrap;
       
       img {
-        width: 160rem;
-        margin: 0 auto 30rem;
-        // margin-left: 60rem;
+        width: 20vw;
+        margin: 20rem auto 10rem;
       }
       > div {
         display: flex;
         justify-content: center;
-        width: 260rem;
+        width: 100%;
       }
     }
   }
