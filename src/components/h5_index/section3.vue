@@ -7,11 +7,8 @@ import gsap from "gsap";
   gsap.registerPlugin(ScrollTrigger);
 const zoomBackground = ref(null); // 用于引用 <div> 元素
 const isEnd = ref(false)
-const timelineIsEnd = ref(false)
 const evolutioncontent = ref(null); // 用于引用 <div> 元素
 const timelinecontent = ref(null); // 用于引用 <div> 元素
-const show = ref(false); 
-const showtimeline = ref(false);
 
 
 const observer = new IntersectionObserver((entries) => {
@@ -26,28 +23,6 @@ const observer = new IntersectionObserver((entries) => {
         console.log(isEnd.value, 'isEnd')
         evolutioncontent.value.classList.add('active'); // 添加类来触发动画
         isEnd.value = true
-      }
-      
-    } else {
-      // 模块离开可视化区域
-      // backgroundStyle.value.transform = 'scale(1.0)';
-      // evolutioncontent.value.classList.remove('active'); // 移除类来停止动画
-    }
-  });
-}, { threshold: [0, 1] });
-
-const timelineobserver = new IntersectionObserver((entries) => {
-  console.log(entries, 'entries')
-  entries.forEach((entry) => {
-    console.log(entry)
-    if (entry.isIntersecting) {
-      // 模块进入可视化区域
-      // backgroundStyle.value.transform = 'scale(1.02)';
-      console.log(timelineIsEnd.value)
-      if(!timelineIsEnd.value) {
-        console.log(timelineIsEnd.value, 'timelineIsEnd')
-        timelinecontent.value.classList.add('active'); // 添加类来触发动画
-        timelineIsEnd.value = true
       }
       
     } else {
@@ -104,23 +79,7 @@ onMounted(() => {
   observer.observe(moduleElement);
 
   // const timelinecontentModule = document.querySelector('.timelinecontent');
-  // timelineobserver.observe(timelinecontentModule);
-
-   // 创建动画时间轴
-  //  const timeline = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: ".evolution", // 触发动画的容器
-  //       start: "top 0%",      // 动画开始的位置
-  //       end: "bottom -40%",  // 动画结束的位置
-  //       scrub: true,           // 平滑滚动效果
-  //       pin: true,             // 固定容器
-  //     },
-  //   });
-  
-  //   // 添加动画效果
-  // timeline
-  //   .to("#timeline-container", { translateX: '-100%', duration: 3000 })         // 放大
-    // .to(".timeline-section", { opacity: 1, duration: 1000 })   
+  // timelineobserver.observe(timelinecontentModule); 
 });
 
 
