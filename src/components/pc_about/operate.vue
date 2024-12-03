@@ -90,7 +90,7 @@ const toggleContent = (index = 0)=> {
         position: absolute;
         right: 15%;
         margin: 700rem 0 0 10%;
-        color: #0a3a5e;
+        color: #093254;
         font-weight: 700;
     }
     
@@ -104,7 +104,7 @@ const toggleContent = (index = 0)=> {
     height: 100%;
     // padding: 20rem;
     box-sizing: border-box;
-    // background-color: #0a3a5e; /* 设置背景颜色 */
+    // background-color: #093254; /* 设置背景颜色 */
     color: white;
     transition: transform 1s ease;
     clip-path: polygon(0% 0, 100% 0, 80% 100%, 0% 100%); /* 定义多边形的剪裁路径 */
@@ -113,7 +113,7 @@ const toggleContent = (index = 0)=> {
     transform: translateX(0);
     width: 75%;
     // display: flex;
-    background-color: #0a3a5e;
+    background-color: #093254;
     // justify-content: ;
     // flex-wrap: wrap;
     padding-left: 25%;

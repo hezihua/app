@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, watch, onUnmounted } from 'vue';
+import Footer from '../common/h5_footer.vue'
 const isSecondContentVisible = ref(false)
 const currentIndex = ref(0)
 
@@ -51,7 +52,7 @@ const triggerDetails = (index) => {
   <div class="transition-container">
     <div class="content">
       <div class="title">
-        <div>Risk</div>
+        <div>Operating</div>
         <div>Committee</div>
       </div>
       <div class="first-content">
@@ -64,22 +65,21 @@ const triggerDetails = (index) => {
             <div class="first">
 
                 <div class="name">
-                  Tony Chin
+                    Stephen Lukow
                 </div>
-                <div class="duty" >Chief Executive Officer and</div>
-                <div class="duty" >Chief Investment Officer</div>
+                <div class="duty" >General Counsel</div>
     
-                <div class="arrow"> <img src="../../assets/arrow.png" ></div>
+                <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" ></div>
             </div>
             <div class="detail">
               <div class="detailcontent" v-if="isHovering[0] && showcontent">
 
                 <div class="text">Tony Chin is the Founder, CEO and CIO of Infini Capital.</div>
                 <div class="text">
-                Before founding Infini Capital in 2015, he was a Partner at GCS Capital, a Hong Kong based Private Equity firm with a focus on buyout and restructuring opportunities in financial sector within Asia. He started his career in the investment banking division at Morgan Stanley and HSBC, with a focus on Mergers and Acquisitions in the TMT sector.
+                    Stephen is responsible for the provision of in-house advice on a range of legal and compliance matters within Infini Capital. He was previously Asian General Counsel at ExodusPoint. Prior to his time at ExodusPoint, he was Regional Head of Trading Agreements at Bank of America. He also led the legal team for structured credit transactions in New York and founded and led Asian fixed income legal team in Tokyo during his time in Lehman Brothers. 
                 </div>
                 <div class="text">
-                He holds a BA in Economics from the University of Michigan, Ann Arbor. 
+                    He received his J.D. from Harvard Law School in 1993 and Bachelor of Arts degrees from Brown University in 1986.
                 </div>
               </div>
             </div>
@@ -92,69 +92,43 @@ const triggerDetails = (index) => {
             <div class="first">
 
                 <div class="name">
-                  U-Lipp Tong
+                    Jackel Chow
                 </div>
-                <div class="duty" >Director of Risk - FICC</div>
-                <div class="arrow"> <img src="../../assets/arrow.png" ></div>
+                <div class="duty" >Head of Operations</div>
+                <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" ></div>
             </div>
             <div class="detail" >
               <div class="detailcontent" v-if="isHovering[1] && showcontent">
 
                 <div class="text">
-                U-Lipp is responsible for establishing risk mandate and monitoring risk limit parameters for the FICC-related strategies. He was previously a Vice President of Investment Risk at JP Morgan Asset Management, an Associate Director of Risk Analysis at Dymon Asia and a Risk Officer at Brevan Howard. 
+                    Jackel is leading the integration of external trading platforms and facilitating the interaction between trading and non-trading functions. He was previously a member of the Operations Committee and the Best Execution/Risk Committee at Ovata Capital and Folger Hill. He also worked in trading desk operations at Barclays, Morgan Stanley, and Goldman Sachs. 
                 </div>
                 <div class="text">
-                He holds a Master of Finance, a Master of Advanced Mechanical Engineering, and a Bachelor's degree in Mechanical Engineering from Imperial College.
+                    He holds a Master's Degree in Financial Engineering from the University of Hong Kong and a Bachelor's degree from The Hong Kong University of Science and Technology, as well as a law degree from the University of London. He is a CFA and FRM Charter Holder.
                 </div>
               </div>
             </div>
         </div>
-        <div 
-          class="leader-card" 
-          :class="{ 'full-width': isHovering[2] }"
-          @click="triggerDetails(2)"
-        >
-            <div class="first">
-
-                <div class="name">
-                  Alex Ng
-                </div>
-                <div class="duty" >Director of Risk - Equity</div>
-                <div class="arrow"> <img src="../../assets/arrow.png" ></div>
-            </div>
-            <div class="detail">
-              <div class="detailcontent" v-if="isHovering[2] && showcontent">
-
-                <div class="text">
-                  Alex oversees risk management for equity-related strategies. Previously, he held a senior risk position at Polymer, managing risk identification, assessment, and mitigation. Before that, he was a Vice President at MSCI.
-                </div>
-                <div class="text">
-                  He holds an MBA and a BBA from The Hong Kong University of Science and Technology and is a CFA and FRM Charter Holder.
-                </div>
-              </div>
-            </div>
-        </div>
+       
 
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 
 <style scoped lang="scss">
 .transition-container {
-    position: relative;
     width: 100%;
     margin: auto;
     color: #fff;
     position: relative;
-    position: sticky;
     overflow: hidden;
-    background: #fff;
+    background: #093254;
     min-height: 100vh;
-    padding-bottom: 10vh;
-    box-sizing: border-box;
-    top: -30vh;
+    // padding-bottom: 10vh;
+    top: -0vh;
   .content {
     position: relative;
     width: 100%;
@@ -163,7 +137,7 @@ const triggerDetails = (index) => {
     overflow: hidden;
     box-sizing: border-box;
     .title {
-      color: #093254;
+      color: #fff;
       font-size: 30rem;
       font-weight: 700;
       padding: 0 10vw 10vh;
@@ -176,7 +150,7 @@ const triggerDetails = (index) => {
     transform: translateX(0);
     width: 100%;
     display: flex;
-    color: #093254;
+    color: #fff;
     // justify-content: ;
     flex-wrap: wrap;
     height: 100%;
@@ -190,7 +164,7 @@ const triggerDetails = (index) => {
       overflow: hidden;
       transition: all .5s ease; /* 加入过渡效果 */   
       &.full-width {
-          height: calc(30vh + 120rem); /* 宽度撑满 */
+          height: calc(40vh + 120rem); /* 宽度撑满 */
       }
       .first {
           height: 120rem;
@@ -216,10 +190,10 @@ const triggerDetails = (index) => {
           }
       }
       .detail {
-        background: #093254;
-        color: #fff;
+        background: #fff;
+        color: #093254;
         font-size: 12rem;
-        height: 30vh;
+        height: 40vh;
         width: 100vw;
         padding: 0 10vw;
         box-sizing: border-box;

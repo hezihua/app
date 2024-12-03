@@ -41,9 +41,9 @@ const navigateTo = (route)=> {
   
   <style scoped lang="scss">
   .footer {
-    // padding: 0 20rem;
+    padding: 0 0 10vh;
     // box-sizing: border-box;
-    height: 60vh;
+    // height: 60vh;
     background-color: #fff;
     // border-top: 1rem solid #dee2e6;
     

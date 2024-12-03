@@ -67,7 +67,7 @@ onMounted(()=> {
   }
 }
   .leadership {
-    background-color: #0a3a5e;
+    background-color: #093254;
     color: white;
     text-align: center;
     display: flex;

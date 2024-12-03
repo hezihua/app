@@ -5,6 +5,7 @@
     <Introduce />
     <Leadership />
     <Risk />
+    <Operating />
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import About from './about.vue';
 import Introduce from './introduce.vue'
 import Leadership from './leadership.vue'
 import Risk from './risk.vue'
+import Operating from './operating.vue';
 onMounted(() => {
   
   

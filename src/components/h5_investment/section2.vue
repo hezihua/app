@@ -77,7 +77,7 @@ onMounted(()=> {
   animation: zoomIn 1s ease-out forwards; /* 应用放大动画 */
 }
   .leadership {
-    background-color: #0a3a5e;
+    background-color: #093254;
     color: white;
     display: flex;
     justify-content: space-between;
