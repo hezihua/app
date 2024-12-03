@@ -10,6 +10,39 @@ const toggleContent = (index = 0)=> {
   
 }
 
+const showcontent = ref(false)
+
+
+
+
+
+
+// 使用数组来存储每个块的悬停状态
+const isHovering = ref([false, false, false]);
+
+
+const triggerDetails = (index) => {
+  showcontent.value = false
+  if (isHovering.value[index]) {
+    isHovering.value[index] = false;
+  } else {
+    let result = [];
+    [1,2,3].forEach((item, i) => {
+      if (i === index) {
+          result.push(true)
+      } else {
+        result.push(false)
+      }
+    })
+    setTimeout(() => {
+      showcontent.value = true
+    }, 1000);
+    isHovering.value = result
+  }
+ 
+  
+};
+
 
 
 </script>
@@ -23,7 +56,11 @@ const toggleContent = (index = 0)=> {
       </div>
       <div class="first-content">
         
-        <div class="leader-card">
+        <div 
+          class="leader-card" 
+          :class="{ 'full-width': isHovering[0] }"
+          @click="triggerDetails(0)"
+        >
             <div class="first">
 
                 <div class="name">
@@ -32,9 +69,11 @@ const toggleContent = (index = 0)=> {
                 <div class="duty" >Chief Executive Officer and</div>
                 <div class="duty" >Chief Investment Officer</div>
     
-                <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" @click="toggleContent(0)"></div>
+                <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" ></div>
             </div>
-            <div class="detail" v-if="currentIndex === 0">
+            <div class="detail">
+              <div class="detailcontent" v-if="isHovering[0] && showcontent">
+
                 <div class="text">Tony Chin is the Founder, CEO and CIO of Infini Capital.</div>
                 <div class="text">
                 Before founding Infini Capital in 2015, he was a Partner at GCS Capital, a Hong Kong based Private Equity firm with a focus on buyout and restructuring opportunities in financial sector within Asia. He started his career in the investment banking division at Morgan Stanley and HSBC, with a focus on Mergers and Acquisitions in the TMT sector.
@@ -42,42 +81,57 @@ const toggleContent = (index = 0)=> {
                 <div class="text">
                 He holds a BA in Economics from the University of Michigan, Ann Arbor. 
                 </div>
+              </div>
             </div>
         </div>
-        <div class="leader-card">
+        <div 
+          class="leader-card" 
+          :class="{ 'full-width': isHovering[1] }"
+          @click="triggerDetails(1)"
+        >
             <div class="first">
 
                 <div class="name">
                   U-Lipp Tong
                 </div>
                 <div class="duty" >Director of Risk - FICC</div>
-                <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" @click="toggleContent(1)"></div>
+                <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" ></div>
             </div>
-            <div class="detail" v-if="currentIndex === 1">
+            <div class="detail" >
+              <div class="detailcontent" v-if="isHovering[1] && showcontent">
+
                 <div class="text">
                 U-Lipp is responsible for establishing risk mandate and monitoring risk limit parameters for the FICC-related strategies. He was previously a Vice President of Investment Risk at JP Morgan Asset Management, an Associate Director of Risk Analysis at Dymon Asia and a Risk Officer at Brevan Howard. 
                 </div>
                 <div class="text">
                 He holds a Master of Finance, a Master of Advanced Mechanical Engineering, and a Bachelor's degree in Mechanical Engineering from Imperial College.
                 </div>
+              </div>
             </div>
         </div>
-        <div class="leader-card">
+        <div 
+          class="leader-card" 
+          :class="{ 'full-width': isHovering[2] }"
+          @click="triggerDetails(2)"
+        >
             <div class="first">
 
                 <div class="name">
                   Alex Ng
                 </div>
                 <div class="duty" >Director of Risk - Equity</div>
-                <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" @click="toggleContent(2)"></div>
+                <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" ></div>
             </div>
-            <div class="detail" v-if="currentIndex === 2">
+            <div class="detail">
+              <div class="detailcontent" v-if="isHovering[2] && showcontent">
+
                 <div class="text">
-               Alex oversees risk management for equity-related strategies. Previously, he held a senior risk position at Polymer, managing risk identification, assessment, and mitigation. Before that, he was a Vice President at MSCI.
-             </div>
-             <div class="text">
-               He holds an MBA and a BBA from The Hong Kong University of Science and Technology and is a CFA and FRM Charter Holder.
-             </div>
+                  Alex oversees risk management for equity-related strategies. Previously, he held a senior risk position at Polymer, managing risk identification, assessment, and mitigation. Before that, he was a Vice President at MSCI.
+                </div>
+                <div class="text">
+                  He holds an MBA and a BBA from The Hong Kong University of Science and Technology and is a CFA and FRM Charter Holder.
+                </div>
+              </div>
             </div>
         </div>
 
@@ -94,23 +148,24 @@ const toggleContent = (index = 0)=> {
     margin: auto;
     color: #fff;
     position: relative;
-    height: 100vh;
     position: sticky;
     overflow: hidden;
     background: #fff;
     min-height: 100vh;
+    // padding-bottom: 10vh;
+    top: -0vh;
   .content {
     position: relative;
     width: 100%;
+    padding: 10vh 0 0 0;
     // height: 100vh;
     overflow: hidden;
-    padding: 10vh 10vw 0 10vw;
     box-sizing: border-box;
     .title {
       color: #0a3a5e;
       font-size: 30rem;
       font-weight: 700;
-      padding: 0 0 10vh 0;
+      padding: 0 10vw 10vh;
     }
     
     /* 初始状态 */
@@ -130,12 +185,19 @@ const toggleContent = (index = 0)=> {
     .leader-card {
       box-sizing: border-box;
       width: 100%;
+      height: 120rem;
+      overflow: hidden;
+      transition: all .5s ease; /* 加入过渡效果 */   
+      &.full-width {
+          height: calc(30vh + 120rem); /* 宽度撑满 */
+      }
       .first {
-
+          height: 120rem;
+          padding: 0 10vw;
           .name {
             font-size: 30rem;
             width: 100%;
-            margin-bottom: 10rem;
+            height: 40rem;
           }
           .duty {
             width: 100%;
@@ -143,9 +205,8 @@ const toggleContent = (index = 0)=> {
           }
           .arrow {
             display: flex;
-            // justify-content: center;
             align-items: center;
-            // height: 100rem;
+            height: 40rem;
             img {
               width: 80rem;
               transition: transform 1s ease;
@@ -154,8 +215,19 @@ const toggleContent = (index = 0)=> {
           }
       }
       .detail {
-        
+        background: #0a3a5e;
+        color: #fff;
         font-size: 12rem;
+        height: 30vh;
+        width: 100vw;
+        padding: 0 10vw;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .detailcontent {
+
+        }
       }
     }
     

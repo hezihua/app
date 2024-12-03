@@ -171,7 +171,6 @@ const handleMouseLeave = (index) => {
 }
 
 .philosophy {
- 
   .title {
     font-size: 34rem;
     font-family: var(--main-font);
