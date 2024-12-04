@@ -12,7 +12,7 @@ onMounted(() => {
 
   setTimeout(()=> {
     show.value = true
-  }, 2000)
+  }, 200)
 });
 
 // 组件销毁时移除事件监听器
@@ -26,15 +26,28 @@ onUnmounted(() => {
     <div class="container">
       <Header />
         <div class="career" ref="zoomBackground">
-            <div class="title">
-                <div>Career</div>
+          <Transition name="fade">
+
+            <div class="title" v-if="show">
+              <div>Career</div>
             </div>
+          </Transition>
             
         </div>
     </div>
   </template>
   
   <style scoped lang="scss">
+    .fade-enter-active,
+.fade-leave-active {
+  transition: all 1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translate(-100vw);
+}
   .container {
     color: #fff;
     position: relative;
