@@ -33,16 +33,18 @@ const currentIndex = ref(-1)
 const showcontent = ref(false)
 
 const handleClick = (index = 0) => {
-    console.log(currentIndex ,-1)
-    if(currentIndex.value === -1) {
-        currentIndex.value = index
-        setTimeout(()=> {
-            showcontent.value = true
-        }, 2000)
+    if (isHovering.value[index]) {
+      isHovering.value[index] = false;
     } else {
-        currentIndex.value = -1
-        showcontent.value = false
-
+      let result = [];
+      [1,2,3,4].forEach((item, i) => {
+        if (i === index) {
+            result.push(true)
+        } else {
+          result.push(false)
+        }
+      })
+      isHovering.value = result
     }
     
 }
@@ -96,49 +98,45 @@ const handleMouseLeave = (index) => {
 
 </script>
 <template>
-    <div class="container">
-        <div class="Infrastructure-container">
-          <div class="Infrastructure">
-            <div class="infrastructuretitle">Infrastructure</div>
-            <div class="list">
-                <div 
-                    v-for="(item, index) in items" 
-                    :key="index" 
-                    class="item" 
-                    @mouseenter="showDetails(index)" 
-                    @mouseleave="hideDetails(index)"
-                    >
-                    <transition name="fade">
-                        <div v-if="isHovering[index]" class="content-detail">{{ item.details }}</div>
-                        <div v-else class="content-title">
-                            <div class="text">
-                                {{ item.title }}
-                            </div>
-                            <div>
-                                +
-                            </div>
-                        </div>
-                    </transition>
-                </div>
-            </div>
-              
+  <div class="container">
+    <div class="Infrastructure-container">
+      <div class="Infrastructure">
+        <div class="infrastructuretitle">Infrastructure</div>
+        <div class="list">
+          <div
+            v-for="(item, index) in items"
+            :key="index"
+            class="item"
+            @click="handleClick(index)"
+          >
+            <!-- 使用 transition 实现动画 -->
+              <div v-if="isHovering[index]" class="content-detail">
+                {{ item.details }}
+              </div>
+              <div v-if="!isHovering[index]"  class="content-title">
+                <div class="text">{{ item.title }}</div>
+                <div class="add">+</div>
+              </div>
           </div>
         </div>
-        <Footer />
+      </div>
     </div>
-      
-  </template>
+    <Footer />
+  </div>
+</template>
+
   
   <style scoped lang="scss">
 
+/* 定义透明度过渡动画 */
+// .fade-enter-active, .fade-leave-active {
+//   transition: opacity 0.5s ease;
+// }
+// .fade-enter-from, .fade-leave-to {
+//   opacity: 0;
+// }
 
 
-.fade-feature-enter-active, .fade-feature-leave-active {
-  transition: opacity 0.3s;
-}
-.fade-feature-enter, .fade-feature-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
 
     /* 定义动画 */
 @keyframes showcontent {
@@ -151,11 +149,8 @@ const handleMouseLeave = (index) => {
 }
   .container {
     background: #f8f9fa;
-    // height: 140vh;
     position: relative;
     overflow: hidden;
-    // border-radius: 20rem 20rem 0 0;
-    // top: -40vh;
   }
   
 
@@ -179,58 +174,45 @@ const handleMouseLeave = (index) => {
         }
 
         .item {
-            // width: ;
-            // height: 250rem;
-            // position: relative;
+            text-align: center;
+            
             // display: flex;
             // justify-content: center;
             // align-items: center;
-            text-align: center;
             
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: background-color 0.3s;
             cursor: pointer;
             margin: 0 auto;
             height: 20vh;
             .content-title {
-                // position: absolute;
-                // left: 0;
-                // top: 0;
                 font-size: 20rem;
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
+                justify-content: center;
+                align-content: center;
+                flex-wrap: wrap;
                 width: 100%;
-                
+                transition: all 1s ease;
+                height: 100%;
                 .text {
                     
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    
+                    width: 80%;
+                }
+                .add {
+                  width: 100%;
                 }
             }
             .content-detail {
-                // position: absolute;
-                // left: 0;
-                // top: 0;
-                
+                transition: all 1s ease;
                 font-size: 12rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                // height: 250rem;
+                height: 100%;
+
+                
             }
-        }
-
-        .fade-enter-active, .fade-leave-active {
-            transition: opacity 0.5s;
-        }
-
-        .fade-enter-from, .fade-leave-to {
-            opacity: 0;
         }
     }
   }
