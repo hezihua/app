@@ -7,7 +7,7 @@
     
     <Section4 />
     
-    <!-- <Section5 /> -->
+    <Section5 />
   </div>
 </template>
 

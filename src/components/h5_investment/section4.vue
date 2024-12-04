@@ -182,7 +182,7 @@ const handleMouseLeave = (index) => {
               
           </transition>
         </div>
-        <div class="Infrastructure-container">
+        <!-- <div class="Infrastructure-container">
           <div class="Infrastructure">
             <div class="infrastructuretitle">Infrastructure</div>
             <div class="list">
@@ -208,9 +208,9 @@ const handleMouseLeave = (index) => {
             </div>
               
           </div>
-        </div>
+        </div> -->
       </div>
-      <Footer />
+      <!-- <Footer /> -->
     </div>
   </template>
   
@@ -236,11 +236,11 @@ const handleMouseLeave = (index) => {
 }
   .container {
     background: #f8f9fa;
-    height: 120vh;
+    height: 150vh;
     position: sticky;
     overflow: hidden;
     border-radius: 20rem 20rem 0 0;
-    top: -20vh;
+    top: -50vh;
   }
   
   .feature-boxes {
