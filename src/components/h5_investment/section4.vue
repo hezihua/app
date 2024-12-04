@@ -111,17 +111,18 @@ const handleMouseLeave = (index) => {
             <div 
               :class="{ 'full-width': blockHovering[0] }"  
               class="feature" 
-              @mouseenter="handleMouseEnter(0)" 
-              @mouseleave="handleMouseLeave(0)" 
+              @click="triggerDetails(0)"
             >
               <div class="main">
-                  <div>Specialized Risk</div>
-                  <div>Management</div>
-                  <div>Process</div>
+                  <div class="item">Specialized Risk</div>
+                  <div class="item">Management</div>
+                  <div class="item">Process</div>
               </div>
-              <div class="detail" v-if="blockHovering[0] && showcontent">
+              <div class="detail" >
+                  <div v-if="blockHovering[0] && showcontent">
+                    Risk managers specialize in the asset classes they oversee, facilitating productive discussions with investment professionals.
+                  </div>
                   
-                  Risk managers specialize in the asset classes they oversee, facilitating productive discussions with investment professionals.
               </div>
             </div>
           </transition>
@@ -129,18 +130,17 @@ const handleMouseLeave = (index) => {
               <div 
                 :class="{ 'full-width': blockHovering[1] }" 
                 class="feature color" 
-                @mouseenter="handleMouseEnter(1)" 
-                @mouseleave="handleMouseLeave(1)" 
+                @click="triggerDetails(1)"
               >
                   <div class="main">
-                      <div>Prudent</div>
-                      <div>Capital</div>
-                      <div>Allocation</div>
+                      <div class="item">Prudent</div>
+                      <div class="item">Capital</div>
+                      <div class="item">Allocation</div>
                   </div>
-                  <div class="detail" v-if="blockHovering[1] && showcontent">
-                      
+                  <div class="detail">
+                    <div v-if="blockHovering[1] && showcontent">
                       Capital allocation is both art and science. We strive to identify the best uses of capital to generate superior long-term returns for investors. 
-                      
+                     </div> 
                   </div>
               </div>
           </transition>
@@ -148,18 +148,17 @@ const handleMouseLeave = (index) => {
               <div 
                 :class="{ 'full-width': blockHovering[2] }" 
                 class="feature" 
-                @mouseenter="handleMouseEnter(2)" 
-                @mouseleave="handleMouseLeave(2)" 
+                @click="triggerDetails(2)"
               >
                   <div class="main">
-                      <div>Mitigation</div>
-                      <div>of</div>
-                      <div>Tail Risks</div>
+                      <div class="item">Mitigation</div>
+                      <div class="item">of</div>
+                      <div class="item">Tail Risks</div>
                   </div>
-                  <div class="detail" v-if="blockHovering[2] && showcontent">
-                      
+                  <div class="detail">
+                    <div v-if="blockHovering[2] && showcontent">
                       We systematically evaluate potential stress factors and scenarios to manage exposures across our portfolio, striking the right balance between risk and reward.
-                      
+                      </div>
                   </div>
               </div>
           </transition>
@@ -167,18 +166,18 @@ const handleMouseLeave = (index) => {
               <div 
                 :class="{ 'full-width': blockHovering[3] }" 
                 class="feature color" 
-                @mouseenter="handleMouseEnter(3)" 
-                @mouseleave="handleMouseLeave(3)" 
+                @click="triggerDetails(3)"
               >
                   <div class="main">
-                      <div>Resilient</div>
-                      <div>Liquidity</div>
-                      <div>Profile</div>
+                      <div class="item">Resilient</div>
+                      <div class="item">Liquidity</div>
+                      <div class="item">Profile</div>
                   </div>
-                  <div class="detail" v-if="blockHovering[3] && showcontent">
-                      
+                  <div class="detail">
+                    <div v-if="blockHovering[3] && showcontent">
                       We employ a range of methods to monitor and manage the liquidity of our portfolio. We stay vigilant even in highly liquid asset classes to avoid concentration risks. 
                   </div>
+                    </div>
               </div>
               
           </transition>
@@ -246,13 +245,12 @@ const handleMouseLeave = (index) => {
   
   .feature-boxes {
     overflow: hidden;
-    
+    padding: 10vh 0 10vh;
+    box-sizing: border-box;
     .title {
         font-size: 30rem;
         font-family: var(--main-font);
-        // text-align: center;
-        // width: 800rem;
-        margin: 200rem auto 60rem;
+        margin: 0 auto 10vh;
         padding: 0 10vw;
         box-sizing: border-box;
     }
@@ -262,7 +260,6 @@ const handleMouseLeave = (index) => {
         margin: 0rem 0 100rem;
         padding: 0 10vw;
         box-sizing: border-box;
-        // text-align: center;
     }
     .features {
         display: flex;
@@ -272,7 +269,6 @@ const handleMouseLeave = (index) => {
         margin: 0 auto;
         padding: 0 0 280rem;
         position: relative;
-        height: 300rem;
         padding: 0 10vw;
         box-sizing: border-box;
         .feature {
@@ -281,24 +277,30 @@ const handleMouseLeave = (index) => {
             width: 80vw;
             cursor: pointer;
             color: #fff;
-            height: 360rem;
             background: #093254;
-            border-radius: 20rem;
+            border-radius: 10rem;
             display: flex;
             align-items: center;
-            transition: all .5s ease; /* 加入过渡效果 */    
+            flex-wrap: wrap;
+            transition: all .5s ease; /* 加入过渡效果 */  
+            height: 100rem;  
+            margin-bottom: 2vh;
             &.full-width {
-                width: 600rem; /* 宽度撑满 */
+                height: calc(100rem + 15vh); /* 宽度撑满 */
             }
             .main {
-                width: 260rem;
+                width: 100%;
+                height: 100rem;
                 font-size: 15rem;
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                > div {
-                    width: 260rem;
+                padding: 2vh 0;
+                box-sizing: border-box;
+                // display: flex;
+                // align-items: center;
+                // flex-wrap: wrap;
+                .item {
+                    width: 100%;
                     text-align: center;
+                    margin-bottom: 1vh;
                 }
             }
             .detail {
@@ -308,9 +310,10 @@ const handleMouseLeave = (index) => {
                 align-items: center;
                 justify-content: center;
                 font-size: 12rem;
-                height: 320rem;
-                width: 340rem;
-                padding: 0 20rem 0 0;
+                height: 14vh;
+                width: 100%;
+                padding: 2vh;
+                box-sizing: border-box;
                 animation: showcontent .5s ease-out forwards;
             }
         }
