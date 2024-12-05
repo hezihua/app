@@ -67,7 +67,7 @@ const navigateTo = (route)=> {
         top: 0;
         width: 96vw;
         height: 100vh;
-        background-color: #234c68;
+        background-color: #093254;
         padding: 10vh 20vw;
         box-sizing: border-box;
         transform: translateX(100%);
