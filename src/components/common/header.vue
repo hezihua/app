@@ -22,7 +22,7 @@ const navigateTo = (route)=> {
           <div class="item" @click="navigateTo('/investment')">Investment approach</div>
           <div class="item" @click="navigateTo('/career')">Career</div>
           <div class="item" @click="navigateTo('/contact')">Contact us</div>
-          <div class="item" @click="navigateTo('/investor-login')">Investor login</div>
+          <div class="login" @click="navigateTo('/investor-login')">Investor login</div>
         </div>
 
       </div>
@@ -44,7 +44,7 @@ const navigateTo = (route)=> {
     width: 100%;
     z-index: 99;
     .header-content {
-      width: 80vw;
+      width: 90vw;
       display: flex;
       justify-content: space-between;
       height: 200rem;
@@ -71,6 +71,19 @@ const navigateTo = (route)=> {
             margin: 0 0rem 0 40rem;
             cursor: pointer;
         }
+        .login {
+                padding: 10rem 25rem;
+                border-radius: 60rem;
+                height: 30rem;
+                font-size: 26rem;
+                background: #fff;
+                color: #093254;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                margin: 0 0rem 0 40rem;
+            }
     }
     
 }

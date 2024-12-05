@@ -15,7 +15,14 @@ const navigateTo = (route)=> {
         <div class="menus-row">
 
             <div class="logo" @click="navigateTo('/index')">
-              <img src="../../assets/footer_logo.png" alt="">
+                <div class="logobox">
+
+                    <img src="../../assets/footer_logo.png" alt="" class="logoimg">
+                </div>
+              <div class="memberbox">
+                <div class="text">member of</div>
+                <img src="../../assets/ic_website_layout_v1B-32.png" alt="" class="memberimg">
+              </div>
             </div>
             <div class="links">
                 <div class="item" @click="navigateTo('/about')">About us</div>
@@ -30,8 +37,6 @@ const navigateTo = (route)=> {
         </div>
         <div class="line"></div>
         <div class="legal">
-            <div class="item" @click="navigateTo('/terms')">Terms of Use</div>
-            <div class="item" @click="navigateTo('/media')">Media Inquiries</div>
             <div class="item" @click="navigateTo('/privacy')">Privacy Policy</div>
             <div class="item" @click="navigateTo('/disclosures')">Disclosures</div>
         </div>
@@ -42,10 +47,7 @@ const navigateTo = (route)=> {
   <style scoped lang="scss">
   .footer {
     padding: 0 0 10vh;
-    // box-sizing: border-box;
-    // height: 60vh;
     background-color: #fff;
-    // border-top: 1rem solid #dee2e6;
     
     color: #093254;
     .menus-row {
@@ -53,15 +55,35 @@ const navigateTo = (route)=> {
         align-items: center;
         justify-content: space-between;
         padding-top: 100rem;
-        width: 80vw;
+        width: 90vw;
         margin: 0 auto;
         .logo {
             padding-left: 20rem;
             font-size: 36rem;
             cursor: pointer;
-            width: 300rem;
-            img {
-              width: 300rem;
+            width: 570rem;
+            display: flex;
+            // display: flex;
+            .logobox {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 300rem;
+                margin-right: 100rem;
+                .logoimg {
+                  width: 300rem;
+                }
+            }
+            .memberbox {
+                width: 140rem;
+                display: inline-block;
+                .text {
+                    font-size: 26rem;
+                    font-weight: 700;
+                }
+                .memberimg {
+                    width: 140rem;
+                }
             }
         }
         .links {
@@ -76,9 +98,9 @@ const navigateTo = (route)=> {
                 cursor: pointer;
             }
             .login {
-                padding: 10rem 20rem;
+                padding: 10rem 25rem;
                 border-radius: 60rem;
-                height: 50rem;
+                height: 30rem;
                 font-size: 26rem;
                 background: #093254;
                 color: #fff;
@@ -91,16 +113,16 @@ const navigateTo = (route)=> {
     }
     .line {
         height: 0;
-        width: 80vw;
+        width: 90vw;
         background: #0b5e9c;
         padding-bottom: 1rem;
-        margin: 50rem auto;
+        margin: 20rem auto 40rem;
     }
     .legal {
         display: flex;
         font-size: 26rem;
         padding-left: 20rem;
-        width: 80vw;
+        width: 90vw;
         margin: 0 auto;
         .item {
             margin-right: 40rem;
