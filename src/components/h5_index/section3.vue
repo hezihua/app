@@ -149,22 +149,16 @@ onMounted(() => {
                   <div class="circle"></div>
                   <div class="content">
                     <div class="date margin">Nov 2023</div>
-                    <div class="description margin">Infini Global Master Fund </div>
-                    <div class="description">launched</div>
-                    <div class="description margin"></div>
-                    <div class="date margin"></div>
-                    <div class="description margin"></div>
+                    <div class="description margin">Open for </div>
+                    <div class="description">external capital</div>
                   </div>
                 </div>
                 <div class="timeline-item">
                   <div class="circle"></div>
                   <div class="content">
-                    <div class="date">2024</div>
-                    <div class="description margin">Licensed with the  </div>
-                    <div class="description">Financial Services </div>
-                    <div class="description margin">Regulatory Authority  </div>
-                    <div class="description">(FSRA) at </div>
-                    <div class="description margin">Abu Dhabi</div>
+                    <div class="date">Mar 2024​  </div>
+                    <div class="description margin">Established presence in  </div>
+                    <div class="description">Abu Dhabi​   </div>
                   </div>
                 </div>
               </div>
