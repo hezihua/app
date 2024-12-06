@@ -13,7 +13,6 @@ const navigateTo = (route)=> {
 <template>
     <div class="footer">
         <div class="menus-row">
-
             <div class="logo" @click="navigateTo('/index')">
                 <div class="logobox">
 
@@ -69,7 +68,7 @@ const navigateTo = (route)=> {
                 justify-content: center;
                 align-items: center;
                 width: 300rem;
-                margin-right: 100rem;
+                margin-right: 160rem;
                 .logoimg {
                   width: 300rem;
                 }

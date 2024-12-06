@@ -26,13 +26,20 @@ const navigateTo = (route)=> {
         </div>
         <div class="line"></div>
         <div class="legal">
-            <div class="item" @click="navigateTo('/disclosures')">Disclosures</div>
-            <div class="login" @click="navigateTo('/investor-login')">
-                Investor Login
+            <div class="leftbox">
+                <div class="item" @click="navigateTo('/disclosures')">Disclosures</div>
+                <div class="login" @click="navigateTo('/investor-login')">
+                    Investor Login
+                </div>
             </div>
-            <div class="logo" @click="navigateTo('/index')">
-              <img src="../../assets/footer_logo.png" alt="">
+            <div class="memberbox">
+                <div class="text">member of</div>
+                <img src="../../assets/ic_website_layout_v1B-32.png" alt="" class="memberimg">
             </div>
+           
+        </div>
+        <div class="logo" @click="navigateTo('/index')">
+            <img src="../../assets/footer_logo.png" alt="">
         </div>
     </div>
   </template>
@@ -60,7 +67,7 @@ const navigateTo = (route)=> {
             font-size: 16rem;
             font-weight: 700;
             .item {
-                margin: 10rem 0;
+                margin: 15rem 0;
                 cursor: pointer;
             }
            
@@ -78,9 +85,13 @@ const navigateTo = (route)=> {
         font-size: 16rem;
         width: 80vw;
         margin: 0 auto;
+        display: flex;
+        .leftbox {
+            width: 70%;
+        }
         .login {
             border-radius: 60rem;
-            width: 60%;
+            width: 80%;
             height: 40rem;
             font-size: 16rem;
             background: #093254;
@@ -91,18 +102,31 @@ const navigateTo = (route)=> {
             cursor: pointer;
             margin-bottom: 10rem;
         }
-        .logo {
-            font-size: 42rem;
-            cursor: pointer;
-            width: 14rem;
-            width: 60%;
-            img {
-              width: 100%;
-            }
-        }
+        
         .item {
             cursor: pointer;
-            margin: 10rem 0;
+            margin: 15rem 0;
+        }
+        .memberbox {
+            width: 30%;
+            display: inline-block;
+            .text {
+                font-size: 15rem;
+                font-weight: 700;
+            }
+            .memberimg {
+                width: 80rem;
+            }
+        }
+    }
+    .logo {
+        font-size: 42rem;
+        cursor: pointer;
+        width: 14rem;
+        width: 80vw;
+        padding: 0 10vw;
+        img {
+            width: 100%;
         }
     }
   }
