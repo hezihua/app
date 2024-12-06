@@ -207,13 +207,14 @@ onMounted(() => {
       width: 100vw;
     }
 
-    .evolution-background {
-      width: 100%;
-      background-image: url('../../assets/Constant_Evolution.jpg');
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
+    
+  }
+  .evolution-background {
+    width: 100%;
+    background-image: url('../../assets/Constant_Evolution.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 35% center;
   }
   .evolutioncontent.active {
     animation: zoomIn 1s ease-out forwards; /* 应用放大动画 */
@@ -245,7 +246,7 @@ onMounted(() => {
   .evolutioncontainer {
     width: 100%;
     
-    background: #234c68;
+    // background: #234c68;
     height: 120vh;
     
     // align-items: center;
@@ -281,7 +282,7 @@ onMounted(() => {
         height: 60rem;
         margin: 100rem 10%;
         img {
-          width: 60rem;
+          width: 40rem;
           transition: transform 1s ease;
           cursor: pointer;
           transform: rotate(180deg);
@@ -325,9 +326,9 @@ onMounted(() => {
         align-items: center;
         justify-content: flex-end;
         height: 60rem;
-        margin: 100rem 10%;
+        margin: 10vh 10vw;
         img {
-          width: 60rem;
+          width: 40rem;
           transition: transform 1s ease;
           cursor: pointer;
         }
