@@ -15,7 +15,6 @@ const navigateTo = (route)=> {
         <div class="menus-row">
             <div class="logo" @click="navigateTo('/index')">
                 <div class="logobox">
-
                     <img src="../../assets/footer_logo.png" alt="" class="logoimg">
                 </div>
               <div class="memberbox">
