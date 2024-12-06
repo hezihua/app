@@ -71,7 +71,7 @@ const handleMouseLeave = (index) => {
           :class="{ 'full-width': isHovering[0] }">
             <div class="icon">
               <img src="../../assets/ic_website_layout_v1B-20.png" alt="">
-              <div>Discipline</div>
+              <div class="text">Discipline</div>
             </div>
             <div v-if="isHovering[0] && showcontent" class="content-detail">
               A strong risk culture is embedded in our proprietary DNA. Our mission is clear: to safeguard and grow our investors' capital
@@ -86,7 +86,7 @@ const handleMouseLeave = (index) => {
           :class="{ 'full-width': isHovering[1] }">
             <div class="icon" >
               <img src="../../assets/ic_website_layout_v1B-21.png" alt="">
-              <div>Entrepreneurial Spirit</div>
+              <div  class="text">Entrepreneurial Spirit</div>
             </div>
             <div v-if="isHovering[1] && showcontent" class="content-detail">
               
@@ -103,7 +103,7 @@ const handleMouseLeave = (index) => {
           :class="{ 'full-width': isHovering[2] }">
             <div class="icon" >
               <img src="../../assets/ic_website_layout_v1B-22.png" alt="">
-              <div>Adaptability</div>
+              <div  class="text">Adaptability</div>
               
             </div>
             <div v-if="isHovering[2] && showcontent" class="content-detail" >
@@ -121,7 +121,7 @@ const handleMouseLeave = (index) => {
           :class="{ 'full-width': isHovering[3] }">
             <div class="icon" >
               <img src="../../assets/ic_website_layout_v1B-23.png" alt="">
-              <div>Respect</div>
+              <div  class="text">Respect</div>
               
             </div>
             <div v-if="isHovering[3] && showcontent" class="content-detail">
@@ -144,7 +144,6 @@ const handleMouseLeave = (index) => {
   box-sizing: border-box;
   position: sticky;
   overflow: hidden;
-  border-radius: 20rem 20rem 0 0;
   top: -30vh;
   background-color: #ffffff;
   color: #093254;
@@ -231,13 +230,14 @@ const handleMouseLeave = (index) => {
       font-size: 15rem;
       display: flex;
       justify-content: center;
+      align-content: center;
       flex-wrap: wrap;
       
       img {
-        width: 20vw;
-        margin: 20rem auto 10rem;
+        height: 20vw;
+        margin: 2vh auto 10rem;
       }
-      > div {
+      .text {
         display: flex;
         justify-content: center;
         width: 100%;

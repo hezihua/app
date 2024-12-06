@@ -174,7 +174,6 @@ onMounted(() => {
   color: #fff;
   position: sticky;
   overflow: hidden;
-  border-radius: 20rem 20rem 0 0;
   position: sticky;
   top: 0;
 }

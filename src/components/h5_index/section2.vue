@@ -61,7 +61,6 @@ onMounted(() => {
     height: 110vh;
     position: sticky;
     overflow: hidden;
-    border-radius: 20rem 20rem 0 0;
     top: -10vh;
     // z-index: 3;
   }

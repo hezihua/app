@@ -19,7 +19,6 @@
     height: 100vh;
     position: relative;
     overflow: hidden;
-    border-radius: 20rem 20rem 0 0;
   }
   
   .story {

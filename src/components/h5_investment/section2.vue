@@ -85,7 +85,6 @@ onMounted(()=> {
     height: 160vh;
     position: sticky;
     overflow: hidden;
-    border-radius: 20rem 20rem 0 0;
     top: -60vh;
     .content {
       width: 100%;

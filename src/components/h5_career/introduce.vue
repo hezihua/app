@@ -37,8 +37,10 @@
 <style scoped lang="scss">
 .container {
 width: 100vw;
-margin: 10vh auto 0;
+margin: 0 auto 0;
 color: #093254;
+background: #fff;
+padding: 10vh 0;
 .divider {
   border: none;
   margin: 20rem 0;

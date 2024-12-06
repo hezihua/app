@@ -236,11 +236,10 @@ const handleMouseLeave = (index) => {
 }
   .container {
     background: #f8f9fa;
-    height: 150vh;
+    height: 170vh;
     position: sticky;
     overflow: hidden;
-    border-radius: 20rem 20rem 0 0;
-    top: -50vh;
+    top: -70vh;
   }
   
   .feature-boxes {
@@ -253,11 +252,12 @@ const handleMouseLeave = (index) => {
         margin: 0 auto 10vh;
         padding: 0 10vw;
         box-sizing: border-box;
+        color: #093254;
     }
     .introduce {
         font-size: 15rem;
         color: #234c68;
-        margin: 0rem 0 100rem;
+        margin: 0rem 0 10vh;
         padding: 0 10vw;
         box-sizing: border-box;
     }
@@ -286,13 +286,13 @@ const handleMouseLeave = (index) => {
             height: 100rem;  
             margin-bottom: 2vh;
             &.full-width {
-                height: calc(100rem + 15vh); /* 宽度撑满 */
+                height: calc(50rem + 20vh); /* 宽度撑满 */
             }
             .main {
                 width: 100%;
-                height: 100rem;
+                height: calc(50rem + 5vh);
                 font-size: 15rem;
-                padding: 2vh 0;
+                padding: 2vh 0 0;
                 box-sizing: border-box;
                 // display: flex;
                 // align-items: center;
@@ -312,7 +312,7 @@ const handleMouseLeave = (index) => {
                 font-size: 12rem;
                 height: 14vh;
                 width: 100%;
-                padding: 2vh;
+                padding:  0 2vh 2vh;
                 box-sizing: border-box;
                 animation: showcontent .5s ease-out forwards;
             }

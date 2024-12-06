@@ -46,13 +46,14 @@ onMounted(() => {
 }
   .section {
     color: #fff;
-    position: relative;
     height: 100vh;
     position: sticky;
     top: 0;
     overflow: hidden;
-    border-radius: 20rem 20rem 0 0;
+    
     background: #fff;
+    display: flex;
+    align-items: center;
   }
   
   .feature-boxes {
@@ -61,7 +62,7 @@ onMounted(() => {
     .introduce {
         font-size: 15rem;
         color: #234c68;
-        margin: 100rem 0 100rem;
+        margin: 0 0 10vh;
         
         
     }
