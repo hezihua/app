@@ -174,7 +174,8 @@ const handleMouseLeave = (index) => {
     font-family: var(--main-font);
     display: flex;
     justify-content: center;
-    margin: 5% 0;
+    padding: 5% 0;
+
     color: #093254;
   }
   .icons {
