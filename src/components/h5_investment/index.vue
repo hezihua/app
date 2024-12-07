@@ -30,7 +30,7 @@ onMounted(() => {
 .container {
   background: #eee;
   width: 100vw;
-
+  position: relative;
   // height: 520vh;
   margin: 0 auto;
   overflow: visible;
