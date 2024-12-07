@@ -7,6 +7,7 @@ import investment from "../pages/investment.vue"
 import career from "../pages/career.vue"
 import contact from "../pages/contact.vue"
 import privacy from '../pages/privacy.vue'
+import disclaimer from '../pages/disclaimer.vue'
 
 //2. 路由配置
 const routes = [
@@ -21,6 +22,7 @@ const routes = [
     { path: "/career", component: career },
     { path: "/contact", component: contact },
     { path: "/privacy", component: privacy },
+    { path: "/disclosures", component: disclaimer },
 ]
 
 // 3. 创建路由实例
