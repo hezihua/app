@@ -13,7 +13,6 @@ const backgroundStyle = ref({
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry)
     if (entry.isIntersecting) {
       // 模块进入可视化区域
       // backgroundStyle.value.transform = 'scale(1.02)';

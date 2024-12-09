@@ -35,13 +35,10 @@ const isEnd = ref(false)
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry)
     if (entry.isIntersecting) {
       // 模块进入可视化区域
       // backgroundStyle.value.transform = 'scale(1.02)';
-      console.log(isEnd.value)
       if(!isEnd.value) {
-        console.log(isEnd.value, 'isEnd')
         storycontent.value.classList.add('active'); // 添加类来触发动画
         isEnd.value = true
       }

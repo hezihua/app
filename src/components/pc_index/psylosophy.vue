@@ -37,7 +37,6 @@ const triggerDetails = (index) => {
 };
 
 const handleMouseEnter = (index) => {
-  console.log('kkkk')
   showcontent.value = false
   let result = [];
   [1,2,3,4].forEach((item, i) => {

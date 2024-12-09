@@ -30,13 +30,10 @@ const buttoncontent = ref(null);
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry)
     if (entry.isIntersecting) {
       // 模块进入可视化区域
       // backgroundStyle.value.transform = 'scale(1.02)';
-      console.log(isEnd.value)
       if(!isEnd.value) {
-        console.log(isEnd.value, 'isEnd')
         titlecontent.value.classList.add('active'); // 添加类来触发动画
         isEnd.value = true
       }
@@ -51,13 +48,10 @@ const observer = new IntersectionObserver((entries) => {
 
 const textobserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry)
     if (entry.isIntersecting) {
       // 模块进入可视化区域
       // backgroundStyle.value.transform = 'scale(1.02)';
-      console.log(isEndText.value)
       if(!isEndText.value) {
-        console.log(isEndText.value, 'isEndText')
         textcontent.value.classList.add('active'); // 添加类来触发动画
         isEndText.value = true
       }
@@ -72,13 +66,10 @@ const textobserver = new IntersectionObserver((entries) => {
 
 const buttonobserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry)
     if (entry.isIntersecting) {
       // 模块进入可视化区域
       // backgroundStyle.value.transform = 'scale(1.02)';
-      console.log(isEndButton.value)
       if(!isEndButton.value) {
-        console.log(isEndButton.value, 'isEndButton')
         buttoncontent.value.classList.add('active'); // 添加类来触发动画
         isEndButton.value = true
       }

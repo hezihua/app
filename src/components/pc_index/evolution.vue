@@ -17,15 +17,11 @@ const showtimeline = ref(false);
 
 
 const observer = new IntersectionObserver((entries) => {
-  console.log(entries, 'entries')
   entries.forEach((entry) => {
-    console.log(entry)
     if (entry.isIntersecting) {
       // 模块进入可视化区域
       // backgroundStyle.value.transform = 'scale(1.02)';
-      console.log(isEnd.value)
       if(!isEnd.value) {
-        console.log(isEnd.value, 'isEnd')
         evolutioncontent.value.classList.add('active'); // 添加类来触发动画
         isEnd.value = true
       }
@@ -39,15 +35,11 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: [0, 1] });
 
 const timelineobserver = new IntersectionObserver((entries) => {
-  console.log(entries, 'entries')
   entries.forEach((entry) => {
-    console.log(entry)
     if (entry.isIntersecting) {
       // 模块进入可视化区域
       // backgroundStyle.value.transform = 'scale(1.02)';
-      console.log(timelineIsEnd.value)
       if(!timelineIsEnd.value) {
-        console.log(timelineIsEnd.value, 'timelineIsEnd')
         timelinecontent.value.classList.add('active'); // 添加类来触发动画
         timelineIsEnd.value = true
       }

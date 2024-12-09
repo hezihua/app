@@ -8,7 +8,6 @@ const show = ref(false);
 // 组件挂载后计算一次高度
 onMounted(() => {
   setTimeout(()=> {
-    console.log('llll')
     show.value = true
   }, 200)
 });
