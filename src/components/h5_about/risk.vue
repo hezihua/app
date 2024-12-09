@@ -36,7 +36,7 @@ const triggerDetails = (index) => {
     })
     setTimeout(() => {
       showcontent.value = true
-    }, 1000);
+    }, 500);
     isHovering.value = result
   }
  

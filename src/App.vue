@@ -7,18 +7,18 @@ const showTips = ref(false)
 const handleAgree = ()=> {
   showTips.value = false
   localStorage.setItem('token', new Date().getTime())
-  let overlay = document.querySelector("#app");
-  overlay.style.overflow = "";
-  overlay.style.height = "";
+  // let overlay = document.querySelector("#app");
+  // overlay.style.overflow = "";
+  // overlay.style.height = "";
 }
 
 const handleDisagree = ()=> {
   window.location.href = 'about:blank';
 }
 onMounted(()=> {
-  let overlay = document.querySelector("#app");
-  overlay.style.overflow = "hidden";
-  overlay.style.height = "100vh";
+  // let overlay = document.querySelector("#app");
+  // overlay.style.overflow = "hidden";
+  // overlay.style.height = "100vh";
   // overlay.style.overflow = "hidden";
   const token = localStorage.getItem('token')
   console.log(token)

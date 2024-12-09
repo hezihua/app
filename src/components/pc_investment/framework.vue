@@ -62,7 +62,7 @@ const triggerDetails = (index) => {
     })
     setTimeout(() => {
       showcontent.value = true
-    }, 1000);
+    }, 500);
     blockHovering.value = result
   }
  
@@ -81,7 +81,7 @@ const handleMouseEnter = (index) => {
   })
   setTimeout(() => {
     showcontent.value = true
-  }, 1000);
+  }, 500);
   blockHovering.value = result
 }
 const handleMouseLeave = (index) => {
@@ -251,6 +251,7 @@ const handleMouseLeave = (index) => {
         text-align: center;
         width: 800rem;
         margin: 200rem auto 60rem;
+        color: #093254;
     }
     .introduce {
         font-size: 32rem;

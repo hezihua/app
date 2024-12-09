@@ -33,6 +33,7 @@ const currentIndex = ref(-1)
 const showcontent = ref(false)
 
 const handleClick = (index = 0) => {
+    console.log(currentIndex ,-1)
     if(currentIndex.value === -1) {
         currentIndex.value = index
         setTimeout(()=> {
@@ -62,7 +63,7 @@ const triggerDetails = (index) => {
     })
     setTimeout(() => {
       showcontent.value = true
-    }, 1000);
+    }, 500);
     blockHovering.value = result
   }
  
@@ -70,6 +71,7 @@ const triggerDetails = (index) => {
 };
 
 const handleMouseEnter = (index) => {
+  console.log('kkkk')
   showcontent.value = false
   let result = [];
   [1,2,3,4].forEach((item, i) => {
@@ -81,7 +83,7 @@ const handleMouseEnter = (index) => {
   })
   setTimeout(() => {
     showcontent.value = true
-  }, 1000);
+  }, 500);
   blockHovering.value = result
 }
 const handleMouseLeave = (index) => {
