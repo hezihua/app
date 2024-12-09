@@ -3,7 +3,7 @@
 <template>
     <Teleport to="body">
         <div v-if="isVisible" class="mask">
-            <div class="container">
+            <div class="container" @wheel="handleWheel">
                 <div class="header">
                     Disclaimer
                 </div>
@@ -25,9 +25,9 @@
                     <div class="button" @click="handleAgree">
                         I have read and agreed
                     </div>
-                    <div class="button" @click="handleDisagree">
+                    <!-- <div class="button" @click="handleDisagree">
                         I do not agree
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -54,6 +54,10 @@ const handleAgree = () => {
 const handleDisagree = () => {
   emit('disagree');
 };
+
+const handleWheel = (event) => {
+  event.stopPropagation(); // 阻止滚动事件冒泡
+};
 </script>
 
 
@@ -70,10 +74,11 @@ const handleDisagree = () => {
         background: rgba(0, 0, 0, 0.5);
         z-index: 99;
         .container {
-            width: 60%;
+            width: 90vw;
             background-color: #fff;
-            overflow: scroll;
-            height: 50vh;
+            overflow-y: scroll;
+            height: 80vh;
+            
             .header {
                 height: 50rem;
                 display: flex;
@@ -87,18 +92,18 @@ const handleDisagree = () => {
                 color: #093254;
                 padding: 0 10rem;
                 
-                
                 margin: 20rem 0 0;
             }
             .footer {
                 height: 50rem;
                 display: flex;
+                justify-content: center;
                 .button {
-                    width: 100rem;
-                    height: 20rem;
+                    width: 200rem;
+                    height: 40rem;
                     background: #093254;
                     color: #fff;
-                    font-size: 12rem;
+                    font-size: 16rem;
                     margin: 0 20px;
                     display: flex;
                     justify-content: center;

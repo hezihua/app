@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue';
 import tips from './components/common/tips.vue'
 import h5_tips from './components/common/h5_tips.vue'
+import Vue3DeviceDetector from 'vue3-device-detector';
 const showTips = ref(false)
 
 const handleAgree = ()=> {
@@ -30,7 +31,9 @@ onMounted(()=> {
 
 <template>
   <router-view></router-view>
-  <tips :isVisible="showTips" @agree="handleAgree" @disagree="handleDisagree"/>
+  
+  <h5_tips v-if="Vue3DeviceDetector().isMobile" :isVisible="showTips" @agree="handleAgree" @disagree="handleDisagree"/>
+  <tips :isVisible="showTips" @agree="handleAgree" @disagree="handleDisagree" v-else/>
 </template>
 
 <style scoped>

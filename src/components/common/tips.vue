@@ -25,9 +25,9 @@
                     <div class="button" @click="handleAgree">
                         I have read and agreed
                     </div>
-                    <div class="button" @click="handleDisagree">
+                    <!-- <div class="button" @click="handleDisagree">
                         I do not agree
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
