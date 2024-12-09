@@ -3,7 +3,7 @@
 <template>
     <Teleport to="body">
         <div v-if="isVisible" class="mask">
-            <div class="container" @wheel="handleWheel">
+            <div class="container">
                 <div class="header">
                     Disclaimer
                 </div>
@@ -54,10 +54,6 @@ const handleAgree = () => {
 const handleDisagree = () => {
   emit('disagree');
 };
-
-const handleWheel = (event) => {
-  event.stopPropagation(); // 阻止滚动事件冒泡
-};
 </script>
 
 
@@ -76,9 +72,8 @@ const handleWheel = (event) => {
         .container {
             width: 60%;
             background-color: #fff;
-            overflow-y: scroll;
-            height: 60vh;
-            
+            overflow: scroll;
+            height: 50vh;
             .header {
                 height: 50rem;
                 display: flex;
@@ -92,17 +87,18 @@ const handleWheel = (event) => {
                 color: #093254;
                 padding: 0 10rem;
                 
+                
                 margin: 20rem 0 0;
             }
             .footer {
                 height: 50rem;
                 display: flex;
                 .button {
-                    width: 200rem;
-                    height: 40rem;
+                    width: 100rem;
+                    height: 20rem;
                     background: #093254;
                     color: #fff;
-                    font-size: 16rem;
+                    font-size: 12rem;
                     margin: 0 20px;
                     display: flex;
                     justify-content: center;
