@@ -94,7 +94,7 @@ const handleMouseLeave = (index) => {
 
 </script>
 <template>
-    <div class="container">
+    <div class="section">
       <div class="feature-boxes">
         <div class="title">
             Robust Risk Management Framework
@@ -232,7 +232,7 @@ const handleMouseLeave = (index) => {
     opacity: 1;
   }
 }
-  .container {
+  .section {
     background: #f8f9fa;
     height: 170vh;
     position: sticky;

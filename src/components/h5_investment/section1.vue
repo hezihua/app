@@ -19,7 +19,7 @@ onMounted(() => {
 
 </script>
 <template>
-    <div class="container">
+    <div class="section">
         <div class="boxes" ref="zoomBackground" >
             <Transition name="fade">
 
@@ -45,7 +45,7 @@ onMounted(() => {
   opacity: 0;
   transform: translate(-100vw);
 }
-  .container {
+  .section {
     // background-color: #e0e8f0;
     // text-align: center;
     height: 100vh;

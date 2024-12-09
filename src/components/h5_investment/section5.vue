@@ -97,7 +97,7 @@ const handleMouseLeave = (index) => {
 
 </script>
 <template>
-  <div class="container">
+  <div class="section">
     <div class="Infrastructure-container">
       <div class="Infrastructure">
         <div class="infrastructuretitle">Infrastructure</div>
@@ -146,7 +146,7 @@ const handleMouseLeave = (index) => {
     opacity: 1;
   }
 }
-  .container {
+  .section {
     background: #f8f9fa;
     position: relative;
     overflow: hidden;
