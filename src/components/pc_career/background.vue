@@ -40,7 +40,7 @@ onMounted(() => {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-  transform: translate(-100vw);
+  // transform: translate(-100vw);
 }
   .container {
     color: #fff;

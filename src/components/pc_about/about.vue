@@ -74,7 +74,7 @@ onMounted(() => {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-  transform: translate(-60vw);
+  // transform: translate(-60vw);
 }
   .about-us {
     color: #fff;
