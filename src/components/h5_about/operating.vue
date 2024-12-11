@@ -74,11 +74,13 @@ const triggerDetails = (index) => {
             <div class="detail">
               <div class="detailcontent" v-if="isHovering[0] && showcontent">
 
-                <div class="text">Tony Chin is the Founder, CEO and CIO of Infini Capital.</div>
-                <div class="text">
+                <div class="text">Tony Chin is the Founder, CEO and CIO of Infini Capital.
+
+                <!-- </div>
+                <div class="text"> -->
                     Stephen is responsible for the provision of in-house advice on a range of legal and compliance matters within Infini Capital. He was previously Asian General Counsel at ExodusPoint. Prior to his time at ExodusPoint, he was Regional Head of Trading Agreements at Bank of America. He also led the legal team for structured credit transactions in New York and founded and led Asian fixed income legal team in Tokyo during his time in Lehman Brothers. 
-                </div>
-                <div class="text">
+                <!-- </div>
+                <div class="text"> -->
                     He received his J.D. from Harvard Law School in 1993 and Bachelor of Arts degrees from Brown University in 1986.
                 </div>
               </div>
@@ -102,8 +104,8 @@ const triggerDetails = (index) => {
 
                 <div class="text">
                     Jackel is leading the integration of external trading platforms and facilitating the interaction between trading and non-trading functions. He was previously a member of the Operations Committee and the Best Execution/Risk Committee at Ovata Capital and Folger Hill. He also worked in trading desk operations at Barclays, Morgan Stanley, and Goldman Sachs. 
-                </div>
-                <div class="text">
+                <!-- </div>
+                <div class="text"> -->
                     He holds a Master's Degree in Financial Engineering from the University of Hong Kong and a Bachelor's degree from The Hong Kong University of Science and Technology, as well as a law degree from the University of London. He is a CFA and FRM Charter Holder.
                 </div>
               </div>

@@ -23,28 +23,28 @@ const toggleContent = (index = 0)=> {
       </div>
       <div class="first-content">
         
-        <div class="leader-card"  v-if="!(isSecondContentVisible && currentIndex !== 0)">
+        <div class="leader-card"  v-if="!(isSecondContentVisible && currentIndex !== 0)" @click="toggleContent(0)" >
             <div class="name">
               Tony Chin
             </div>
             <div class="duty" >Chief Executive Officer and</div>
             <div class="duty" >Chief Investment Officer</div>
 
-            <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" @click="toggleContent(0)"></div>
+            <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" ></div>
         </div>
-        <div class="leader-card"   v-if="!(isSecondContentVisible && currentIndex !== 1)">
+        <div class="leader-card"   v-if="!(isSecondContentVisible && currentIndex !== 1)" @click="toggleContent(1)">
             <div class="name">
               U-Lipp Tong
             </div>
             <div class="duty" >Director of Risk - FICC</div>
-            <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" @click="toggleContent(1)"></div>
+            <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png"></div>
         </div>
-        <div class="leader-card"   v-if="!(isSecondContentVisible && currentIndex !== 2)">
+        <div class="leader-card"   v-if="!(isSecondContentVisible && currentIndex !== 2)" @click="toggleContent(2)">
             <div class="name">
               Alex Ng
             </div>
             <div class="duty" >Director of Risk - Equity</div>
-            <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" @click="toggleContent(2)"></div>
+            <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" ></div>
         </div>
 
       </div>
@@ -132,6 +132,7 @@ const toggleContent = (index = 0)=> {
       box-sizing: border-box;
       width: 40%;
       height: 400rem;
+      cursor: pointer;
       .name {
         font-size: 58rem;
         width: 100%;
@@ -149,7 +150,7 @@ const toggleContent = (index = 0)=> {
         img {
           width: 80rem;
           transition: transform 1s ease;
-          cursor: pointer;
+          
         }
       }
     }

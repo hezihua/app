@@ -48,7 +48,7 @@ const handleMouseEnter = (index) => {
   })
   setTimeout(() => {
     showcontent.value = true
-  }, 500);
+  }, 400);
   isHovering.value = result
 }
 const handleMouseLeave = (index) => {

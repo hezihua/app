@@ -59,7 +59,7 @@ onUnmounted(() => {
         background-position: center;
         transform-origin: center;
         overflow: hidden;
-        height: 60vh;
+        height: 100vh;
         .article {
             margin-bottom: 50rem;
         }
@@ -67,7 +67,7 @@ onUnmounted(() => {
             font-size: 30rem;
             font-family: var(--main-font);
             width:65%;
-            margin: 20vh 10% 3%;
+            margin: 35vh 10% 3%;
         }
         .text {
             font-size: 36rem;

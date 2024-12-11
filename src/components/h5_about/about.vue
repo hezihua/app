@@ -51,7 +51,7 @@ onMounted(() => {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: all 1s ease;
+  transition: all .5s ease;
 }
 
 .fade-enter-from,

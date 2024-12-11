@@ -46,7 +46,7 @@ const handleClose = () => {
 
 function animateopen(start = -100, end = 0) {
   const element = document.querySelector('#timeline-container');  // 获取你想要动画的元素
-  let duration = 600;  // 动画持续时间，单位是毫秒
+  let duration = 400;  // 动画持续时间，单位是毫秒
   let startTime = null;
 
   function step(timestamp) {

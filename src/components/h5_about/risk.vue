@@ -74,11 +74,14 @@ const triggerDetails = (index) => {
             <div class="detail">
               <div class="detailcontent" v-if="isHovering[0] && showcontent">
 
-                <div class="text">Tony Chin is the Founder, CEO and CIO of Infini Capital.</div>
                 <div class="text">
+                  Tony Chin is the Founder, CEO and CIO of Infini Capital.
+
+                <!-- </div>
+                <div class="text"> -->
                 Before founding Infini Capital in 2015, he was a Partner at GCS Capital, a Hong Kong based Private Equity firm with a focus on buyout and restructuring opportunities in financial sector within Asia. He started his career in the investment banking division at Morgan Stanley and HSBC, with a focus on Mergers and Acquisitions in the TMT sector.
-                </div>
-                <div class="text">
+                <!-- </div>
+                <div class="text"> -->
                 He holds a BA in Economics from the University of Michigan, Ann Arbor. 
                 </div>
               </div>
@@ -102,8 +105,8 @@ const triggerDetails = (index) => {
 
                 <div class="text">
                 U-Lipp is responsible for establishing risk mandate and monitoring risk limit parameters for the FICC-related strategies. He was previously a Vice President of Investment Risk at JP Morgan Asset Management, an Associate Director of Risk Analysis at Dymon Asia and a Risk Officer at Brevan Howard. 
-                </div>
-                <div class="text">
+                <!-- </div>
+                <div class="text"> -->
                 He holds a Master of Finance, a Master of Advanced Mechanical Engineering, and a Bachelor's degree in Mechanical Engineering from Imperial College.
                 </div>
               </div>
@@ -127,8 +130,8 @@ const triggerDetails = (index) => {
 
                 <div class="text">
                   Alex oversees risk management for equity-related strategies. Previously, he held a senior risk position at Polymer, managing risk identification, assessment, and mitigation. Before that, he was a Vice President at MSCI.
-                </div>
-                <div class="text">
+                <!-- </div>
+                <div class="text"> -->
                   He holds an MBA and a BBA from The Hong Kong University of Science and Technology and is a CFA and FRM Charter Holder.
                 </div>
               </div>
@@ -219,9 +222,9 @@ const triggerDetails = (index) => {
         background: #093254;
         color: #fff;
         font-size: 12rem;
-        height: 30vh;
+        max-height: 30vh;
         width: 100vw;
-        padding: 0 10vw;
+        padding: 10vw 10vw;
         box-sizing: border-box;
         display: flex;
         justify-content: center;
