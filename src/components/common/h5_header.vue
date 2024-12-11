@@ -44,7 +44,7 @@ const navigateTo = (route)=> {
     color: #fff;
     padding: 0 10vw;
     box-sizing: border-box;
-    z-index: 9;
+    z-index: 999;
     top: 0;
     left: 0;
     .logo {
