@@ -166,7 +166,7 @@ const triggerDetails = (index) => {
       overflow: hidden;
       transition: all .5s ease; /* 加入过渡效果 */   
       &.full-width {
-          height: calc(40vh + 120rem); /* 宽度撑满 */
+          height: 370rem; /* 宽度撑满 */
       }
       .first {
           height: 120rem;
@@ -195,9 +195,9 @@ const triggerDetails = (index) => {
         background: #fff;
         color: #093254;
         font-size: 12rem;
-        height: 40vh;
+        height: 250rem;
         width: 100vw;
-        padding: 0 10vw;
+        padding: 10vw 10vw;
         box-sizing: border-box;
         display: flex;
         justify-content: center;

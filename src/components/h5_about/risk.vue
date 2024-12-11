@@ -114,7 +114,7 @@ const triggerDetails = (index) => {
         </div>
         <div 
           class="leader-card" 
-          :class="{ 'full-width': isHovering[2] }"
+          :class="{ 'third-full-width': isHovering[2] }"
           @click="triggerDetails(2)"
         >
             <div class="first">
@@ -125,7 +125,7 @@ const triggerDetails = (index) => {
                 <div class="duty" >Director of Risk - Equity</div>
                 <div class="arrow"> <img src="../../assets/arrow.png" ></div>
             </div>
-            <div class="detail">
+            <div class="detail third">
               <div class="detailcontent" v-if="isHovering[2] && showcontent">
 
                 <div class="text">
@@ -193,7 +193,10 @@ const triggerDetails = (index) => {
       overflow: hidden;
       transition: all .5s ease; /* 加入过渡效果 */   
       &.full-width {
-          height: calc(30vh + 120rem); /* 宽度撑满 */
+          height: 320rem; /* 宽度撑满 */
+      }
+      &.third-full-width {
+        height: 280rem;
       }
       .first {
           height: 120rem;
@@ -222,7 +225,7 @@ const triggerDetails = (index) => {
         background: #093254;
         color: #fff;
         font-size: 12rem;
-        max-height: 30vh;
+        height: 200rem;
         width: 100vw;
         padding: 10vw 10vw;
         box-sizing: border-box;
@@ -232,6 +235,10 @@ const triggerDetails = (index) => {
         .detailcontent {
 
         }
+      }
+
+      .third {
+        height: 160rem;
       }
     }
     
