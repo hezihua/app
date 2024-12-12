@@ -13,20 +13,18 @@ const navigateTo = (route)=> {
 <template>
     <div class="footer">
         <div class="menus-row">
-
-            
             <div class="links">
                 <div class="item" @click="navigateTo('/about')">About us</div>
                 <div class="item" @click="navigateTo('/investment')">Investment approach</div>
                 <div class="item" @click="navigateTo('/career')">Career</div>
                 <div class="item" @click="navigateTo('/contact')">Contact us</div>
-                
             </div>
-            
         </div>
         <div class="line"></div>
         <div class="legal">
             <div class="leftbox">
+                
+                <div class="item" @click="navigateTo('/privacy')">Privacy Policy</div>
                 <div class="item" @click="navigateTo('/disclosures')">Disclosures</div>
                 <div class="login" @click="navigateTo('/investor-login')">
                     Investor Login
@@ -105,7 +103,7 @@ const navigateTo = (route)=> {
         
         .item {
             cursor: pointer;
-            margin: 15rem 0;
+            margin: 0 0 10rem;
         }
         .memberbox {
             width: 30%;

@@ -90,13 +90,14 @@ const handleWheel = (event) => {
             .content {
                 font-size: 16rem;
                 color: #093254;
-                padding: 0 10rem;
+                padding: 30rem 60rem;
                 
                 margin: 20rem 0 0;
             }
             .footer {
                 height: 50rem;
                 display: flex;
+                justify-content: center;
                 .button {
                     width: 200rem;
                     height: 40rem;
@@ -107,6 +108,7 @@ const handleWheel = (event) => {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    cursor: pointer;
                 }
             }
         }
