@@ -1,6 +1,5 @@
 <template>
   <div ref="container" class="container">
-    <Header />
     <Section1 />
     <Section2 />
     <Section3 />

@@ -1,6 +1,7 @@
 
 <script setup>
 import { ref, onMounted, watch, onUnmounted } from 'vue';
+import Header from '../common/h5_header.vue';
 const zoomBackground = ref(null); // 用于引用 <div> 元素
 const show = ref(false); 
 
@@ -17,6 +18,7 @@ onMounted(() => {
 </script>
 <template>
     <section class="section hero zoom-background" ref="zoomBackground" >
+      <Header />
       <Transition name="fade">
 
         <div class="content" v-if="show">
@@ -57,7 +59,7 @@ onMounted(() => {
   opacity: 0;
 }
   .section {
-    height: 100vh;
+    height: calc(100vh + 100rem);
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -69,7 +71,7 @@ onMounted(() => {
     // top: 50vh;
     // left: 50vw;
     width: 100vw; /* 放大一点以防旋转时背景漏出 */
-    height: 100vh;
+    height: calc(100vh + 100rem);
     background-image: url('../../assets/landing_earth.jpg'); /* 背景图路径 */
     background-size: cover;
     background-repeat: no-repeat;
@@ -82,7 +84,7 @@ onMounted(() => {
 /* 顶部背景 */
 .hero {
   position: sticky;
-  top: 0;
+  top: -100rem;
   .content {
     position: absolute;
     width: 100vw;

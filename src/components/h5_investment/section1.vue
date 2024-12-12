@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, watch, onUnmounted } from 'vue';
-import Header from '../common/header.vue'
+import Header from '../common/h5_header.vue'
 
 const zoomBackground = ref(null); // 用于引用 <div> 元素
 const show = ref(false); 
@@ -20,6 +20,7 @@ onMounted(() => {
 </script>
 <template>
     <div class="section">
+      <Header />
         <div class="boxes" ref="zoomBackground" >
             <Transition name="fade">
 
@@ -48,10 +49,10 @@ onMounted(() => {
   .section {
     // background-color: #e0e8f0;
     // text-align: center;
-    height: 100vh;
+    height: calc(100vh + 100rem);
     overflow: hidden;
     position: sticky;
-    top: 0;
+    top: -100rem;
     color: #fff;
     .boxes {
         background-image: url('../../assets/Investment_Approach.jpg'); /* 背景图路径 */
@@ -64,7 +65,7 @@ onMounted(() => {
         display: flex;
         align-items: center;
         width: 100vw;
-        height: 100vh;
+        height: calc(100vh + 100rem);
         .title {
             font-size: 30rem;
             font-family: var(--main-font);

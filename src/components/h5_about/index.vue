@@ -1,6 +1,6 @@
 <template>
   <div ref="container" class="container">
-    <Header />
+    <!-- <Header /> -->
     <About />
     <Introduce />
     <Leadership />

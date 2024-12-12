@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, watch, onUnmounted } from 'vue';
-import Header from '../common/header.vue'
+import Header from '../common/h5_header.vue';
 
 const zoomBackground = ref(null); // 用于引用 <div> 元素
 const show = ref(false); 
@@ -17,6 +17,7 @@ onMounted(() => {
 </script>
 <template>
     <div class="about-us">
+      <Header />
         <div class="about-boxes" ref="zoomBackground" >
           <Transition name="fade">
 
@@ -61,11 +62,10 @@ onMounted(() => {
 }
   .about-us {
     color: #fff;
-    position: relative;
-    height: 100vh;
+    height: calc(100vh + 100rem);
     position: sticky;
     overflow: hidden;
-    top: 0;
+    top: -100rem;
     .about-boxes {
         background-image: url('../../assets/aboutus.jpg'); /* 背景图路径 */
         background-size: cover;
@@ -78,7 +78,7 @@ onMounted(() => {
         flex-wrap: wrap;
         // padding-left: 10vw;
         width: 100vw;
-        height: 100vh;
+        height: calc(100vh + 100rem);
         #aboutuscontent {
           padding: 0 0 0 10vw;
         }
