@@ -96,6 +96,7 @@ onMounted(() => {
     padding: 0 0 0 10vw;
     .title {
       font-size: 30rem;
+      font-family: var(--main-font);
       width:80vw;
       margin: 0vh 0% 8vh;
     }

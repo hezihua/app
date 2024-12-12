@@ -44,7 +44,7 @@ onMounted(() => {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-  transform: translate(-100vw);
+  // transform: translate(-100vw);
 }
   .section {
     // background-color: #e0e8f0;

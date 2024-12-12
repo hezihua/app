@@ -55,13 +55,16 @@ padding: 10vh 0;
   .content {
       color: #093254;
       .question {
+        width: 60vw;
           font-size: 30rem;
+          font-family: var(--main-font);
           
       }
       .title {
           font-weight: 700;
           margin: 2vh 0 5vh;
           font-size: 18rem;
+          font-family: var(--main-font);
       }
       .text {
           font-size: 16rem;

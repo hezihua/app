@@ -58,6 +58,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        font-family: var(--main-font);
         .text {
           width: 60%;
         }
@@ -91,6 +92,7 @@
             width: 80%;
             margin-bottom: 50rem;
             font-size: 42rem;
+            font-family: var(--main-font);
         }
         .text {
             width: 80%;

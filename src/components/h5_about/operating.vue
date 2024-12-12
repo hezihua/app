@@ -143,6 +143,7 @@ const triggerDetails = (index) => {
       font-size: 30rem;
       font-weight: 700;
       padding: 0 10vw 10vh;
+      font-family: var(--main-font);
     }
     
     /* 初始状态 */
