@@ -18,7 +18,7 @@ onMounted(() => {
 <template>
     <div class="about-us">
         <Header />
-        <div class="about-boxes" ref="zoomBackground"  :style="{ height: '56.25vw' }">
+        <div class="about-boxes" ref="zoomBackground"  :style="{ height: '75vw' }">
           <Transition name="fade">
 
             <div id="aboutuscontent" v-if="show">
