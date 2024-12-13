@@ -81,7 +81,7 @@ import Footer from '../common/h5_footer.vue'
         padding: 0 10vw 80rem;
         .item {
             margin-bottom: 20rem;
-            text-indent: 2em;
+            // text-indent: 2em;
         }
     }
 }

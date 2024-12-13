@@ -102,6 +102,7 @@ const toggleContent = (index = 0)=> {
       margin: 700rem 0 0 10%;
       color: #093254;
       font-weight: 700;
+      font-family: var(--main-font);
     }
     
     /* 初始状态 */
@@ -137,6 +138,7 @@ const toggleContent = (index = 0)=> {
         font-size: 58rem;
         width: 100%;
         margin-bottom: 10rem;
+        font-family: var(--main-font);
       }
       .duty {
         width: 100%;

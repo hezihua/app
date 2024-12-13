@@ -114,6 +114,7 @@ onMounted(()=> {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        font-family: var(--main-font);
         .item {
             font-size: 48rem;
             width: 450rem;

@@ -169,7 +169,7 @@ import Footer from '../common/footer.vue'
             }
             .item {
                 margin: 0 0 10rem;
-                text-indent: 2em;
+                // text-indent: 2em;
             }
         }
     }
