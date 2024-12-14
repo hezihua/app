@@ -48,8 +48,7 @@
 
                         To the maximum extent permitted by law, you agree to indemnify, defend and hold harmless Infini HK, its members, licensors, officers, directors, employees, agents, trustees, subsidiaries, parent companies and affiliates (the “Indemnitees”) from and against all third party complaints, charges, claims, losses, expenses, damages, costs, liabilities and expenses (including, but not limited to, reasonable attorneys’ fees) due to, arising out of, or relating in any way to: (a) your access to or use of this website and (b) your breach of this Agreement, in each case unless caused by such Indemnitee’s misrepresentation, gross negligence, wilful misconduct or fraud. 
                     </div>
-                     
-                     <div class="item">
+                    <div class="item">
 
                         The products and/or funds mentioned in this website have not been registered or qualified with, nor approved or disapproved by any regulatory authority, nor has any regulatory authority vetted upon the accuracy or adequacy of the information provided herein.
                     </div>
