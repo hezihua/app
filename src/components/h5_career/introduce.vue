@@ -67,7 +67,7 @@ padding: 10vh 0;
           font-family: var(--main-font);
       }
       .text {
-          font-size: 16rem;
+          font-size: 15rem;
       }
       .join-button {
           width: 30vw;

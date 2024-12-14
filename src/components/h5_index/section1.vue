@@ -95,6 +95,7 @@ onMounted(() => {
     flex-wrap: wrap;
     color: white;
     z-index: 1;
+    font-family: var(--main-font);
     /* 使用 transform 控制内容动画 */
     transition: all 1s ease;
     .border {

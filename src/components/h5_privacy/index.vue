@@ -169,6 +169,7 @@ import Footer from '../common/h5_footer.vue'
             }
             .item {
                 margin: 0 0 10rem;
+                text-align: justify;
                 // text-indent: 2em;
             }
         }

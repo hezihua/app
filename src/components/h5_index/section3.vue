@@ -267,7 +267,7 @@ onMounted(() => {
       // opacity: 0;
     }
     .text {
-      font-size: 16rem;
+      font-size: 15rem;
       width: 65%;
       margin: 3vw auto;
       // opacity: 0;

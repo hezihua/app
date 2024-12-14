@@ -86,12 +86,13 @@ const handleWheel = (event) => {
                 align-items: center;
                 font-size: 30rem;
                 background: #093254;
+                font-family: var(--main-font);
             }
             .content {
-                font-size: 16rem;
+                font-size: 13rem;
                 color: #093254;
                 padding: 30rem 60rem;
-                
+                text-align: justify;
                 margin: 20rem 0 0;
             }
             .footer {
@@ -103,7 +104,7 @@ const handleWheel = (event) => {
                     height: 40rem;
                     background: #093254;
                     color: #fff;
-                    font-size: 16rem;
+                    font-size: 15rem;
                     margin: 0 20px;
                     display: flex;
                     justify-content: center;

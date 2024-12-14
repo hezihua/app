@@ -62,7 +62,7 @@ const navigateTo = (route)=> {
 
         
         .links {
-            font-size: 16rem;
+            font-size: 12rem;
             font-weight: 700;
             .item {
                 margin: 15rem 0;
@@ -80,7 +80,7 @@ const navigateTo = (route)=> {
     }
     .legal {
         // display: flex;
-        font-size: 16rem;
+        font-size: 12rem;
         width: 80vw;
         margin: 0 auto;
         display: flex;
@@ -89,9 +89,9 @@ const navigateTo = (route)=> {
         }
         .login {
             border-radius: 60rem;
-            width: 80%;
-            height: 40rem;
-            font-size: 16rem;
+            width: 70%;
+            height: 35rem;
+            font-size: 12rem;
             background: #093254;
             color: #fff;
             display: flex;
@@ -109,18 +109,18 @@ const navigateTo = (route)=> {
             width: 30%;
             display: inline-block;
             .text {
-                font-size: 15rem;
+                font-size: 13rem;
                 font-weight: 700;
             }
             .memberimg {
-                width: 80rem;
+                width: 70rem;
             }
         }
     }
     .logo {
         font-size: 42rem;
         cursor: pointer;
-        width: 14rem;
+        width: 12rem;
         width: 80vw;
         padding: 0 10vw;
         img {

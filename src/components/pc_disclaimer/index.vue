@@ -80,6 +80,7 @@ import Footer from '../common/footer.vue'
         padding: 0 10vw 80rem;
         .item {
             margin-bottom: 30rem;
+            text-align: justify;
             // text-indent: 2em;
         }
     }
