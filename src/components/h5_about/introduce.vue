@@ -18,7 +18,7 @@ onMounted(() => {
         <div class="feature-boxes">
             <div class="introduce">
                 <div>As has always been the case,</div>
-                <div>we challenge, innovate, adapt and improve.Our firm has evolved through iterations since inception,</div>
+                <div>we challenge, innovate, adapt and improve. Our firm has evolved through iterations since inception,</div>
                 <div>developing over time in our pursuit of excellence.</div>
 
             </div>

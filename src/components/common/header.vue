@@ -7,6 +7,9 @@ const router = useRouter();
 const navigateTo = (route)=> {
         router.push(route);
       }
+const login  = ()=> {
+  window.open('https://statestreet-icx.efrontcloud.com/@7102/statestreet/login.aspx')
+}
 
 </script>
 
@@ -22,7 +25,8 @@ const navigateTo = (route)=> {
           <div class="item" @click="navigateTo('/investment')">Investment approach</div>
           <div class="item" @click="navigateTo('/career')">Career</div>
           <div class="item" @click="navigateTo('/contact')">Contact us</div>
-          <div class="login" @click="navigateTo('/investor-login')">Investor login</div>
+          <div class="login" @click="login">Investor login</div>
+          <!-- https://statestreet-icx.efrontcloud.com/@7102/statestreet/login.aspx -->
         </div>
 
       </div>

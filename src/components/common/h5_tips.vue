@@ -108,7 +108,7 @@ const handleWheel = (event) => {
         .container {
             width: 90vw;
             background-color: #fff;
-            overflow-y: scroll;
+            
             height: 80vh;
             
             .header {
@@ -116,16 +116,19 @@ const handleWheel = (event) => {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 30rem;
+                font-size: 20rem;
                 background: #093254;
                 font-family: var(--main-font);
             }
             .content {
-                font-size: 13rem;
+                font-size: 12rem;
                 color: #093254;
-                padding: 0 10rem;
+                padding: 0 10rem 0;
+                box-sizing: border-box;
                 text-align: justify;
-                margin: 20rem 0 0;
+                overflow-y: scroll;
+                height: calc(80vh - 140rem);
+                margin: 20rem 0;
                 .item {
                     margin-bottom: 10rem;
                     text-align: justify;

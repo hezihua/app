@@ -110,7 +110,7 @@ const handleWheel = (event) => {
         .container {
             width: 60%;
             background-color: #fff;
-            overflow-y: scroll;
+            
             height: 60vh;
             
             .header {
@@ -126,8 +126,11 @@ const handleWheel = (event) => {
                 font-size: 13rem;
                 color: #093254;
                 padding: 30rem 60rem;
+                box-sizing: border-box;
                 text-align: justify;
-                margin: 20rem 0 0;
+                margin: 20rem 0;
+                overflow-y: scroll;
+                height: calc(60vh - 140rem);
                 .item {
                     margin-bottom: 10rem;
                     text-align: justify;

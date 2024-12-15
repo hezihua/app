@@ -7,6 +7,9 @@ const router = useRouter();
 const navigateTo = (route)=> {
         router.push(route);
       }
+const login  = ()=> {
+  window.open('https://statestreet-icx.efrontcloud.com/@7102/statestreet/login.aspx', '_self')
+}
 
 </script>
 
@@ -23,15 +26,14 @@ const navigateTo = (route)=> {
         <div class="line"></div>
         <div class="legal">
             <div class="leftbox">
-                
                 <div class="item" @click="navigateTo('/privacy')">Privacy Policy</div>
                 <div class="item" @click="navigateTo('/disclosures')">Disclosures</div>
-                <div class="login" @click="navigateTo('/investor-login')">
+                <div class="login" @click="login">
                     Investor Login
                 </div>
             </div>
             <div class="memberbox">
-                <div class="text">member of</div>
+                <div class="text">Member of</div>
                 <img src="../../assets/ic_website_layout_v1B-32.png" alt="" class="memberimg">
             </div>
            
@@ -109,8 +111,8 @@ const navigateTo = (route)=> {
             width: 30%;
             display: inline-block;
             .text {
-                font-size: 13rem;
-                font-weight: 700;
+                font-size: 14rem;
+                // font-weight: 700;
             }
             .memberimg {
                 width: 70rem;
@@ -121,7 +123,7 @@ const navigateTo = (route)=> {
         font-size: 42rem;
         cursor: pointer;
         width: 12rem;
-        width: 80vw;
+        width: 60vw;
         padding: 0 10vw;
         img {
             width: 100%;
