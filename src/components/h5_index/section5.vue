@@ -269,7 +269,7 @@ onMounted(() => {
       // display: flex;
       // transform: translate(-100%, 0);
       // justify-content: center;
-      // margin: 4% 0 0 10%;
+      margin: 10% 0 0 0%;
       .button {
         width: 140rem;
         height: 40rem;

@@ -74,7 +74,7 @@ const triggerDetails = (index) => {
             <div class="detail">
               <div class="detailcontent" v-if="isHovering[0] && showcontent">
 
-                <div class="text">Tony Chin is the Founder, CEO and CIO of Infini Capital.
+                <div class="text">
 
                 <!-- </div>
                 <div class="text"> -->
@@ -204,7 +204,7 @@ const triggerDetails = (index) => {
         justify-content: center;
         align-items: center;
         .detailcontent {
-
+          text-align: justify;
         }
       }
     }

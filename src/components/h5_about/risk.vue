@@ -234,7 +234,7 @@ const triggerDetails = (index) => {
         justify-content: center;
         align-items: center;
         .detailcontent {
-
+          text-align: justify;
         }
       }
 

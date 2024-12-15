@@ -10,6 +10,7 @@
             <div class="item" @click="navigateTo('/investment')">Investment approach</div>
             <div class="item" @click="navigateTo('/career')">Career</div>
             <div class="item" @click="navigateTo('/contact')">Contact us</div>
+            <div class="item" @click="login">Investor login</div>
         </div>
     </div>
 </template>
@@ -29,6 +30,9 @@ const  toggleMenu = ()=> {
 }
 const navigateTo = (route)=> {
     router.push(route);
+}
+const login  = ()=> {
+  window.open('https://statestreet-icx.efrontcloud.com/@7102/statestreet/login.aspx', '_self')
 }
 </script>
 
@@ -84,7 +88,8 @@ const navigateTo = (route)=> {
         }
     }
     .item {
-        margin: 10vh 0;
+        margin: 5vh 0;
+        font-size: 20rem;
     }
 }
 </style>
