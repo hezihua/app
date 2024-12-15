@@ -259,17 +259,18 @@ onMounted(() => {
     justify-content: center;
     width: 100%;
     height: 100%;
+    margin: 0 10vw;
     .title {
       font-size: 30rem;
       font-family: var(--main-font);
       width:65%;
-      margin: 10vw auto 5vw;
+      margin: 10vw 0 5vw;
       // opacity: 0;
     }
     .text {
       font-size: 15rem;
       width: 65%;
-      margin: 3vw auto;
+      margin: 3vw 0;
       // opacity: 0;
     }
 
