@@ -56,7 +56,7 @@ onMounted(() => {
             font-size: 72rem;
             font-family: var(--main-font);
             width:65%;
-            margin: 20% 10% 3%;
+            margin: 400rem 10% 0;
         }
     }
   }

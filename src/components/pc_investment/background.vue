@@ -58,12 +58,12 @@ onMounted(() => {
         transform-origin: center;
         overflow: hidden;
         display: flex;
-        align-items: center;
+        // align-items: center;
         .title {
             font-size: 72rem;
             font-family: var(--main-font);
             width:65%;
-            margin: 0% 10%;
+            margin: 350rem 10% 0;
             // transform: translate(-100vw);
         }
     }

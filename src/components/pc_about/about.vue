@@ -87,12 +87,13 @@ onMounted(() => {
         transform-origin: center;
         overflow: hidden;
         display: flex;
-        align-items: center;
+        // align-items: center;
         flex-wrap: wrap;
         padding-left: 10vw;
-        // #aboutuscontent {
-        //   transform: translate(-60vw);
-        // }
+        #aboutuscontent {
+          // transform: translate(-60vw);
+          margin-top: 300rem;
+        }
         .article {
             margin-bottom: 50rem;
         }
@@ -100,7 +101,7 @@ onMounted(() => {
             font-size: 72rem;
             font-family: var(--main-font);
             width:65%;
-            margin: 0% 0% 3%;
+            margin: 0% 0% 120rem;
         }
         .text {
             font-size: 26rem;
