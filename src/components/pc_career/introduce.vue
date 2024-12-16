@@ -1,41 +1,48 @@
+<script setup>
+
+const goto = ()=> {
+  window.open('https://apply.workable.com/infini-capital-management-limited')
+}
+</script>
+
 <template>
-    <div class="container">
-      <!-- 我们正在寻找的特质部分 -->
-      <div class="section">
-        <div class="question">
-          <div class="text">
-            What we are looking for
-          </div>        
-        </div>
-        <div class="content">
-          <div class="title">Innovation and Entrepreneurship        </div>
-          <div class="text">
-            At Infini Capital, we embrace uncertainty and invest our energy into pursuing new ideas. We are passionate about solving complex problems in a creative and visionary manner.
-          </div>
+  <div class="container">
+    <!-- 我们正在寻找的特质部分 -->
+    <div class="section">
+      <div class="question">
+        <div class="text">
+          What we are looking for
+        </div>        
+      </div>
+      <div class="content">
+        <div class="title">Innovation and Entrepreneurship        </div>
+        <div class="text">
+          At Infini Capital, we embrace uncertainty and invest our energy into pursuing new ideas. We are passionate about solving complex problems in a creative and visionary manner.
         </div>
       </div>
-  
-      <!-- 分割线 -->
-      <hr class="divider" />
-  
-      <!-- 文化部分 -->
-
-      <div class="section">
-        <div class="question">
-            <div class="text">Culture</div> 
-            <div class="join-button">Join us</div>
-        </div>
-        <div class="content">
-          <div class="title">Diversity and Collaboration</div>
-          <div class="text">
-            Our culture is defined by our people around the globe. We emphasize diversity, inclusion and autonomy within our framework, enabling our people to excel at solving complex problems together as a team. We are dedicated to continuously building a supportive environment for different perspectives.
-          </div>
-
-        </div>
-      </div>
-     
     </div>
-  </template>
+
+    <!-- 分割线 -->
+    <hr class="divider" />
+
+    <!-- 文化部分 -->
+
+    <div class="section">
+      <div class="question">
+          <div class="text">Culture</div> 
+          <div class="join-button" @click="goto">Join us</div>
+      </div>
+      <div class="content">
+        <div class="title">Diversity and Collaboration</div>
+        <div class="text">
+          Our culture is defined by our people around the globe. We emphasize diversity, inclusion and autonomy within our framework, enabling our people to excel at solving complex problems together as a team. We are dedicated to continuously building a supportive environment for different perspectives.
+        </div>
+
+      </div>
+    </div>
+    
+  </div>
+</template>
 
 <style scoped lang="scss">
 .container {
