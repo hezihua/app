@@ -74,7 +74,7 @@ const handleMouseLeave = (index) => {
               <div>Discipline</div>
             </div>
             <div v-if="isHovering[0] && showcontent" class="content-detail">
-              A strong risk culture is embedded in our proprietary DNA. Our mission is clear: to safeguard and grow our investors' capital
+              Embedded in our proprietary DNA is a strong risk culture, focused on safeguarding and growing investor capital
             </div>
             <div class="add" :class="{ 'active': isHovering[0] }"> + </div>
           </div>
@@ -92,7 +92,7 @@ const handleMouseLeave = (index) => {
             </div>
             <div v-if="isHovering[1] && showcontent" class="content-detail">
               
-              We acknowledge that there is always potential for improvement. We are in a state of continuous evolution, aiming for excellence in everything we do
+              Committed to continuous improvement, we strive for excellence in everything we do
             </div>
             <div class="add"  :class="{ 'active': isHovering[1] }"> + </div>
           </div>
@@ -110,7 +110,7 @@ const handleMouseLeave = (index) => {
               
             </div>
             <div v-if="isHovering[2] && showcontent" class="content-detail" >
-              The market is anything but static. We embrace this challenge with perseverance and flexibility
+              The market is anything but static. We thrive in the ever-changing market with unwavering perseverance and agility
             </div>
             <div class="add"  :class="{ 'active': isHovering[2] }"> + </div>
           </div>
@@ -129,7 +129,7 @@ const handleMouseLeave = (index) => {
               
             </div>
             <div v-if="isHovering[3] && showcontent" class="content-detail">
-              We hold transparency and collaboration in high esteem, convinced that open dialogue and a supportive culture foster the most robust investment ideas
+              We value transparency and teamwork, believing that open dialogue and support drive strong investment ideas
             </div>
             <div class="add"  :class="{ 'active': isHovering[3] }"> + </div>
           </div>

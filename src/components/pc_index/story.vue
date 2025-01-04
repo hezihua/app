@@ -108,8 +108,8 @@ onMounted(() => {
         <div class="storycontainer">
           <div id="storycontent" class="storycontent" :style="{ transform: 'translate(-100%)' }" ref="storycontent">
             <div class="title">Our Story</div>
-            <p class="text">Infini Capital started as a proprietary trading house and organically evolved into an alternative investment manager. We prioritize capital preservation and high-quality returns as core to our investment and operation.</p>
-            <p class="text">Over the years, we have captured uncorrelated and attractive return streams, by implementing this principle and by empowering extraordinary talents to pursue their best ideas.</p>
+            <p class="text">Infini Capital started as a proprietary trading house and evolved into an alternative investment manager. We prioritize capital preservation and high-quality returns at the core of our investments and operations.</p>
+            <p class="text">Over the years, we have captured uncorrelated and attractive return streams, by adhering to this principle and empowering exceptional talent.</p>
           </div>
           
         </div>

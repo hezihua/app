@@ -152,8 +152,8 @@ onMounted(() => {
             <div>Constant</div>
             <div>Evolution</div>
           </div>
-          <p class="text">We continually challenge the status quo, upgrade our institutionalized infrastructure and strategically expand across diverse high-Sharpe strategies.</p>
-          <p class="text">Our entrepreneurial spirit gives us agility and resilience, enabling us to prosper amidst the ever-shifting market.</p>
+          <p class="text">We continually challenge the status quo, enhance our institutional infrastructure and strategically expand across diverse high-Sharpe strategies.</p>
+          <p class="text">Our entrepreneurial spirit fosters agility and resilience,  enabling us to excel in shifting market.</p>
 
           <!-- <div class="arrow"><img @click="handleOpen" src="../../assets/ic_website_layout_v1B.png"></div> -->
         </div>
@@ -170,7 +170,7 @@ onMounted(() => {
                   <div class="circle"></div>
                   <div class="content">
                     <p class="date">Jun 2015</p>
-                    <p class="description">Founded Infini Capital to </p>
+                    <p class="description">Founded to </p>
                     <p class="description">conduct proprietary trading </p>
                     <p class="date"></p>
                     <p class="description"></p>

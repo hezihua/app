@@ -129,12 +129,12 @@ onMounted(() => {
         <div class="investmentcontent">
           <div class="title" ref="titlecontent">
             <div>Investment in and </div>
-            <div>Empowerment of</div>
-            <div>Excellent People</div>
+            <div>Empowering</div>
+            <div>Distinguished Talent</div>
           </div>
           <div class="text" ref="textcontent">
-            <div class="item">People are the lifeblood of our business. We take pride in having cultivated an organization that is a magnet for exceptional talent.</div>
-            <div class="item">At Infini Capital, our people are given an opportunity to be impactful in a highly human-centric, highly self-driven environment. We believe in providing our talent with the opportunity to thrive, which in turn leads to our investments prospering.</div>
+            <div class="item">People are the lifeblood of our business. We take pride in cultivating an organization that attracts exceptional talent.</div>
+            <div class="item">At Infini Capital, our talents have the chance to make an impact in a human-centric and self-driven environment. We believe that empowering our talent to thrive drives the success of our investments.</div>
           </div>
          
           <div class="buttonbox" ref="buttoncontent">
