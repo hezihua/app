@@ -12,11 +12,6 @@ onMounted(() => {
   }, 2000)
 });
 
-const items = [
-  { title: "AI Empowerment", details: "We are exploring the use of AI in the  investment process and are in discussions with a reputable provider in the region to support this initiative." },
-  { title: "In-house Quantitative and IT Teams", details: "We have dedicated our in-house research and development effort in technology to accelerate our platform evolution." },
-  { title: "Proprietary Systems", details: "We have developed tailor-made system solutions to best fit our strategy and risk mandate, optimizing risk-reward ratios and adapting quickly to changing market conditions." }
-];
 const blockHovering = ref([false, false, false, false]);
 // 使用数组来存储每个块的悬停状态
 const isHovering = ref([false, false, false]);
@@ -70,27 +65,6 @@ const triggerDetails = (index) => {
   
 };
 
-const handleMouseEnter = (index) => {
-  console.log('kkkk')
-  showcontent.value = false
-  let result = [];
-  [1,2,3,4].forEach((item, i) => {
-    if (i === index) {
-        result.push(true)
-    } else {
-      result.push(false)
-    }
-  })
-  setTimeout(() => {
-    showcontent.value = true
-  }, 500);
-  blockHovering.value = result
-}
-const handleMouseLeave = (index) => {
-  showcontent.value = false
-  blockHovering.value[index] = false;
-}
-
 
 
 
@@ -103,7 +77,7 @@ const handleMouseLeave = (index) => {
         </div>
         <div class="introduce">
             <div>As a firm that invests substantial capital in our own strategies,</div>
-            <div>capital preservation and quality of returns are of the utmost importance to us.</div>
+            <div>capital preservation and quality of returns are of utmost importance to us.</div>
 
         </div>
         <div class="features">
@@ -139,7 +113,7 @@ const handleMouseLeave = (index) => {
                   </div>
                   <div class="detail">
                     <div v-if="blockHovering[1] && showcontent">
-                      Capital allocation is both art and science. We strive to identify the best uses of capital to generate superior long-term returns for investors. 
+                      Capital allocation is both an art and a science. We strive to identify the most effective uses of capital to generate superior long-term returns for investors 
                      </div> 
                   </div>
               </div>
@@ -175,42 +149,15 @@ const handleMouseLeave = (index) => {
                   </div>
                   <div class="detail">
                     <div v-if="blockHovering[3] && showcontent">
-                      We employ a range of methods to monitor and manage the liquidity of our portfolio. We stay vigilant even in highly liquid asset classes to avoid concentration risks. 
+                      We employ a range of methods to manage our portfolio’s liquidity, staying vigilant even in highly liquid asset classes to avoid concentration risks. 
                   </div>
                     </div>
               </div>
               
           </transition>
         </div>
-        <!-- <div class="Infrastructure-container">
-          <div class="Infrastructure">
-            <div class="infrastructuretitle">Infrastructure</div>
-            <div class="list">
-                <div 
-                    v-for="(item, index) in items" 
-                    :key="index" 
-                    class="item" 
-                    @mouseenter="showDetails(index)" 
-                    @mouseleave="hideDetails(index)"
-                    >
-                    <transition name="fade">
-                        <div v-if="isHovering[index]" class="content-detail">{{ item.details }}</div>
-                        <div v-else class="content-title">
-                            <div class="text">
-                                {{ item.title }}
-                            </div>
-                            <div>
-                                +
-                            </div>
-                        </div>
-                    </transition>
-                </div>
-            </div>
-              
-          </div>
-        </div> -->
+        
       </div>
-      <!-- <Footer /> -->
     </div>
   </template>
   

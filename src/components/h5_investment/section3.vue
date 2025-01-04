@@ -45,7 +45,7 @@ onMounted(async () => {
             Pan-Asia Expert with Local Expertise
         </div>
         <div class="text">
-            As a homegrown Pan-Asia firm, we have cultivated specialized expertise in navigating the diverse and dynamic Asian markets. Over the years, we have built robust infrastructure, tailored to the intricacies of the heterogeneous Asia market. This platform-level sophistication empowers our talent to excel at their craft.
+            As a homegrown Pan-Asia firm, we possess specialized expertise in navigating the diverse and dynamic Asian markets. We have developed a robust infrastructure specifically tailored to the intricacies of the heterogeneous Asian market. This sophisticated platform enables our talent to excel.
         </div>
       </div>
     </section>

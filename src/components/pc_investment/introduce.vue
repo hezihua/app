@@ -40,7 +40,7 @@ onMounted(()=> {
                 <div>Quality of Returns</div>
             </div>
             
-            <div class="text">We understand there is no “one-size-fits-all” strategy. As the market inevitably changes, so does our firm, constantly adapting and  improving. We harness the mathematical power of diversification while vertically spanning across lowly-correlated, high-Sharpe strategies. Put simply, we don’t compromise on quality of returns and seek to generate alpha regardless of the market environment. </div>
+            <div class="text">We understand there is no “one-size-fits-all” strategy. Our firm continuously adapts and improves as the market changes. We harness the power of diversification across low-correlation, high-Sharpe strategies. Simply put, we prioritize high-quality returns and consistently seek to generate alpha, regardless of the market environment. </div>
           </div>
         </div>
         <div class="right">

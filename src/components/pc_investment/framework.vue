@@ -13,8 +13,8 @@ onMounted(() => {
 });
 
 const items = [
-  { title: "AI Empowerment", details: "We are exploring the use of AI in the  investment process and are in discussions with a reputable provider in the region to support this initiative." },
-  { title: "In-house Quantitative and IT Teams", details: "We have dedicated our in-house research and development effort in technology to accelerate our platform evolution." },
+  { title: "AI Empowerment", details: "We are actively exploring the integration of AI into our investment process, and engaging with a leading provider in the region to support the initiative." },
+  { title: "In-house Quantitative and IT Teams", details: "We have dedicated our in-house research and development efforts to technology to accelerate our platform's evolution." },
   { title: "Proprietary Systems", details: "We have developed tailor-made system solutions to best fit our strategy and risk mandate, optimizing risk-reward ratios and adapting quickly to changing market conditions." }
 ];
 const blockHovering = ref([false, false, false, false]);
@@ -102,7 +102,7 @@ const handleMouseLeave = (index) => {
             </div>
             <div class="introduce">
                 <div>As a firm that invests substantial capital in our own strategies,</div>
-                <div>capital preservation and quality of returns are of the utmost importance to us.</div>
+                <div>capital preservation and quality of returns are of utmost importance to us.</div>
 
             </div>
             <div class="features">
@@ -139,7 +139,7 @@ const handleMouseLeave = (index) => {
                         </div>
                         <div class="detail" v-if="blockHovering[1] && showcontent">
                             
-                            Capital allocation is both art and science. We strive to identify the best uses of capital to generate superior long-term returns for investors. 
+                            Capital allocation is both an art and a science. We strive to identify the most effective uses of capital to generate superior long-term returns for investors 
                             
                         </div>
                     </div>
@@ -177,7 +177,7 @@ const handleMouseLeave = (index) => {
                         </div>
                         <div class="detail" v-if="blockHovering[3] && showcontent">
                             
-                            We employ a range of methods to monitor and manage the liquidity of our portfolio. We stay vigilant even in highly liquid asset classes to avoid concentration risks. 
+                            We employ a range of methods to manage our portfolio’s liquidity, staying vigilant even in highly liquid asset classes to avoid concentration risks. 
                         </div>
                     </div>
                     

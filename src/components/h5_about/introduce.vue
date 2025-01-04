@@ -24,7 +24,7 @@ onMounted(() => {
             </div>
             <div class="features">
 
-                <div class="feature">First Asian Hedge Fund with Presence in Abu Dhabi</div>
+                <a href="https://www.adgm.com/media/announcements/infini-capital-establishes-a-strategic-presence-in-emea-region-with-abu-dhabi-office" target="_self"><div class="feature">Asian Hedge Fund with Presence in Abu Dhabi</div></a>
                 <div class="feature color">Proprietary Fund DNA Prioritizing Capital Preservation and High-Quality Returns</div>
                 <div class="feature">Substantial Internal Investment to Ensure Alignment of Interest with Investors</div>
                 <div class="feature color">Bottom-up Construction of Fund Infrastructure Enables Agility</div>
@@ -43,6 +43,12 @@ onMounted(() => {
   100% {
     transform: scale(1.08);
   }
+
+
+}
+
+a {
+  text-decoration: none;
 }
   .section {
     color: #fff;
