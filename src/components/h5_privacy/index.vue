@@ -115,24 +115,26 @@
                     12.To submit a Data Access Request or for information regarding the Company’s policies and practices relating to personal data, please contact:
                 </div>
                 <div class="item">
-
-                    Suites 1307-1308, 13/F
+                    27/F, East Tower 
                 </div>
                 <div class="item">
 
-                    Two Exchange Square
+                    Cheung Kong Center II
+
                 </div>
                 <div class="item">
 
-                    8 Connaught Place, Central, Hong Kong 
+                    10 Harcourt Road, Central, Hong Kong
+
                 </div>
                 <div class="item">
                     
-                    Attn: General Counsel
+                    Attn: Legal and Compliance Department
+
                 </div>
                 <div class="item">
 
-                    Email: stephen.lukow@infinicapital.com
+                    Email: compliance@infinicapital.com
                 </div>
                 <div class="item">
                     13.The Company reserves the right, at any time and without prior notice, to add to, change, update or modify this Statement.
