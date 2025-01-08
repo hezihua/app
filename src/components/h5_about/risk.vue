@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, watch, onUnmounted } from 'vue';
+import Footer from '../common/h5_footer.vue'
 const isSecondContentVisible = ref(false)
 const currentIndex = ref(0)
 
@@ -18,7 +19,7 @@ const showcontent = ref(false)
 
 
 // 使用数组来存储每个块的悬停状态
-const isHovering = ref([false, false, false]);
+const isHovering = ref([false, false, false, false]);
 
 
 const triggerDetails = (index) => {
@@ -27,7 +28,7 @@ const triggerDetails = (index) => {
     isHovering.value[index] = false;
   } else {
     let result = [];
-    [1,2,3].forEach((item, i) => {
+    [1,2,3,4].forEach((item, i) => {
       if (i === index) {
           result.push(true)
       } else {
@@ -51,8 +52,8 @@ const triggerDetails = (index) => {
   <div class="transition-container">
     <div class="content">
       <div class="title">
-        <div>Risk</div>
-        <div>Committee</div>
+        <div>Senior</div>
+        <div>Management</div>
       </div>
       <div class="first-content">
         
@@ -137,33 +138,50 @@ const triggerDetails = (index) => {
               </div>
             </div>
         </div>
+        <div 
+          class="leader-card" 
+          :class="{ 'fourth-full-width': isHovering[3] }"
+          @click="triggerDetails(3)"
+        >
+            <div class="first">
 
+                <div class="name">
+                    Jackel Chow
+                </div>
+                <div class="duty" >Head of Operations</div>
+                <div class="arrow"> <img src="../../assets/arrow.png" ></div>
+            </div>
+            <div class="detail fourth" >
+              <div class="detailcontent" v-if="isHovering[3] && showcontent">
+
+                <div class="text">
+                    Jackel is leading the integration of external trading platforms and facilitating the interaction between trading and non-trading functions. He was previously a member of the Operations Committee and the Best Execution/Risk Committee at Ovata Capital and Folger Hill. He also worked in trading desk operations at Barclays, Morgan Stanley, and Goldman Sachs. 
+
+                    He holds a Master's Degree in Financial Engineering from the University of Hong Kong and a Bachelor's degree from The Hong Kong University of Science and Technology, as well as a law degree from the University of London. He is a CFA and FRM Charter Holder.
+                </div>
+              </div>
+            </div>
+        </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 
 <style scoped lang="scss">
 .transition-container {
-    position: relative;
     width: 100%;
     margin: auto;
-    color: #fff;
+    color: #093254;
     position: relative;
-    position: sticky;
     overflow: hidden;
     background: #fff;
     min-height: 100vh;
-    padding-bottom: 10vh;
-    box-sizing: border-box;
-    top: -30vh;
   .content {
     position: relative;
     width: 100%;
     padding: 10vh 0 0 0;
-    // height: 100vh;
-    overflow: hidden;
     box-sizing: border-box;
     .title {
       color: #093254;
@@ -198,6 +216,9 @@ const triggerDetails = (index) => {
       }
       &.third-full-width {
         height: 280rem;
+      }
+      &.fourth-full-width {
+        height: 360rem;
       }
       .first {
           height: 120rem;
@@ -240,6 +261,9 @@ const triggerDetails = (index) => {
 
       .third {
         height: 160rem;
+      }
+      .fourth {
+        height: 240rem;
       }
     }
     

@@ -42,7 +42,7 @@ onMounted(async () => {
 
     <Leaders />
 
-    <Operate />
+    <!-- <Operate /> -->
 
 
     <Footer />

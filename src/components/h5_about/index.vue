@@ -5,7 +5,7 @@
     <Introduce />
     <Leadership />
     <Risk />
-    <Operating />
+    <!-- <Operating /> -->
   </div>
 </template>
 

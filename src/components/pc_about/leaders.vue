@@ -18,8 +18,8 @@ const toggleContent = (index = 0)=> {
   <div class="transition-container">
     <div class="content" :class="{ active: isSecondContentVisible }">
       <div class="text" v-if="!isSecondContentVisible">
-        <div>Risk</div>
-        <div>Committee</div>
+        <div>Senior</div>
+        <div>Management</div>
       </div>
       <div class="first-content">
         
@@ -44,6 +44,13 @@ const toggleContent = (index = 0)=> {
               Alex Ng
             </div>
             <div class="duty" >Director of Risk - Equity</div>
+            <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" ></div>
+        </div>
+        <div class="leader-card"   v-if="!(isSecondContentVisible && currentIndex !== 3)" @click="toggleContent(3)">
+            <div class="name">
+                Jackel Chow
+            </div>
+            <div class="duty" >Head of Operations</div>
             <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" ></div>
         </div>
 
@@ -78,6 +85,16 @@ const toggleContent = (index = 0)=> {
                He holds an MBA and a BBA from The Hong Kong University of Science and Technology and is a CFA and FRM Charter Holder.
              </div>
            </div>
+           <div v-if="currentIndex === 3">
+            <div class="text">
+              Jackel is leading the integration of external trading platforms and facilitating the interaction between trading and non-trading functions. He was previously a member of the Operations Committee and the Best Execution/Risk Committee at Ovata Capital and Folger Hill. He also worked in trading desk operations at Barclays, Morgan Stanley, and Goldman Sachs. 
+  
+            </div>
+            <div class="text">
+              He holds a Master's Degree in Financial Engineering from the University of Hong Kong and a Bachelor's degree from The Hong Kong University of Science and Technology, as well as a law degree from the University of London. He is a CFA and FRM Charter Holder.
+  
+            </div>
+          </div>
          </div>
       </div>
     </div>
