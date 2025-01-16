@@ -110,7 +110,7 @@ const handleMouseLeave = (index) => {
               
             </div>
             <div v-if="isHovering[2] && showcontent" class="content-detail" >
-              The market is anything but static. We thrive in the ever-changing market with unwavering perseverance and agility
+              The market is anything but static. We thrive in the dynamic market with unwavering perseverance and agility
             </div>
             <div class="add"  :class="{ 'active': isHovering[2] }"> + </div>
           </div>

@@ -63,10 +63,14 @@ const toggleContent = (index = 0)=> {
            <div v-if="currentIndex === 0">
              <div class="text">Tony Chin is the Founder, CEO and CIO of Infini Capital.</div>
              <div class="text">
-               Before founding Infini Capital in 2015, he was a Partner at GCS Capital, a Hong Kong based Private Equity firm with a focus on buyout and restructuring opportunities in financial sector within Asia. He started his career in the investment banking division at Morgan Stanley and HSBC, with a focus on Mergers and Acquisitions in the TMT sector.
+               Before founding Infini Capital in 2015, he was a Partner at GCS Capital, a Hong Kong based Alternative Investment Firm. He started his career in the investment banking division at Morgan Stanley and HSBC.
              </div>
              <div class="text">
-               He holds a BA in Economics from the University of Michigan, Ann Arbor. 
+              Education
+               <!-- He holds a BA in Economics from the University of Michigan, Ann Arbor.  -->
+             </div>
+             <div class="text">
+              BA in Economics - the University of Michigan, Ann Arbor.
              </div>
            </div>
            <div v-if="currentIndex === 1">

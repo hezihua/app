@@ -2,7 +2,7 @@
   <div ref="container" class="container">
     <!-- <Header /> -->
     <About />
-    <Introduce />
+    <!-- <Introduce /> -->
     <Leadership />
     <Risk />
     <!-- <Operating /> -->

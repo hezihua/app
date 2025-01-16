@@ -25,7 +25,7 @@ onMounted(() => {
   
               <div class="title">About Us</div>
               <div class="article">
-                  <div class="text">From our founding in 2015 and our roots in proprietary investment, Infini Capital has organically </div>
+                  <div class="text">With our roots in proprietary investment, Infini Capital has organically </div>
                   <div class="text">grown into a global multi-strategy investment management firm with a Pan-Asia focus.</div>
               </div>
               <div>

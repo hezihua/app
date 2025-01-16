@@ -108,8 +108,8 @@ onMounted(() => {
           <div class="timelinecontent" ref="timelinecontent">
 
             <section class="timeline-section">
-              <div class="title">Proprietary </div>
-              <div  class="title">Investment</div>
+              <!-- <div class="title">Proprietary </div>
+              <div  class="title">Investment</div> -->
               <div class="timeline">
                 <div class="timeline-item">
                   <div class="circle"></div>
@@ -142,8 +142,8 @@ onMounted(() => {
             </section>
   
             <section class="timeline-section">
-              <div class="title">Welcoming External Capital </div>
-              <p class="sub-title">(with Significant Internal Investment)</p>
+              <!-- <div class="title">Welcoming External Capital </div>
+              <p class="sub-title">(with Significant Internal Investment)</p> -->
               <div class="timeline">
                 <div class="timeline-item">
                   <div class="circle"></div>

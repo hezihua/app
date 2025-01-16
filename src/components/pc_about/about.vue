@@ -25,7 +25,7 @@ onMounted(() => {
   
               <div class="title">About Us</div>
               <div class="article">
-                  <div class="text">From our founding in 2015 and our roots in proprietary investment, Infini Capital has organically </div>
+                  <div class="text">With our roots in proprietary investment, Infini Capital has organically </div>
                   <div class="text">grown into a global multi-strategy investment management firm with a Pan-Asia focus.</div>
               </div>
               <div>
@@ -36,7 +36,7 @@ onMounted(() => {
           </Transition>
         </div>
       
-        <div class="feature-boxes">
+        <!-- <div class="feature-boxes">
             <div class="introduce">
                 <div>As has always been the case,</div>
                 <div>we challenge, innovate, adapt and improve. Our firm has evolved through iterations since inception,</div>
@@ -50,7 +50,7 @@ onMounted(() => {
                 <div class="feature">Substantial Internal Investment to Ensure Alignment of Interest with Investors</div>
                 <div class="feature color">Bottom-up Construction of Fund Infrastructure Enables Agility</div>
             </div>
-        </div>
+        </div> -->
     </div>
   </template>
   
