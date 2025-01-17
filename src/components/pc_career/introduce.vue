@@ -17,7 +17,7 @@ const goto = ()=> {
       <div class="content">
         <div class="title">Innovation and Entrepreneurship        </div>
         <div class="text">
-          At Infini Capital, we embrace uncertainty and invest our energy into pursuing new ideas. We are passionate about solving complex problems in a creative and visionary manner.
+          At Infini Capital, we embrace uncertainty, pursuing innovative ideas and solving complex problems creatively.
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@ const goto = ()=> {
       <div class="content">
         <div class="title">Diversity and Collaboration</div>
         <div class="text">
-          Our culture is defined by our people around the globe. We emphasize diversity, inclusion and autonomy within our framework, enabling our people to excel at solving complex problems together as a team. We are dedicated to continuously building a supportive environment for different perspectives.
+          Our culture values diversity, inclusion, and autonomy, fostering teamwork and a supportive environment for solving complex problems.
         </div>
 
       </div>

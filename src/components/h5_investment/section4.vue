@@ -94,7 +94,7 @@ const triggerDetails = (index) => {
               </div>
               <div class="detail" >
                   <div v-if="blockHovering[0] && showcontent">
-                    Risk managers specialize in the asset classes they oversee, facilitating productive discussions with investment professionals.
+                    Risk managers specialize in different asset classes, facilitating productive discussions with investment professionals.
                   </div>
                   
               </div>
@@ -131,7 +131,7 @@ const triggerDetails = (index) => {
                   </div>
                   <div class="detail">
                     <div v-if="blockHovering[2] && showcontent">
-                      We systematically evaluate potential stress factors and scenarios to manage exposures across our portfolio, striking the right balance between risk and reward.
+                      We systematically evaluate potential stress factors and scenarios to manage exposures across our portfolio, striking the balance between risk and reward.
                       </div>
                   </div>
               </div>

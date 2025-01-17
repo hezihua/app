@@ -83,7 +83,11 @@ const triggerDetails = (index) => {
                 Before founding Infini Capital in 2015, he was a Partner at GCS Capital, a Hong Kong based Alternative Investment Firm. He started his career in the investment banking division at Morgan Stanley and HSBC.
                 <!-- </div>
                 <div class="text"> -->
-                Education BA in Economics - the University of Michigan, Ann Arbor. 
+                  <div class="educationtitle"> Education</div>
+                  <div class="spetext">
+
+                    BA in Economics - the University of Michigan, Ann Arbor
+                  </div>
                 </div>
               </div>
             </div>
@@ -108,7 +112,13 @@ const triggerDetails = (index) => {
                 U-Lipp is responsible for establishing risk mandate and monitoring risk limit parameters for the FICC-related strategies. He was previously a Vice President of Investment Risk at JP Morgan Asset Management, an Associate Director of Risk Analysis at Dymon Asia and a Risk Officer at Brevan Howard. 
                 <!-- </div>
                 <div class="text"> -->
-                He holds a Master of Finance, a Master of Advanced Mechanical Engineering, and a Bachelor's degree in Mechanical Engineering from Imperial College.
+                <!-- He holds a Master of Finance, a Master of Advanced Mechanical Engineering, and a Bachelor's degree in Mechanical Engineering from Imperial College. -->
+                <div class="educationtitle"> Education</div>
+                <div class="spetext">
+
+                  Master of Finance, Master of Advanced Mechanical Engineering, Bachelor's degree in Mechanical Engineering – Imperial College
+                </div>
+
                 </div>
               </div>
             </div>
@@ -133,7 +143,11 @@ const triggerDetails = (index) => {
                   Alex oversees risk management for equity-related strategies. Previously, he held a senior risk position at Polymer, managing risk identification, assessment, and mitigation. Before that, he was a Vice President at MSCI.
                 <!-- </div>
                 <div class="text"> -->
-                  He holds an MBA and a BBA from The Hong Kong University of Science and Technology and is a CFA and FRM Charter Holder.
+                  <div class="educationtitle"> Education</div>
+                  <div class="spetext">
+                    MBA and BBA – The Hong Kong University of Science and Technology
+
+                  </div>
                 </div>
               </div>
             </div>
@@ -156,8 +170,12 @@ const triggerDetails = (index) => {
 
                 <div class="text">
                     Jackel is leading the integration of external trading platforms and facilitating the interaction between trading and non-trading functions. He was previously a member of the Operations Committee and the Best Execution/Risk Committee at Ovata Capital and Folger Hill. He also worked in trading desk operations at Barclays, Morgan Stanley, and Goldman Sachs. 
+                    <div class="educationtitle"> Education</div>
+                  <div class="spetext">
 
-                    He holds a Master's Degree in Financial Engineering from the University of Hong Kong and a Bachelor's degree from The Hong Kong University of Science and Technology, as well as a law degree from the University of London. He is a CFA and FRM Charter Holder.
+                    Master's Degree in Financial Engineering – University of Hong Kong Bachelor's degree – The Hong Kong University of Science and Technology Law degree –University of London
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -256,6 +274,12 @@ const triggerDetails = (index) => {
         align-items: center;
         .detailcontent {
           text-align: justify;
+          .educationtitle {
+            text-decoration: underline;
+          }
+          .spetext {
+            
+          }
         }
       }
 

@@ -22,7 +22,7 @@ import Footer from '../common/footer.vue'
         <div class="menus">
             <div class="item">
                 <div class="sub-title">Hong Kong</div>
-                <div class="text">13/F, Two Exchange Square,8 Connaught Place, Central, Hong Kong                </div>
+                <div class="text">27/F, East Tower, Cheung Kong Center II, 10 Harcourt Road, Central, Hong Kong                </div>
             </div>
             <div class="item">
                 <div class="sub-title">Abu Dhabi</div>
