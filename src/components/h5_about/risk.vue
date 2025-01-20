@@ -276,6 +276,7 @@ const triggerDetails = (index) => {
           text-align: justify;
           .educationtitle {
             text-decoration: underline;
+            margin-top: 10rem;
           }
           .spetext {
             

@@ -83,17 +83,17 @@ onMounted(() => {
           padding: 0 0 0 10vw;
         }
         .article {
-            margin-bottom: 50rem;
+            margin-bottom: 20rem;
+            width: 80vw;
         }
         .title {
             font-size: 30rem;
             font-family: var(--main-font);
-            width:65%;
-            margin: 0% 0% 3%;
+            margin: 0% 0% 30rem;
         }
         .text {
             font-size: 15rem;
-            width: 65%;
+            width: 80vw;
         }
     }
   }
