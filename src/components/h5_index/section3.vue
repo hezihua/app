@@ -115,10 +115,11 @@ onMounted(() => {
                   <div class="circle"></div>
                   <div class="content">
                     <div class="date margin">Jun 2015</div>
-                    <div class="description">Founded to</div>
+                    <div class="description margin">Founded to</div>
 
-                    <div class="description margin">conduct proprietary </div>
-                    <div class="description">trading </div>
+                    <div class="description">conduct proprietary </div>
+                    <div class="description margin">trading </div>
+                    <div class="description"></div>
                     <div class="date margin"></div>
                     <div class="description margin"></div>
                     <div class="description"></div>
@@ -259,7 +260,7 @@ onMounted(() => {
     justify-content: center;
     width: 100%;
     height: 100%;
-    margin: 0 10vw;
+    padding: 0 10vw;
     .title {
       font-size: 30rem;
       font-family: var(--main-font);
@@ -269,19 +270,20 @@ onMounted(() => {
     }
     .text {
       font-size: 15rem;
-      width: 65%;
+      width: calc(100% - 20vw);
       margin: 3vw 0;
+      box-sizing: border-box;
       // opacity: 0;
     }
 
     .arrow {
         position: absolute;
-        right: 0;
-        bottom: 0;
+        right: 100rem;
+        bottom: 100rem;
         display: flex;
         align-items: flex-end;
         height: 60rem;
-        margin: 100rem 10%;
+        // margin: 100rem 10%;
         img {
           width: 40rem;
           transition: transform 1s ease;
@@ -379,7 +381,7 @@ onMounted(() => {
     .circle {
       width: 10rem;
       height: 10rem;
-      transform: translate(20rem, -5rem);
+      transform: translate(20rem, -4rem);
       background-color: #fff;
       border-radius: 50%;
       position: relative;
