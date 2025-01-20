@@ -102,7 +102,7 @@ const triggerDetails = (index) => {
                 <div class="name">
                   U-Lipp Tong
                 </div>
-                <div class="duty" >Director of Risk - FICC</div>
+                <div class="duty" >Head of Risk - FICC</div>
                 <div class="arrow"> <img src="../../assets/arrow.png" ></div>
             </div>
             <div class="detail" >
@@ -116,7 +116,8 @@ const triggerDetails = (index) => {
                 <div class="educationtitle"> Education</div>
                 <div class="spetext">
 
-                  Master of Finance, Master of Advanced Mechanical Engineering, Bachelor's degree in Mechanical Engineering – Imperial College
+                  MSc in Finance, MEng & BEng in Mechanical Engineering from Imperial College
+
                 </div>
 
                 </div>
@@ -146,7 +147,6 @@ const triggerDetails = (index) => {
                   <div class="educationtitle"> Education</div>
                   <div class="spetext">
                     MBA and BBA – The Hong Kong University of Science and Technology
-
                   </div>
                 </div>
               </div>
@@ -162,6 +162,7 @@ const triggerDetails = (index) => {
                 <div class="name">
                     Jackel Chow
                 </div>
+                <div class="duty">CFA, FRM                </div>
                 <div class="duty" >Head of Operations</div>
                 <div class="arrow"> <img src="../../assets/arrow.png" ></div>
             </div>
@@ -173,7 +174,15 @@ const triggerDetails = (index) => {
                     <div class="educationtitle"> Education</div>
                   <div class="spetext">
 
-                    Master's Degree in Financial Engineering – University of Hong Kong Bachelor's degree – The Hong Kong University of Science and Technology Law degree –University of London
+                    Master's Degree in Financial Engineering – University of Hong Kong 
+                  </div>
+                  <div class="spetext">
+
+                    BBA in Accounting and Finance – The Hong Kong University of Science and Technology 
+                  </div>
+                  <div class="spetext">
+
+                    LLB – University of London
                   </div>
 
                 </div>
@@ -276,10 +285,10 @@ const triggerDetails = (index) => {
           text-align: justify;
           .educationtitle {
             text-decoration: underline;
-            margin-top: 10rem;
+            margin: 10rem 0 5rem;
           }
           .spetext {
-            
+            margin-bottom: 5rem;
           }
         }
       }

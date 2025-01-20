@@ -36,7 +36,7 @@ const toggleContent = (index = 0)=> {
             <div class="name">
               U-Lipp Tong
             </div>
-            <div class="duty" >Director of Risk - FICC</div>
+            <div class="duty" >Head of Risk - FICC</div>
             <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png"></div>
         </div>
         <div class="leader-card"   v-if="!(isSecondContentVisible && currentIndex !== 2)" @click="toggleContent(2)">
@@ -50,6 +50,7 @@ const toggleContent = (index = 0)=> {
             <div class="name">
                 Jackel Chow
             </div>
+            <div class="duty">CFA, FRM                </div>
             <div class="duty" >Head of Operations</div>
             <div class="arrow"> <img src="../../assets/ic_website_layout_v1B.png" ></div>
         </div>
@@ -79,7 +80,7 @@ const toggleContent = (index = 0)=> {
              </div>
              <div class="title">Education            </div>
              <div class="spetext">
-              Master of Finance, Master of Advanced Mechanical Engineering, Bachelor's degree in Mechanical Engineering – Imperial College
+              MSc in Finance, MEng & BEng in Mechanical Engineering from Imperial College
 
              </div>
            </div>
@@ -104,10 +105,17 @@ const toggleContent = (index = 0)=> {
               Education
                <!-- He holds an MBA and a BBA from The Hong Kong University of Science and Technology and is a CFA and FRM Charter Holder. -->
              </div>
-            <div class="spetext">
-              
-              Master's Degree in Financial Engineering – University of Hong Kong Bachelor's degree – The Hong Kong University of Science and Technology Law degree –University of London
+             <div class="spetext">
 
+            Master's Degree in Financial Engineering – University of Hong Kong 
+            </div>
+            <div class="spetext">
+
+            BBA in Accounting and Finance – The Hong Kong University of Science and Technology 
+            </div>
+            <div class="spetext">
+
+            LLB – University of London
             </div>
           </div>
          </div>
@@ -202,11 +210,11 @@ const toggleContent = (index = 0)=> {
       padding: 20rem 25%;
     }
     .title {
-      padding: 0 25%;
+      padding: 10rem 25% 5rem;
       text-decoration: underline;
     }
     .spetext {
-      padding: 0 25%;
+      padding: 0 25% 5rem;
     }
   }
 
