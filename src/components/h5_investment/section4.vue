@@ -262,6 +262,7 @@ const triggerDetails = (index) => {
                 padding:  0 2vh 2vh;
                 box-sizing: border-box;
                 animation: showcontent .5s ease-out forwards;
+                text-align: justify;
             }
         }
 

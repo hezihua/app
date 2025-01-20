@@ -242,10 +242,10 @@ const triggerDetails = (index) => {
           height: 320rem; /* 宽度撑满 */
       }
       &.third-full-width {
-        height: 280rem;
+        height: 290rem;
       }
       &.fourth-full-width {
-        height: 360rem;
+        height: 380rem;
       }
       .first {
           height: 120rem;
@@ -294,10 +294,10 @@ const triggerDetails = (index) => {
       }
 
       .third {
-        height: 160rem;
+        height: 170rem;
       }
       .fourth {
-        height: 240rem;
+        height: 260rem;
       }
     }
     
