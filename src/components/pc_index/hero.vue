@@ -21,7 +21,7 @@ onMounted(() => {
 <template>
    <section class="section hero zoom-background" ref="zoomBackground"  :style="{ height: '56.25vw' }">
       <Header />
-      <!-- <Transition name="fade"> -->
+      <Transition name="fade">
 
         <div class="content" v-if="show">
           <div class="textLeft" :style="{ height: '60%' }">
@@ -38,7 +38,7 @@ onMounted(() => {
             
           </div>
         </div>
-      <!-- </Transition> -->
+      </Transition>
     </section>
 </template>
 
@@ -53,6 +53,7 @@ onMounted(() => {
     transform: translate(-50%, -50%) scale(1);
   }
 }
+
 
 /* 基础样式 */
 .section {
