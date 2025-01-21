@@ -21,7 +21,7 @@ onMounted(() => {
 <template>
    <section class="section hero zoom-background" ref="zoomBackground"  :style="{ height: '56.25vw' }">
       <Header />
-      <Transition name="fade">
+      <!-- <Transition name="fade"> -->
 
         <div class="content" v-if="show">
           <div class="textLeft" :style="{ height: '60%' }">
@@ -38,7 +38,7 @@ onMounted(() => {
             
           </div>
         </div>
-      </Transition>
+      <!-- </Transition> -->
     </section>
 </template>
 
@@ -80,7 +80,7 @@ onMounted(() => {
   background-position: center;
   transform-origin: center;
   transform: translate(-50%, -50%) rotate(0deg);
-  animation: zoomIn 1s ease-out forwards;
+  // animation: zoomIn 1s ease-out forwards;
 }
 
 /* 顶部背景 */

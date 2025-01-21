@@ -78,7 +78,7 @@ onMounted(() => {
     // background-position: 20% 0;
     transform-origin: center;
     // transform: translate(-50vw, -50vh) rotate(0deg); /* 移动到中心，并设置旋转角度 */
-    animation: zoomIn 1s ease-out forwards; /* 设置动画持续时间 */
+    // animation: zoomIn 1s ease-out forwards; /* 设置动画持续时间 */
 }
 
 /* 顶部背景 */
