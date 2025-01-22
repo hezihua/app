@@ -13,9 +13,9 @@ onMounted(() => {
 });
 
 const items = [
-  { title: "AI Empowerment", details: "We are actively exploring the integration of AI into our investment process, and engaging with a leading provider in the region to support the initiative." },
-  { title: "In-house Quantitative and IT Teams", details: "We have dedicated our in-house research and development efforts to technology to accelerate our platform's evolution." },
-  { title: "Proprietary Systems", details: "We have developed tailor-made system solutions to best fit our strategy and risk mandate, optimizing risk-reward ratios and adapting quickly to changing market conditions." }
+  { title: "AI Empowerment", details: "We are embracing AI-driven innovation to enhance our investment process, exploring collaboration with a leading regional provider to drive this initiative." },
+  { title: "In-house Quantitative and IT Teams", details: "Our dedicated Quantitative and IT teams focus on research and development, leveraging technology to accelerate the evolution of our platform." },
+  { title: "Proprietary Systems", details: "We have developed bespoke system solutions designed to align with our strategic objectives and risk mandate, enabling us to optimize risk-reward outcomes and adapt swiftly to dynamic market conditions." }
 ];
 const blockHovering = ref([false, false, false, false]);
 // 使用数组来存储每个块的悬停状态

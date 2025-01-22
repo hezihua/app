@@ -13,9 +13,9 @@ onMounted(() => {
 });
 
 const items = [
-  { title: "AI Empowerment", details: "We are actively exploring the integration of AI into our investment process, and engaging with a leading provider in the region to support the initiative." },
-  { title: "In-house Quantitative and IT Teams", details: "We have dedicated our in-house research and development efforts to technology to accelerate our platform's evolution." },
-  { title: "Proprietary Systems", details: "We have developed tailor-made system solutions to best fit our strategy and risk mandate, optimizing risk-reward ratios and adapting quickly to changing market conditions." }
+  { title: "AI Empowerment", details: "We are embracing AI-driven innovation to enhance our investment process, exploring collaboration with a leading regional provider to drive this initiative." },
+  { title: "In-house Quantitative and IT Teams", details: "Our dedicated Quantitative and IT teams focus on research and development, leveraging technology to accelerate the evolution of our platform." },
+  { title: "Proprietary Systems", details: "We have developed bespoke system solutions designed to align with our strategic objectives and risk mandate, enabling us to optimize risk-reward outcomes and adapt swiftly to dynamic market conditions." }
 ];
 const blockHovering = ref([false, false, false, false]);
 // 使用数组来存储每个块的悬停状态
@@ -101,8 +101,10 @@ const handleMouseLeave = (index) => {
                 Robust Risk Management Framework
             </div>
             <div class="introduce">
-                <div>As a firm that invests substantial capital in our own strategies,</div>
-                <div>capital preservation and quality of returns are of utmost importance to us.</div>
+              <div>At Infini Capital, capital preservation and the quality of returns are paramount. </div>
+              <div>As a firm that invests substantial capital in our own strategies, </div>
+              <div>we maintain a disciplined and comprehensive approach to risk management.</div>
+                <!-- <div>capital preservation and quality of returns are of utmost importance to us.</div> -->
 
             </div>
             <div class="features">
@@ -121,7 +123,7 @@ const handleMouseLeave = (index) => {
                         </div>
                         <div class="detail" v-if="blockHovering[0] && showcontent">
                             
-                            Risk managers specialize in different asset classes, facilitating productive discussions with investment professionals.
+                          Our dedicated risk managers specialize across asset classes, fostering informed and productive collaboration with investment professionals.
                         </div>
                     </div>
                 </transition>
@@ -139,7 +141,7 @@ const handleMouseLeave = (index) => {
                         </div>
                         <div class="detail" v-if="blockHovering[1] && showcontent">
                             
-                            Capital allocation is both an art and a science. We strive to identify the most effective uses of capital to generate superior long-term returns for investors 
+                          Combining the art and science of capital allocation, we identify optimal opportunities to generate superior long-term returns for our investors.
                             
                         </div>
                     </div>
@@ -158,7 +160,7 @@ const handleMouseLeave = (index) => {
                         </div>
                         <div class="detail" v-if="blockHovering[2] && showcontent">
                             
-                            We systematically evaluate potential stress factors and scenarios to manage exposures across our portfolio, striking the balance between risk and reward.
+                          Through systematic stress testing and scenario analysis, we proactively manage portfolio exposures, balancing risk and reward.
                             
                         </div>
                     </div>
@@ -177,7 +179,7 @@ const handleMouseLeave = (index) => {
                         </div>
                         <div class="detail" v-if="blockHovering[3] && showcontent">
                             
-                            We employ a range of methods to manage our portfolio’s liquidity, staying vigilant even in highly liquid asset classes to avoid concentration risks. 
+                          We employ diverse methods to ensure a robust liquidity framework, maintaining vigilance across highly liquid assets to mitigate concentration risks. 
                         </div>
                     </div>
                     

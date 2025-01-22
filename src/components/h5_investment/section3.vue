@@ -42,10 +42,10 @@ onMounted(async () => {
       <div class="content">
 
         <div class="title">
-            Pan-Asia Expert with Local Expertise
+          Pan-Asia Expertise with Local Insights
         </div>
         <div class="text">
-            As a homegrown Pan-Asia firm, we possess specialized expertise in navigating the diverse and dynamic Asian markets. We have developed a robust infrastructure specifically tailored to the intricacies of the heterogeneous Asian market. This sophisticated platform enables our talent to excel.
+          As a homegrown Pan-Asia firm, Infini Capital excels in navigating the complexities of the diverse and dynamic Asian markets. Our tailored infrastructure is designed to address the unique intricacies of the region, enabling our team to leverage local insights and deliver exceptional results.
         </div>
       </div>
     </section>

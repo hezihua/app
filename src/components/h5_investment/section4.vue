@@ -73,11 +73,11 @@ const triggerDetails = (index) => {
     <div class="section">
       <div class="feature-boxes">
         <div class="title">
-            Robust Risk Management Framework
+          Robust Risk Management Framework
         </div>
         <div class="introduce">
-            <div>As a firm that invests substantial capital in our own strategies,</div>
-            <div>capital preservation and quality of returns are of utmost importance to us.</div>
+            <div>At Infini Capital, capital preservation and the quality of returns are paramount. As a firm that invests substantial capital in our own strategies, we maintain a disciplined and comprehensive approach to risk management.</div>
+            <!-- <div>capital preservation and quality of returns are of utmost importance to us.</div> -->
 
         </div>
         <div class="features">
@@ -94,7 +94,7 @@ const triggerDetails = (index) => {
               </div>
               <div class="detail" >
                   <div v-if="blockHovering[0] && showcontent">
-                    Risk managers specialize in different asset classes, facilitating productive discussions with investment professionals.
+                    Our dedicated risk managers specialize across asset classes, fostering informed and productive collaboration with investment professionals.
                   </div>
                   
               </div>
@@ -113,7 +113,7 @@ const triggerDetails = (index) => {
                   </div>
                   <div class="detail">
                     <div v-if="blockHovering[1] && showcontent">
-                      Capital allocation is both an art and a science. We strive to identify the most effective uses of capital to generate superior long-term returns for investors 
+                      Combining the art and science of capital allocation, we identify optimal opportunities to generate superior long-term returns for our investors.
                      </div> 
                   </div>
               </div>
@@ -131,7 +131,7 @@ const triggerDetails = (index) => {
                   </div>
                   <div class="detail">
                     <div v-if="blockHovering[2] && showcontent">
-                      We systematically evaluate potential stress factors and scenarios to manage exposures across our portfolio, striking the balance between risk and reward.
+                      Through systematic stress testing and scenario analysis, we proactively manage portfolio exposures, balancing risk and reward.
                       </div>
                   </div>
               </div>
@@ -149,7 +149,7 @@ const triggerDetails = (index) => {
                   </div>
                   <div class="detail">
                     <div v-if="blockHovering[3] && showcontent">
-                      We employ a range of methods to manage our portfolio’s liquidity, staying vigilant even in highly liquid asset classes to avoid concentration risks. 
+                      We employ diverse methods to ensure a robust liquidity framework, maintaining vigilance across highly liquid assets to mitigate concentration risks.
                   </div>
                     </div>
               </div>

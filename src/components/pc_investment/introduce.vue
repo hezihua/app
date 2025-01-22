@@ -36,11 +36,10 @@ onMounted(()=> {
 
             <div class="title">
                 <div>Continual Diversification</div>
-                <div>and Focus on</div>
-                <div>Quality of Returns</div>
+                <div>with a Focus</div>
+                <div>on Quality Returns</div>
             </div>
-            
-            <div class="text">We understand there is no “one-size-fits-all” strategy. We adapt to market changes, leveraging diversification and high-Sharpe strategies to prioritize quality returns and generate alpha in any environment. </div>
+            <div class="text">At Infini Capital, we recognize that no single strategy fits all market environments. By embracing diversification and leveraging high-Sharpe strategies, we prioritize delivering consistent, high-quality returns while generating alpha in any market environment. </div>
           </div>
         </div>
         <div class="right">
