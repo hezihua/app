@@ -54,6 +54,7 @@ onMounted(() => {
   }
 }
 
+
 /* 基础样式 */
 .section {
   width: 100%;
@@ -80,7 +81,7 @@ onMounted(() => {
   background-position: center;
   transform-origin: center;
   transform: translate(-50%, -50%) rotate(0deg);
-  animation: zoomIn 1s ease-out forwards;
+  // animation: zoomIn 1s ease-out forwards;
 }
 
 /* 顶部背景 */
