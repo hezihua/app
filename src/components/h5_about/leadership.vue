@@ -37,10 +37,10 @@ onMounted(()=> {
 
             <div class="title">Leadership</div>
             <!-- <div class="sub-title">Expertise leads to success</div> -->
-            <div class="text">Infini Capital is led by a seasoned team of industry </div>
-            <div class="text">experts with complementary skills. Emphasizing </div>
-            <div class="text">collaboration, entrepreneurship, and agility, they develop the overarching</div>
-            <div class="text">investment strategy and supporting infrastructure.</div>
+            <div class="text">Infini Capital is led by a seasoned team of industry 
+            experts with complementary skills. Emphasizing 
+            collaboration, entrepreneurship, and agility, they develop the overarching
+            investment strategy and supporting infrastructure.</div>
         </div>
       
     </div>

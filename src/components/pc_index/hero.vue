@@ -32,8 +32,9 @@ onMounted(() => {
           <div class="border" :style="{ height: '60%' }"></div>
           <div class="textRight" :style="{ height: '60%' }">
             <div>
-              <div>Relentless Pursuit of</div> 
-              <div>Quality Returns</div>
+              <div>Dedicated to</div> 
+              <div>Delivering Exceptional</div>
+              <div> Returns</div>
             </div>
             
           </div>

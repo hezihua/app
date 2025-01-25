@@ -29,9 +29,9 @@ onMounted(() => {
           </div>
           <div class="border"></div>
           <div class="textRight">
-            <div>Relentless Pursuit</div> 
-            <div>of Quality</div> 
-            <div>Returns</div>
+            <div>Dedicated to</div> 
+            <div>Delivering Exceptional</div>
+            <div> Returns</div>
           </div>
         </div>
       </Transition>

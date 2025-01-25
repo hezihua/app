@@ -37,7 +37,7 @@ import Footer from '../common/footer.vue'
                 <div class="text">7/F,  Al Khatem Tower, Al Falah St, Al Maryah Island, ADGM Square, Abu Dhabi, UAE                </div>
             </div>
             <div class="item">
-                <div class="sub-title">Investor Enquiry                </div>
+                <div class="sub-title">Investor Enquiries                </div>
                 <div class="text">ir@infinicapital.com</div>
             </div>
         </div>

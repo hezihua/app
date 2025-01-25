@@ -41,7 +41,7 @@ import Footer from '../common/h5_footer.vue'
                 <div class="text">Abu Dhabi, UAE                </div>
             </div>
             <div class="item">
-                <div class="sub-title">Investor Enquiry                </div>
+                <div class="sub-title">Investor Enquiries                </div>
                 <div class="text">ir@infinicapital.com</div>
             </div>
         </div>
