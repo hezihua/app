@@ -115,7 +115,7 @@ onMounted(() => {
                   <div class="circle"></div>
                   <div class="content">
                     <div class="date margin">Jun 2015</div>
-                    <div class="description margin">Founded to</div>
+                    <div class="description margin">Infini founded</div>
 
                     <div class="description">conduct proprietary </div>
                     <div class="description margin">trading </div>
