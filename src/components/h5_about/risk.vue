@@ -83,18 +83,18 @@ const triggerDetails = (index) => {
                 Before founding Infini Capital in 2015, he was a Partner at GCS Capital, a Hong Kong based Alternative Investment Firm. He started his career in the investment banking division at Morgan Stanley and HSBC.
                 <!-- </div>
                 <div class="text"> -->
-                  <div class="educationtitle"> Education</div>
+                  <!-- <div class="educationtitle"> Education</div>
                   <div class="spetext">
 
                     BA in Economics - the University of Michigan, Ann Arbor
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
         </div>
         <div 
           class="leader-card" 
-          :class="{ 'full-width': isHovering[1] }"
+          :class="{ 'second-full-width': isHovering[1] }"
           @click="triggerDetails(1)"
         >
             <div class="first">
@@ -105,7 +105,7 @@ const triggerDetails = (index) => {
                 <div class="duty" >Head of Risk - FICC</div>
                 <div class="arrow"> <img src="../../assets/arrow.png" ></div>
             </div>
-            <div class="detail" >
+            <div class="detail second" >
               <div class="detailcontent" v-if="isHovering[1] && showcontent">
 
                 <div class="text">
@@ -113,12 +113,12 @@ const triggerDetails = (index) => {
                 <!-- </div>
                 <div class="text"> -->
                 <!-- He holds a Master of Finance, a Master of Advanced Mechanical Engineering, and a Bachelor's degree in Mechanical Engineering from Imperial College. -->
-                <div class="educationtitle"> Education</div>
+                <!-- <div class="educationtitle"> Education</div>
                 <div class="spetext">
 
                   MSc in Finance, MEng & BEng in Mechanical Engineering from Imperial College
 
-                </div>
+                </div> -->
 
                 </div>
               </div>
@@ -144,10 +144,10 @@ const triggerDetails = (index) => {
                   Alex oversees risk management for equity-related strategies. Previously, he held a senior risk position at Polymer, managing risk identification, assessment, and mitigation. Before that, he was a Vice President at MSCI.
                 <!-- </div>
                 <div class="text"> -->
-                  <div class="educationtitle"> Education</div>
+                  <!-- <div class="educationtitle"> Education</div>
                   <div class="spetext">
                     MBA and BBA – The Hong Kong University of Science and Technology
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -171,7 +171,7 @@ const triggerDetails = (index) => {
 
                 <div class="text">
                     Jackel is leading the integration of external trading platforms and facilitating the interaction between trading and non-trading functions. He was previously a member of the Operations Committee and the Best Execution/Risk Committee at Ovata Capital and Folger Hill. He also worked in trading desk operations at Barclays, Morgan Stanley, and Goldman Sachs. 
-                    <div class="educationtitle"> Education</div>
+                    <!-- <div class="educationtitle"> Education</div>
                   <div class="spetext">
 
                     Master's Degree in Financial Engineering – University of Hong Kong 
@@ -183,7 +183,7 @@ const triggerDetails = (index) => {
                   <div class="spetext">
 
                     LLB – University of London
-                  </div>
+                  </div> -->
 
                 </div>
               </div>
@@ -239,13 +239,16 @@ const triggerDetails = (index) => {
       overflow: hidden;
       transition: all .5s ease; /* 加入过渡效果 */   
       &.full-width {
-          height: 320rem; /* 宽度撑满 */
+          height: 240rem; /* 宽度撑满 */
+      }
+      &.second-full-width {
+        height: 246rem;
       }
       &.third-full-width {
-        height: 290rem;
+        height: 220rem;
       }
       &.fourth-full-width {
-        height: 380rem;
+        height: 266rem;
       }
       .first {
           height: 120rem;
@@ -274,7 +277,7 @@ const triggerDetails = (index) => {
         background: #093254;
         color: #fff;
         font-size: 12rem;
-        height: 200rem;
+        height: 120rem;
         width: 100vw;
         padding: 10vw 10vw;
         box-sizing: border-box;
@@ -293,11 +296,15 @@ const triggerDetails = (index) => {
         }
       }
 
+      .second {
+        height: 126rem;
+      }
+
       .third {
-        height: 170rem;
+        height: 100rem;
       }
       .fourth {
-        height: 260rem;
+        height: 146rem;
       }
     }
     
