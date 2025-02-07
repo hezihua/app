@@ -66,44 +66,42 @@ const toggleContent = (index = 0)=> {
              <div class="text">
                Before founding Infini Capital in 2015, he was a Partner at GCS Capital, a Hong Kong based Alternative Investment Firm. He started his career in the investment banking division at Morgan Stanley and HSBC.
              </div>
-             <div class="title">
+             <!-- <div class="title">
               Education
-               <!-- He holds a BA in Economics from the University of Michigan, Ann Arbor.  -->
              </div>
              <div class="spetext">
               BA in Economics - the University of Michigan, Ann Arbor
-             </div>
+             </div> -->
            </div>
            <div v-if="currentIndex === 1">
              <div class="text">
                U-Lipp is responsible for establishing risk mandate and monitoring risk limit parameters for the FICC-related strategies. He was previously a Vice President of Investment Risk at JP Morgan Asset Management, an Associate Director of Risk Analysis at Dymon Asia and a Risk Officer at Brevan Howard. 
              </div>
-             <div class="title">Education            </div>
+             <!-- <div class="title">Education            </div>
              <div class="spetext">
               MSc in Finance, MEng & BEng in Mechanical Engineering from Imperial College
 
-             </div>
+             </div> -->
            </div>
            <div v-if="currentIndex === 2">
              <div class="text">
                Alex oversees risk management for equity-related strategies. Previously, he held a senior risk position at Polymer, managing risk identification, assessment, and mitigation. Before that, he was a Vice President at MSCI.
              </div>
-             <div class="title">
+             <!-- <div class="title">
               Education
-               <!-- He holds an MBA and a BBA from The Hong Kong University of Science and Technology and is a CFA and FRM Charter Holder. -->
              </div>
              <div class="spetext">
               MBA and BBA – The Hong Kong University of Science and Technology
-             </div>
+             </div> -->
            </div>
            <div v-if="currentIndex === 3">
             <div class="text">
               Jackel is leading the integration of external trading platforms and facilitating the interaction between trading and non-trading functions. He was previously a member of the Operations Committee and the Best Execution/Risk Committee at Ovata Capital and Folger Hill. He also worked in trading desk operations at Barclays, Morgan Stanley, and Goldman Sachs. 
   
             </div>
-            <div class="title">
+            <!-- <div class="title">
               Education
-               <!-- He holds an MBA and a BBA from The Hong Kong University of Science and Technology and is a CFA and FRM Charter Holder. -->
+              
              </div>
              <div class="spetext">
 
@@ -116,7 +114,7 @@ const toggleContent = (index = 0)=> {
             <div class="spetext">
 
             LLB – University of London
-            </div>
+            </div> -->
           </div>
          </div>
       </div>
