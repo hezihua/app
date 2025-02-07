@@ -74,6 +74,8 @@ const triggerDetails = (index) => {
 
                 <div class="text">
                   Before founding Infini in 2015, he was engaged in proprietary trading and also successfully built several start-ups.
+                </div>
+                <div class="text">
                   He started his career in the investment banking division at Morgan Stanley and HSBC.
                 </div>
               </div>
@@ -195,13 +197,13 @@ const triggerDetails = (index) => {
   .content {
     position: relative;
     width: 100%;
-    padding: 15vh 0 0 0;
+    padding: 12vh 0 0 0;
     box-sizing: border-box;
     .title {
       color: #093254;
       font-size: 30rem;
       font-weight: 700;
-      padding: 0 10vw 15vh;
+      padding: 0 10vw 12vh;
       font-family: var(--main-font);
     }
     
@@ -274,6 +276,9 @@ const triggerDetails = (index) => {
         align-items: center;
         .detailcontent {
           text-align: justify;
+          .text {
+            padding: 10rem 0;
+          }
           .educationtitle {
             text-decoration: underline;
             margin: 10rem 0 5rem;
