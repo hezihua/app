@@ -195,13 +195,13 @@ const triggerDetails = (index) => {
   .content {
     position: relative;
     width: 100%;
-    padding: 10vh 0 0 0;
+    padding: 15vh 0 0 0;
     box-sizing: border-box;
     .title {
       color: #093254;
       font-size: 30rem;
       font-weight: 700;
-      padding: 0 10vw 5vh;
+      padding: 0 10vw 15vh;
       font-family: var(--main-font);
     }
     
@@ -226,7 +226,7 @@ const triggerDetails = (index) => {
       overflow: hidden;
       transition: all .5s ease; /* 加入过渡效果 */   
       &.full-width {
-          height: 300rem; /* 宽度撑满 */
+          height: 450rem; /* 宽度撑满 */
       }
       &.second-full-width {
         height: 246rem;
@@ -238,7 +238,7 @@ const triggerDetails = (index) => {
         height: 266rem;
       }
       .first {
-          height: 100rem;
+          height: 150rem;
           padding: 0 10vw;
           .name {
             font-size: 30rem;
@@ -265,7 +265,7 @@ const triggerDetails = (index) => {
         color: #fff;
         
         font-size: 14rem;
-        height: 200rem;
+        height: 300rem;
         width: 100vw;
         padding: 10vw 10vw;
         box-sizing: border-box;
