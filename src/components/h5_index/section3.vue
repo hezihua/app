@@ -11,6 +11,26 @@ const evolutioncontent = ref(null); // 用于引用 <div> 元素
 const timelinecontent = ref(null); // 用于引用 <div> 元素
 
 
+const activities = [
+  {
+    content: 'Infini founded to conduct proprietary trading',
+    timestamp: 'Jun 2015'
+
+  },
+  {
+    content: 'Licensed with the Hong Kong Securities & Futures Commission',
+    timestamp: 'Jan 2019',
+  },
+  {
+    content: 'Open for external capital',
+    timestamp: 'Nov 2023',
+  },
+  {
+    content: 'Established office in Abu Dhabi​',
+    timestamp: 'Mar 2024',
+  },
+]
+
 const observer = new IntersectionObserver((entries) => {
   console.log(entries, 'entries')
   entries.forEach((entry) => {
@@ -106,64 +126,15 @@ onMounted(() => {
       <Transition name="timeline">
         <div class="timeline-container" id="timeline-container">
           <div class="timelinecontent" ref="timelinecontent">
-
-            <section class="timeline-section">
-              <!-- <div class="title">Proprietary </div>
-              <div  class="title">Investment</div> -->
-              <div class="timeline">
-                <div class="timeline-item">
-                  <div class="circle"></div>
-                  <div class="content">
-                    <div class="date margin">Jun 2015</div>
-                    <div class="description margin">Infini founded</div>
-
-                    <div class="description">conduct proprietary </div>
-                    <div class="description margin">trading </div>
-                    <div class="description"></div>
-                    <div class="date margin"></div>
-                    <div class="description margin"></div>
-                    <div class="description"></div>
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="circle"></div>
-                  <div class="content">
-                    <div class="date margin">Jan 2019</div>
-                    <div class="description margin">Licensed with the </div>
-                    <div class="description">Hong Kong </div>
-                    <div class="description margin">Securities & Futures </div>
-                    <div class="description">Commission</div>
-                    <div class="date margin">Jun 2019</div>
-                    <div class="description margin">Established </div>
-                    <div class="description">proprietary fund</div>
-                  </div>
-                </div>
-              
-              </div>
-            </section>
-  
-            <section class="timeline-section">
-              <!-- <div class="title">Welcoming External Capital </div>
-              <p class="sub-title">(with Significant Internal Investment)</p> -->
-              <div class="timeline">
-                <div class="timeline-item">
-                  <div class="circle"></div>
-                  <div class="content">
-                    <div class="date margin">Nov 2023</div>
-                    <div class="description margin">Open for </div>
-                    <div class="description">external capital</div>
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="circle"></div>
-                  <div class="content">
-                    <div class="date">Mar 2024​  </div>
-                    <div class="description margin">Established presence in  </div>
-                    <div class="description">Abu Dhabi​   </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+            <el-timeline style="max-width: 600px">
+              <el-timeline-item
+                v-for="(activity, index) in activities"
+                :key="index"
+                :timestamp="activity.timestamp"
+              >
+                {{ activity.content }}
+              </el-timeline-item>
+            </el-timeline>
             <div class="arrow"><img @click="handleClose" src="../../assets/ic_website_layout_v1B.png"></div>
           </div>
         </div>
@@ -439,5 +410,12 @@ onMounted(() => {
     background-color: red;
     z-index: 4;
   } */
+
+  ::v-deep(.el-timeline-item__content){
+    color: #fff;
+  }
+  :deep(.el-timeline-item__wrapper) {
+    margin-bottom: 30px; /* 调整节点之间的间距 */
+  }
   </style>
   

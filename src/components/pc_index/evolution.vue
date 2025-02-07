@@ -170,10 +170,9 @@ onMounted(() => {
                   <div class="circle"></div>
                   <div class="content">
                     <p class="date">Jun 2015</p>
-                    <p class="description">Infini founded </p>
+                    <p class="description">Infini founded to</p>
                     <p class="description">conduct proprietary trading </p>
-                    <p class="date"></p>
-                    <p class="description"></p>
+                   
                   </div>
                 </div>
                 <div class="timeline-item">
@@ -182,8 +181,7 @@ onMounted(() => {
                     <p class="date">Jan 2019</p>
                     <p class="description">Licensed with the Hong Kong </p>
                     <p class="description">Securities & Futures Commission</p>
-                    <p class="date">Jun 2019</p>
-                    <p class="description">Established proprietary fund</p>
+                    
                   </div>
                   <div class="content">
                   
@@ -210,7 +208,7 @@ onMounted(() => {
                   <div class="circle"></div>
                   <div class="content">
                     <p class="date">Mar 2024​                    </p>
-                    <p class="description">Established presence in                    </p>
+                    <p class="description">Established office in                    </p>
                     <p class="description">Abu Dhabi​                    </p>
                   </div>
                 </div>
