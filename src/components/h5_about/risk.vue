@@ -52,14 +52,12 @@ const triggerDetails = (index) => {
   <div class="transition-container">
     <div class="content">
       <div class="title">
-        <div>Senior</div>
-        <div>Management</div>
+        <div>Founder</div>
       </div>
       <div class="first-content">
         
         <div 
-          class="leader-card" 
-          :class="{ 'full-width': isHovering[0] }"
+          class="leader-card full-width" 
           @click="triggerDetails(0)"
         >
             <div class="first">
@@ -67,32 +65,21 @@ const triggerDetails = (index) => {
                 <div class="name">
                   Tony Chin
                 </div>
-                <div class="duty" >Chief Executive Officer and</div>
-                <div class="duty" >Chief Investment Officer</div>
+                <div class="duty" >Founder, CEO and CIO</div>
     
-                <div class="arrow"> <img src="../../assets/arrow.png" ></div>
+                <!-- <div class="arrow"> <img src="../../assets/arrow.png" ></div> -->
             </div>
             <div class="detail">
-              <div class="detailcontent" v-if="isHovering[0] && showcontent">
+              <div class="detailcontent" >
 
                 <div class="text">
-                  Tony Chin is the Founder, CEO and CIO of Infini Capital.
-
-                <!-- </div>
-                <div class="text"> -->
-                Before founding Infini Capital in 2015, he was a Partner at GCS Capital, a Hong Kong based Alternative Investment Firm. He started his career in the investment banking division at Morgan Stanley and HSBC.
-                <!-- </div>
-                <div class="text"> -->
-                  <!-- <div class="educationtitle"> Education</div>
-                  <div class="spetext">
-
-                    BA in Economics - the University of Michigan, Ann Arbor
-                  </div> -->
+                  Before founding Infini in 2015, he was involved in start-ups and proprietary trading.
+                  He started his career in the investment banking division at Morgan Stanley and HSBC.
                 </div>
               </div>
             </div>
         </div>
-        <div 
+        <!-- <div 
           class="leader-card" 
           :class="{ 'second-full-width': isHovering[1] }"
           @click="triggerDetails(1)"
@@ -110,15 +97,15 @@ const triggerDetails = (index) => {
 
                 <div class="text">
                 U-Lipp is responsible for establishing risk mandate and monitoring risk limit parameters for the FICC-related strategies. He was previously a Vice President of Investment Risk at JP Morgan Asset Management, an Associate Director of Risk Analysis at Dymon Asia and a Risk Officer at Brevan Howard. 
-                <!-- </div>
-                <div class="text"> -->
-                <!-- He holds a Master of Finance, a Master of Advanced Mechanical Engineering, and a Bachelor's degree in Mechanical Engineering from Imperial College. -->
-                <!-- <div class="educationtitle"> Education</div>
+                </div>
+                <div class="text">
+                He holds a Master of Finance, a Master of Advanced Mechanical Engineering, and a Bachelor's degree in Mechanical Engineering from Imperial College.
+                <div class="educationtitle"> Education</div>
                 <div class="spetext">
 
                   MSc in Finance, MEng & BEng in Mechanical Engineering from Imperial College
 
-                </div> -->
+                </div>
 
                 </div>
               </div>
@@ -142,12 +129,12 @@ const triggerDetails = (index) => {
 
                 <div class="text">
                   Alex oversees risk management for equity-related strategies. Previously, he held a senior risk position at Polymer, managing risk identification, assessment, and mitigation. Before that, he was a Vice President at MSCI.
-                <!-- </div>
-                <div class="text"> -->
-                  <!-- <div class="educationtitle"> Education</div>
+                </div>
+                <div class="text">
+                  <div class="educationtitle"> Education</div>
                   <div class="spetext">
                     MBA and BBA – The Hong Kong University of Science and Technology
-                  </div> -->
+                  </div>
                 </div>
               </div>
             </div>
@@ -171,7 +158,7 @@ const triggerDetails = (index) => {
 
                 <div class="text">
                     Jackel is leading the integration of external trading platforms and facilitating the interaction between trading and non-trading functions. He was previously a member of the Operations Committee and the Best Execution/Risk Committee at Ovata Capital and Folger Hill. He also worked in trading desk operations at Barclays, Morgan Stanley, and Goldman Sachs. 
-                    <!-- <div class="educationtitle"> Education</div>
+                    <div class="educationtitle"> Education</div>
                   <div class="spetext">
 
                     Master's Degree in Financial Engineering – University of Hong Kong 
@@ -183,12 +170,12 @@ const triggerDetails = (index) => {
                   <div class="spetext">
 
                     LLB – University of London
-                  </div> -->
+                  </div>
 
                 </div>
               </div>
             </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <Footer />
@@ -214,7 +201,7 @@ const triggerDetails = (index) => {
       color: #093254;
       font-size: 30rem;
       font-weight: 700;
-      padding: 0 10vw 10vh;
+      padding: 0 10vw 5vh;
       font-family: var(--main-font);
     }
     
@@ -239,7 +226,7 @@ const triggerDetails = (index) => {
       overflow: hidden;
       transition: all .5s ease; /* 加入过渡效果 */   
       &.full-width {
-          height: 240rem; /* 宽度撑满 */
+          height: 300rem; /* 宽度撑满 */
       }
       &.second-full-width {
         height: 246rem;
@@ -251,7 +238,7 @@ const triggerDetails = (index) => {
         height: 266rem;
       }
       .first {
-          height: 120rem;
+          height: 100rem;
           padding: 0 10vw;
           .name {
             font-size: 30rem;
@@ -276,8 +263,9 @@ const triggerDetails = (index) => {
       .detail {
         background: #093254;
         color: #fff;
-        font-size: 12rem;
-        height: 120rem;
+        
+        font-size: 14rem;
+        height: 200rem;
         width: 100vw;
         padding: 10vw 10vw;
         box-sizing: border-box;

@@ -16,6 +16,37 @@ const show = ref(false);
 const showtimeline = ref(false);
 
 
+const activities = [
+ {
+    color: 'transparent'
+
+  }, 
+  {
+    content: 'Infini founded to conduct proprietary trading',
+    timestamp: 'Jun 2015',
+color: '#fff'
+  },
+  {
+    content: 'Licensed with the Hong Kong Securities & Futures Commission',
+    timestamp: 'Jan 2019',
+    color: '#fff'
+  },
+  {
+    content: 'Open for external capital',
+    timestamp: 'Nov 2023',
+    color: '#fff'
+  },
+  {
+    content: 'Established office in Abu Dhabi​',
+    timestamp: 'Mar 2024',
+    color: '#fff'
+  },
+  {
+
+color: 'transparent'
+}, 
+]
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -163,58 +194,17 @@ onMounted(() => {
         <div class="timeline-container" id="timeline-container">
           <div class="timelinecontent" ref="timelinecontent">
 
-            <section class="timeline-section">
-              <!-- <div class="title">Proprietary Investment</div> -->
-              <div class="timeline">
-                <div class="timeline-item">
-                  <div class="circle"></div>
-                  <div class="content">
-                    <p class="date">Jun 2015</p>
-                    <p class="description">Infini founded to</p>
-                    <p class="description">conduct proprietary trading </p>
-                   
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="circle"></div>
-                  <div class="content">
-                    <p class="date">Jan 2019</p>
-                    <p class="description">Licensed with the Hong Kong </p>
-                    <p class="description">Securities & Futures Commission</p>
-                    
-                  </div>
-                  <div class="content">
-                  
-                    
-                  </div>
-                </div>
-              
-              </div>
-            </section>
-  
-            <section class="timeline-section">
-              <!-- <div class="title">Welcoming External Capital </div>
-              <p class="sub-title">(with Significant Internal Investment)</p> -->
-              <div class="timeline">
-                <div class="timeline-item">
-                  <div class="circle"></div>
-                  <div class="content">
-                    <p class="date">Nov 2023</p>
-                    <p class="description">Open for                     </p>
-                    <p class="description">external capital</p>
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="circle"></div>
-                  <div class="content">
-                    <p class="date">Mar 2024​                    </p>
-                    <p class="description">Established office in                    </p>
-                    <p class="description">Abu Dhabi​                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- <div class="arrow"><img @click="handleClose" src="../../assets/ic_website_layout_v1B.png"></div> -->
+            <el-timeline>
+              <el-timeline-item
+                v-for="(activity, index) in activities"
+                :key="index"
+                placement="top"
+                :color="activity.color"
+                :timestamp="activity.timestamp"
+              >
+                {{ activity.content }}
+              </el-timeline-item>
+            </el-timeline>
           </div>
         </div>
       </Transition>
@@ -366,6 +356,10 @@ onMounted(() => {
     overflow: hidden;
     clip-path: polygon(23% 0, 100% 0, 100% 100%, 0 100%); /* 定义多边形的剪裁路径 */
     box-sizing: border-box;
+    .timelinecontent {
+      display: flex;
+      justify-content: center;
+    }
     .timeline-section {
       // opacity: 0;
     }
@@ -464,6 +458,12 @@ onMounted(() => {
   }
 }
 
-
+::v-deep(.el-timeline-item__content){
+    color: #fff;
+  }
+  :deep(.el-timeline-item__wrapper) {
+    padding-bottom: 20rem; /* 调整节点之间的间距 */
+    font-size: 22rem;
+  }
 
 </style>

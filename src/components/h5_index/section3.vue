@@ -12,23 +12,34 @@ const timelinecontent = ref(null); // 用于引用 <div> 元素
 
 
 const activities = [
+ {
+    color: 'transparent'
+
+  }, 
   {
     content: 'Infini founded to conduct proprietary trading',
-    timestamp: 'Jun 2015'
-
+    timestamp: 'Jun 2015',
+color: '#fff'
   },
   {
     content: 'Licensed with the Hong Kong Securities & Futures Commission',
     timestamp: 'Jan 2019',
+    color: '#fff'
   },
   {
     content: 'Open for external capital',
     timestamp: 'Nov 2023',
+    color: '#fff'
   },
   {
     content: 'Established office in Abu Dhabi​',
     timestamp: 'Mar 2024',
+    color: '#fff'
   },
+  {
+
+color: 'transparent'
+}, 
 ]
 
 const observer = new IntersectionObserver((entries) => {
@@ -126,10 +137,12 @@ onMounted(() => {
       <Transition name="timeline">
         <div class="timeline-container" id="timeline-container">
           <div class="timelinecontent" ref="timelinecontent">
-            <el-timeline style="max-width: 600px">
+            <el-timeline>
               <el-timeline-item
                 v-for="(activity, index) in activities"
                 :key="index"
+                placement="top"
+                :color="activity.color"
                 :timestamp="activity.timestamp"
               >
                 {{ activity.content }}
@@ -415,7 +428,7 @@ onMounted(() => {
     color: #fff;
   }
   :deep(.el-timeline-item__wrapper) {
-    margin-bottom: 30px; /* 调整节点之间的间距 */
+    padding-bottom: 20rem; /* 调整节点之间的间距 */
   }
   </style>
   
