@@ -73,7 +73,7 @@ const triggerDetails = (index) => {
               <div class="detailcontent" >
 
                 <div class="text">
-                  Before founding Infini in 2015, he was involved in start-ups and proprietary trading.
+                  Before founding Infini in 2015, he was engaged in proprietary trading and also successfully built several start-ups.
                   He started his career in the investment banking division at Morgan Stanley and HSBC.
                 </div>
               </div>
