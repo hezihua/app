@@ -197,7 +197,7 @@ const triggerDetails = (index) => {
   .content {
     position: relative;
     width: 100%;
-    padding: 12vh 0 0 0;
+    padding: 20vh 0 0 0;
     box-sizing: border-box;
     .title {
       color: #093254;
@@ -228,7 +228,7 @@ const triggerDetails = (index) => {
       overflow: hidden;
       transition: all .5s ease; /* 加入过渡效果 */   
       &.full-width {
-          height: 450rem; /* 宽度撑满 */
+          height: 420rem; /* 宽度撑满 */
       }
       &.second-full-width {
         height: 246rem;
@@ -240,7 +240,7 @@ const triggerDetails = (index) => {
         height: 266rem;
       }
       .first {
-          height: 150rem;
+          height: 120rem;
           padding: 0 10vw;
           .name {
             font-size: 30rem;
