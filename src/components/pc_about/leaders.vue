@@ -84,10 +84,11 @@ const toggleContent = (index = 0)=> {
     overflow: hidden;
     font-size: 58rem;
     > .text {
-      margin: 800rem 0 0 10%;
+      margin: 700rem 0 0 10%;
       color: #093254;
       font-weight: 700;
       font-family: var(--main-font);
+      font-size: 78rem;
     }
     
     /* 初始状态 */
@@ -155,7 +156,7 @@ const toggleContent = (index = 0)=> {
       font-size: 58rem;
     }
     .duty  {
-      padding:  0 5% 0 45%;
+      padding:  0 5% 20rem 45%;
       font-size: 26rem;
     }
     .text {
