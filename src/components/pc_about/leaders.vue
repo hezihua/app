@@ -32,10 +32,13 @@ const toggleContent = (index = 0)=> {
             </div>
             <div class="duty" >Founder, CEO and CIO</div>
             <div class="text">
-              Before founding Infini in 2015, he was engaged in proprietary trading and also successfully built several start-ups.
+              Before founding Infini in 2015, he engaged in proprietary trading and successfully built several start-ups.
             </div>
             <div class="text">
-              He started his career in the investment banking division at Morgan Stanley and HSBC.
+              He began his career at Morgan Stanley and HSBC.
+            </div>
+            <div class="text">
+              He also founded the Hong Kong Bulls, Hong Kong’s first professional basketball team competing in China’s National Basketball League.
             </div>
              <!-- <div class="title">
               Education

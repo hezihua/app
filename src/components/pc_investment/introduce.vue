@@ -35,7 +35,7 @@ onMounted(()=> {
           <div class="leftcontent" id="leftcontent" ref="leftcontent">
 
             <div class="title">
-                <div>Continual Diversification</div>
+                <div>Innovative Portfolio Allocation</div>
                 <div>with a Focus</div>
                 <div>on Quality Returns</div>
             </div>
