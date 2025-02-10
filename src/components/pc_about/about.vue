@@ -25,7 +25,7 @@ onMounted(() => {
   
               <div class="title">About Us</div>
               <div class="article">
-                  <div class="text">Infini Capital is a global multi-strategy investment firm with a Pan-Asia focus. Built on a foundation of proprietary trading, we deliver high-quality, risk-adjusted returns through diversified, low-correlation, high-Sharpe strategies. </div>
+                  <div class="text">Infini Capital is a global, multi-strategy investment firm with a Pan-Asia focus. Built on a foundation of proprietary trading, we aim to deliver high-quality, risk-adjusted returns through diversified, low-correlation, high-Sharpe strategies. </div>
               </div>
               <div>
                   <div class="text">Our disciplined approach combines innovation, rigorous risk management, and advanced technology and infrastructure to navigate complex markets. We prioritize long-term partnerships, aligning with clients’ objectives to deliver sustainable value across asset classes.</div>
