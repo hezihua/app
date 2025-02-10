@@ -74,7 +74,7 @@ const handleMouseLeave = (index) => {
               <div class="text">Discipline</div>
             </div>
             <div v-if="isHovering[0] && showcontent" class="content-detail">
-              Embedded in our proprietary DNA is a strong risk culture, focused on safeguarding and growing investor capital
+              Embedded in our proprietary DNA is a strong risk culture, focused on safeguarding and growing investors’ capital
             </div>
             <div class="add" :class="{ 'active': isHovering[0] }"> + </div>
           </div>

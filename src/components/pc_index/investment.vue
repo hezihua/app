@@ -130,10 +130,10 @@ onMounted(() => {
         </div>
        
         <div class="buttonbox" ref="buttoncontent">
-          <div class="button" @click="navigateTo('/about', '#leadership')">
+          <!-- <div class="button" @click="navigateTo('/about', '#leadership')">
             <div class="button-text">Meet the Team</div>
             <div  class="add">+</div>
-          </div>
+          </div> -->
           <div class="button" @click="navigateTo('/career')">
             <div class="button-text">Join Us</div>
             <div class="add">+</div>
