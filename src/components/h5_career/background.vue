@@ -29,7 +29,7 @@ onUnmounted(() => {
           <Transition name="fade">
 
             <div class="title" v-if="show">
-              <div>Career</div>
+              <div>Careers</div>
             </div>
           </Transition>
             

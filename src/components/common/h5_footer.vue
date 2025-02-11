@@ -19,7 +19,7 @@ const login  = ()=> {
             <div class="links">
                 <div class="item" @click="navigateTo('/about')">About us</div>
                 <div class="item" @click="navigateTo('/investment')">Investment approach</div>
-                <div class="item" @click="navigateTo('/career')">Career</div>
+                <div class="item" @click="navigateTo('/career')">Careers</div>
                 <div class="item" @click="navigateTo('/contact')">Contact us</div>
             </div>
         </div>
